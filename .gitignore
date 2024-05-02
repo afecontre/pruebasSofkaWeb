@@ -1,0 +1,75 @@
+# Ignorar .env file
+.env
+
+# Archivos de compilación de Serenity BDD
+reports/
+target/site/serenity/
+
+# Archivos de compilación de Maven
+target/
+.mvn/
+mvnw
+mvnw.cmd
+pom.xml.*
+pom.properties
+dependency-reduced-pom.xml
+build.log
+!.mvn/wrapper/maven-wrapper.jar
+
+# Archivos de compilación de Gradle
+.gradle/
+.gradle-cache/
+build/
+out/
+history/
+
+# Archivos de proyecto de IntelliJ IDEA
+.idea/
+.settings/
+*.iws
+*.iml
+*.ipr
+
+# Archivos de proyecto de Eclipse
+.eclipse/
+.project
+.classpath
+.metadata/
+.apt_generated
+.factorypath
+.settings
+.springBeans
+.sts4-cache
+
+# Archivos de proyecto de NetBeans
+nbproject/private/
+dist/
+nbbuild/
+
+# Archivos de proyecto de Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+*.log
+*.swp
+*~
+~$
+\#*\#
+
+# Archivos de compilación de Java
+*.class
+*.jar
+*.war
+*.ear
+bin/
+logs/
+lib/
+!gradle/wrapper/gradle-wrapper.jar
+
+# Archivos de Reportes de OWASP
+scan-results/
+!scan-results/*.txt
+
