@@ -23,10 +23,10 @@ buildscript {
     dependencies {
         classpath("net.serenity-bdd:serenity-gradle-plugin:3.2.5")
         classpath("net.serenity-bdd:serenity-single-page-report:3.5.1")
-        
 
 
-        }
+
+    }
 }
 
 sourceCompatibility = 1.8

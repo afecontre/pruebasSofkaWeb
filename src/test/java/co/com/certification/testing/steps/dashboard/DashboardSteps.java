@@ -1,7 +1,5 @@
 package co.com.certification.testing.steps.dashboard;
 
-import co.com.certification.testing.tasks.authentication.*;
-import co.com.certification.testing.tasks.authentication.SelectLoanType;
 import co.com.certification.testing.tasks.dashboard.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;

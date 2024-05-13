@@ -18,7 +18,7 @@ public class Hooks {
     @Steps(shared = true)
     SharedComponents sharedComponents;
 
-    @Managed(driver = "chrome")
+    @Managed(uniqueSession = true)
     private WebDriver driver;
 
     @Before
