@@ -14,7 +14,7 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnab
 
 public class EnterInformationCsv implements Task {
 
-    private static final String RUTA_ARCHIVO_CSV = "/Users/bcp/Documents/land/qa-automation-suite-master/src/test/resources/data/testdata.csv";
+    private static final String RUTA_ARCHIVO_CSV = "C:\\Users\\Owner\\Documents\\auto_landgorilla\\qa-automation-suite\\src\\test\\resources\\data\\testdata.csv";
     public EnterInformationCsv() {
     }
 

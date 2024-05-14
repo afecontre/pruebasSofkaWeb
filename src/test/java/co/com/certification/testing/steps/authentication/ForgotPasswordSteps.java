@@ -36,8 +36,8 @@ public class ForgotPasswordSteps {
 
     @Then("valid email address")
     public void validEmailAddress() {
-        //USER.attemptsTo(EmailInvalid.withTheFollowingField());
-        USER.attemptsTo(EmailAndPasswordInvalid.withTheFollowingField());
+        USER.attemptsTo(EmailInvalid.withTheFollowingField());
+        //USER.attemptsTo(EmailAndPasswordInvalid.withTheFollowingField());
     }
 
     @Then("the user should receive a password reset link")

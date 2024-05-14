@@ -39,7 +39,7 @@ public class LoginPage {
             .located(By.xpath("//*[contains(text(),'A message was sent to your e-mail address with instructions to reset your password')]"));
 
     public static final Target EMAIL_INVALID= Target.the("Email Address Invalid")
-            .located(By.xpath("//span[contains(text(),'The username or password is invalid.')]"));
+            .located(By.xpath("//span[contains(text(),'Please enter a valid email address.')]"));
 
     public static final Target EMAIL_ANS_PASSWORD_INVALID= Target.the("Email Address Invalid")
             .located(By.xpath("//span[contains(text(),'The username or password is invalid.')]"));
@@ -82,7 +82,7 @@ public class LoginPage {
     public static final Target BTN_REPORTS= Target.the("Reports Button")
             .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[9]/a"));
     public static final Target LABEL_ORDER_ACTIVATE= Target.the("Orders Activate")
-            .located(By.xpath("//div[@class='row dashboard__stats']//div[1]//div[1]//div[2]//h1[1]"));
+            .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/h1/span"));
     public static final Target LABEL_ORDER_ACTIVATE_MONTH= Target.the("Orders Activate Month")
             .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/span[1]"));
     public static final Target LABEL_ORDER_ACTIVATE_WEEK= Target.the("Orders Activate Week")

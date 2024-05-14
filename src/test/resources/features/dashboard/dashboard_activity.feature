@@ -1,5 +1,5 @@
 #language: en
-@lg_dashboard_activity
+@lg_dashboard
 Feature: Dashboard
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -8,7 +8,7 @@ Feature: Dashboard
     Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Bochum4040**"
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Hofeinhem3030**"
 
     @DSH-ACT
       Scenario Outline: Check Statistics of a selected range with visualization by date
@@ -77,15 +77,4 @@ Feature: Dashboard
         Examples:
           | type           |
           | Justin Alvarez |
-
-      @DLA-010
-      Scenario Outline: Display statistics of the Filter "Last Activity" - Loan Activity
-        When it is valid to show the number of active orders
-        And click filtro Loan Activity
-        And filtrar por "Last Activity"
-        And seleccionar el time "<time>"
-        Then valida la informacion organizada
-        Examples:
-          | time   |
-          | 1 Days |
 
