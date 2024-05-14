@@ -1,5 +1,5 @@
 #language: en
-@landgorilla
+@lg_login
 Feature: Login
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password

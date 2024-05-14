@@ -1,5 +1,5 @@
 #language: en
-@landgorilla_dashboard
+@lg_dashboard_activity
 Feature: Dashboard
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -8,15 +8,11 @@ Feature: Dashboard
     Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Paris2020#"
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Bochum4040**"
 
     @DSH-ACT
       Scenario Outline: Check Statistics of a selected range with visualization by date
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And seleccionar el view "<view>"
         Then validar los graficos
         Examples:
@@ -29,11 +25,7 @@ Feature: Dashboard
 
       @DLA-001
       Scenario Outline: Display statistics of the Filter "Loan Program" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "Loan Program"
         And seleccionar el tipo "<type>"
@@ -44,11 +36,7 @@ Feature: Dashboard
 
       @DLA-002
       Scenario Outline: Display statistics of the Filter "Loan Type" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "Loan Type"
         And seleccionar el tipo "<type>"
@@ -59,11 +47,7 @@ Feature: Dashboard
 
       @DLA-003
       Scenario Outline: Display statistics of the Filter "Investor Name" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "Investor"
         And seleccionar el tipo "<type>"
@@ -74,11 +58,7 @@ Feature: Dashboard
 
       @DLA-004
       Scenario Outline: Display statistics of the Filter "Transaction Table" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "Transaction Table"
         And seleccionar el tipo "<type>"
@@ -89,11 +69,7 @@ Feature: Dashboard
 
       @DLA-004
       Scenario Outline: Display statistics of the Filter "System User" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "System User"
         And seleccionar el tipo "<type>"
@@ -104,11 +80,7 @@ Feature: Dashboard
 
       @DLA-010
       Scenario Outline: Display statistics of the Filter "Last Activity" - Loan Activity
-        When the user enter a name your user and a password
-        And click on the Login button
-        And valid home page
-        And valid for complete sections
-        Then it is valid to show the number of active orders
+        When it is valid to show the number of active orders
         And click filtro Loan Activity
         And filtrar por "Last Activity"
         And seleccionar el time "<time>"

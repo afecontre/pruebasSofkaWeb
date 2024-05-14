@@ -1,5 +1,5 @@
 #language: en
-@landgorilla
+@lg_reset
 Feature: Reset Password
 As user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
@@ -23,8 +23,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                  |  new_password    |
-        | rmechan@landgorilla.com|  *Arequipa200   |
+        | email                  |  new_password   |
+        | rmechan@landgorilla.com|  Bochum4040**   |
 
 
     @RPA-002

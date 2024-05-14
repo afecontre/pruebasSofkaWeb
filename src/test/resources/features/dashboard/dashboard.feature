@@ -1,5 +1,5 @@
 #language: en
-@landgorilla_dashboard
+@lg_dashboard
 Feature: Dashboard
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -8,7 +8,7 @@ Feature: Dashboard
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Paris2020#"
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Bochum4040**"
 
     @DSH-001
     Scenario: Order Statistics with Active Status
