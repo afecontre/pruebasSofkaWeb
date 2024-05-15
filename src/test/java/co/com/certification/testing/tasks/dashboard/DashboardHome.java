@@ -8,8 +8,7 @@ import net.thucydides.core.annotations.Step;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.*;
 
 public class DashboardHome implements Task {
     public DashboardHome() {
@@ -23,28 +22,14 @@ public class DashboardHome implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(BTN_LOAN, isEnabled()).forNoMoreThan(3).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_ORDERS, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_CONTACTS, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_USERS, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_PROJECTS, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_HUD, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_PAYMENTS, isEnabled()).forNoMoreThan(1).seconds()
-        );
-        actor.attemptsTo(
-                WaitUntil.the(BTN_REPORTS, isEnabled()).forNoMoreThan(1).seconds()
+                WaitUntil.the(BTN_LOAN,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_ORDERS,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_CONTACTS,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_USERS,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_PROJECTS,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_HUD,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_PAYMENTS,isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_REPORTS,isVisible()).forNoMoreThan(2).seconds()
         );
     }
 }

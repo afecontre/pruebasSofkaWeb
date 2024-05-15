@@ -65,22 +65,21 @@ public class LoginPage {
             .located(By.xpath("//*[contains(text(),'Your password was successfully updated.')]"));
 
     public static final Target BTN_LOAN= Target.the("Loan Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[2]/a"));
-
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Loan')]"));
     public static final Target BTN_ORDERS= Target.the("Orders Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[3]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Orders')]"));
     public static final Target BTN_CONTACTS= Target.the("Contacts Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[4]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Contacts')]"));
     public static final Target BTN_USERS= Target.the("Users Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[5]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Users')]"));
     public static final Target BTN_PROJECTS= Target.the("Projects Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[6]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Projects')]"));
     public static final Target BTN_HUD= Target.the("Hud Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[7]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'HUD Consultant Requests')]"));
     public static final Target BTN_PAYMENTS= Target.the("Payment Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[8]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Payments')]"));
     public static final Target BTN_REPORTS= Target.the("Reports Button")
-            .located(By.xpath("//*[@id=\"page-wrapper\"]/div[1]/nav/div/ul/li[9]/a"));
+            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Reports')]"));
     public static final Target LABEL_ORDER_ACTIVATE= Target.the("Orders Activate")
             .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/h1/span"));
     public static final Target LABEL_ORDER_ACTIVATE_MONTH= Target.the("Orders Activate Month")

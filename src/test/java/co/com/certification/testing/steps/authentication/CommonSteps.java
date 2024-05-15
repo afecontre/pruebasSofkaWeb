@@ -1,9 +1,6 @@
 package co.com.certification.testing.steps.authentication;
 
-import co.com.certification.testing.tasks.authentication.EnterInformation;
-import co.com.certification.testing.tasks.authentication.LoginButton;
-import co.com.certification.testing.tasks.authentication.NavigateTo;
-import co.com.certification.testing.tasks.authentication.NavigateToResetPassword;
+import co.com.certification.testing.tasks.authentication.*;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
@@ -33,7 +30,8 @@ public class CommonSteps {
                     NavigateTo.web(),
                     Ensure.that(LOGIN).isEnabled(),
                     EnterInformation.withCustomerData(username, password),
-                    LoginButton.withTheFollowingField()
+                    LoginButton.withTheFollowingField(),
+                    PageHome.withTheFollowingField()
             );
             loggedIn = true;
         }

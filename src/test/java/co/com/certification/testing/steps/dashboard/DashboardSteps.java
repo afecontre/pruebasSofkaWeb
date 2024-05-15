@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 
 import static co.com.certification.testing.steps.conf.Hooks.USER;
 
-@Test
 public class DashboardSteps {
     @Then("valid for complete sections")
     public void validForCompleteSections() {
