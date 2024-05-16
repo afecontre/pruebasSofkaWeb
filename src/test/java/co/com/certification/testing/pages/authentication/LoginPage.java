@@ -81,11 +81,11 @@ public class LoginPage {
     public static final Target BTN_REPORTS= Target.the("Reports Button")
             .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[contains(text(), 'Reports')]"));
     public static final Target LABEL_ORDER_ACTIVATE= Target.the("Orders Activate")
-            .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/h1/span"));
+            .located(By.xpath("//div[@class='ibox-title']//h5[text()='Orders']"));
     public static final Target LABEL_ORDER_ACTIVATE_MONTH= Target.the("Orders Activate Month")
-            .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/span[1]"));
+            .located(By.xpath("(//span[contains(text(), 'New this Month')])[1]\n"));
     public static final Target LABEL_ORDER_ACTIVATE_WEEK= Target.the("Orders Activate Week")
-            .located(By.xpath("//*[@id=\"dashboard\"]/div/div[1]/div[1]/div/div[2]/span[2]"));
+            .located(By.xpath("(//span[contains(text(), 'New this Week')])[1]"));
     public static final Target BTN_PERIOD= Target.the("Selector Period")
             .located(By.xpath("//*[@id=\"dashboard\"]/div/div[2]/div/div/div[1]/div/div[1]/div/button"));
     public static final Target DAY_PERIOD= Target.the("Selector Period Day")

@@ -1,5 +1,5 @@
 #language: en
-@lg_dashboard
+@lg
 Feature: Dashboard
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -8,14 +8,9 @@ Feature: Dashboard
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Nicaragua3332**"
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Chiclayo0877**"
 
     @DSH-001
-    Scenario: Order Statistics with Active Status
-      When valid for complete sections
-      Then it is valid to show the number of active orders
-
-    @DSH-002
     Scenario Outline: Display statistics of the "Loan Type" Filter
       When it is valid to show the number of active orders
       And click filtro Orders
@@ -32,7 +27,7 @@ Feature: Dashboard
         | type          |
         | Conventional  |
 #
-    @DSH-003
+    @DSH-002
     Scenario Outline: Display statistics of the "System User" Filter
       When it is valid to show the number of active orders
       And click filtro Orders
@@ -49,7 +44,7 @@ Feature: Dashboard
         | type      |
         | Jhon Doe  |
 
-    @DSH-004
+    @DSH-003
     Scenario Outline: Display statistics of the "Product Ordered" Filter
       When it is valid to show the number of active orders
       And click filtro Orders
@@ -66,7 +61,7 @@ Feature: Dashboard
         | type                                          |
         | Commercial Appraisal - Test Push Notification |
 
-    @DSH-005
+    @DSH-004
     Scenario Outline: Display statistics of the "Order Status" Filter
       When it is valid to show the number of active orders
       And click filtro Orders
@@ -83,7 +78,7 @@ Feature: Dashboard
         | type   |
         | Active |
 
-    @DSH-006
+    @DSH-005
     Scenario Outline: Display statistics of the "Loan Program" Filter - Loan
       When it is valid to show the number of active orders
       And click filtro Loan
@@ -100,7 +95,7 @@ Feature: Dashboard
         | type    |
         | JS LP 1 |
 
-    @DSH-007
+    @DSH-006
     Scenario Outline: Display statistics of the "System User" Filter - Loan
       When it is valid to show the number of active orders
       And click filtro Loan
@@ -117,7 +112,7 @@ Feature: Dashboard
         | type           |
         | Justin Alvarez |
 
-    @DSH-008
+    @DSH-007
     Scenario Outline: Display statistics of the "Investor" Filter - Loan
       When it is valid to show the number of active orders
       And click filtro Loan
@@ -134,7 +129,7 @@ Feature: Dashboard
         | type                  |
         | 1651201244184_Cameron |
 
-    @DSH-009
+    @DSH-008
     Scenario Outline: Display statistics of the "Transaction Table" Filter - Loan
       When it is valid to show the number of active orders
       And click filtro Loan
@@ -151,7 +146,7 @@ Feature: Dashboard
         | type            |
         | richard morales |
 
-    @DSH-010
+    @DSH-009
     Scenario Outline: Display statistics of the "Loan Type" Filter - Draws
       When it is valid to show the number of active orders
       And click filtro Draws
@@ -168,7 +163,7 @@ Feature: Dashboard
         | type          |
         | Conventional  |
 
-    @DSH-011
+    @DSH-010
     Scenario Outline: Display statistics of the "System User" Filter - Draws
       When it is valid to show the number of active orders
       And click filtro Draws
@@ -185,7 +180,7 @@ Feature: Dashboard
         | type           |
         | Justin Alvarez |
 
-    @DSH-012
+    @DSH-011
     Scenario Outline: Display statistics of the "Loan Program" Filter - Draws
       When it is valid to show the number of active orders
       And click filtro Draws
@@ -202,7 +197,7 @@ Feature: Dashboard
         | type    |
         | JS LP 1 |
 
-    @DSH-013
+    @DSH-012
     Scenario Outline: Display statistics of the "Investor" Filter - Draws
       When it is valid to show the number of active orders
       And click filtro Draws
@@ -219,7 +214,7 @@ Feature: Dashboard
         | type                  |
         | 1651201244184_Cameron |
 
-    @DSH-014
+    @DSH-013
     Scenario Outline: Display statistics of the "Transaction Table" Filter - Draws
       When it is valid to show the number of active orders
       And click filtro Draws
@@ -236,7 +231,7 @@ Feature: Dashboard
         | type                   |
         | AutoTran 1573146458085 |
 
-    @DSH-015
+    @DSH-014
     Scenario Outline: Display statistics of the "Loan Type" Filter - Change Orders
       When it is valid to show the number of active orders
       And click filtro Change Orders
@@ -253,7 +248,7 @@ Feature: Dashboard
         | type          |
         | Conventional  |
 
-    @DSH-016
+    @DSH-015
     Scenario Outline: Display statistics of the "System User" Filter - Change Orders
       When it is valid to show the number of active orders
       And click filtro Change Orders
@@ -270,7 +265,7 @@ Feature: Dashboard
         | type           |
         | Justin Alvarez |
 
-    @DSH-017
+    @DSH-016
     Scenario Outline: Display statistics of the "Loan Program" Filter - Change Orders
       When it is valid to show the number of active orders
       And click filtro Change Orders
@@ -287,7 +282,7 @@ Feature: Dashboard
         | type    |
         | JS LP 1 |
 
-    @DSH-018
+    @DSH-017
     Scenario Outline: Display statistics of the "Investor" Filter - Change Orders
       When it is valid to show the number of active orders
       And click filtro Change Orders
@@ -304,7 +299,7 @@ Feature: Dashboard
         | type                  |
         | 1651201244184_Cameron |
 
-    @DSH-019
+    @DSH-018
     Scenario Outline: Display statistics of the "Transaction Table" Filter - Change Orders
       When it is valid to show the number of active orders
       And click filtro Draws

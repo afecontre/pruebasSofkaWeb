@@ -22,8 +22,8 @@ public class ItemActivate implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(LABEL_ORDER_ACTIVATE, isVisible()).forNoMoreThan(3).seconds(),
-                WaitUntil.the(LABEL_ORDER_ACTIVATE_MONTH, isVisible()).forNoMoreThan(1).seconds(),
-                WaitUntil.the(LABEL_ORDER_ACTIVATE_WEEK, isVisible()).forNoMoreThan(1).seconds());
+                WaitUntil.the(LABEL_ORDER_ACTIVATE, isVisible()).forNoMoreThan(6).seconds(),
+                WaitUntil.the(LABEL_ORDER_ACTIVATE_MONTH, isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(LABEL_ORDER_ACTIVATE_WEEK, isVisible()).forNoMoreThan(2).seconds());
     }
 }

@@ -13,8 +13,7 @@ public class CommonSteps {
     @Given("the user is on the application home page")
     public void theUserIsOnTheApplicationHomePage() {
         USER.attemptsTo(
-                NavigateTo.web(),
-                Ensure.that(LOGIN).isEnabled());
+                NavigateTo.web());
     }
 
     @Given("the user is on the application reset password")

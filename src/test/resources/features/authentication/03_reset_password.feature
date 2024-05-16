@@ -1,5 +1,5 @@
 #language: en
-@lg_reset
+@lg
 Feature: Reset Password
 As user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
@@ -23,8 +23,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                  |  new_password     |
-        | rmechan@landgorilla.com|  Nicaragua3332**  |
+        | email                  |  new_password   |
+        | rmechan@landgorilla.com|  Chiclayo0877** |
 
 
     @RPA-002
@@ -99,8 +99,8 @@ To access the different products
       And the user enters the password again "<new_password>"
       Then valid that the button is disabled
       Examples:
-        | email                  |  new_password  |
-        | rmechan@landgorilla.com|  Atenas0002**  |
+        | email                  |  new_password       |
+        | rmechan@landgorilla.com|  BuenosAires1919**  |
 
     @RPA-007
     Scenario Outline: Enter digits contain your user ID
