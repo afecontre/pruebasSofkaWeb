@@ -14,6 +14,7 @@ public class NavigateTo {
     private NavigateTo(){
         //Nothing
     }
+
     public static Performable web(){
         return Task.where("",
                 Open.url("https://system.uat-landgorilla.com/clientv2-login.html"),

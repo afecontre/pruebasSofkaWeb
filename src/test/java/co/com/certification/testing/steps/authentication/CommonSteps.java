@@ -10,8 +10,8 @@ import static co.com.certification.testing.steps.conf.Hooks.USER;
 public class CommonSteps {
     private static boolean loggedIn = false;
 
-    @Given("the user is on the application home page")
-    public void theUserIsOnTheApplicationHomePage() {
+    @Given("the user is on the application home page {string}")
+    public void theUserIsOnTheApplicationHomePage(String arg0) {
         USER.attemptsTo(
                 NavigateTo.web());
     }
@@ -22,15 +22,14 @@ public class CommonSteps {
                 NavigateToResetPassword.web());
     }
 
-    @Given("the user has logged in with username {string} and password {string}")
-    public void theUserHasLoggedInWithAndOnApplicationHomePage(String username, String password) {
+    @Given("the user has logged in with username {string} and password {string} in {string}")
+    public void theUserHasLoggedInWithUsernameAndPasswordIn(String username, String password, String url) {
         if (!loggedIn) {
             USER.attemptsTo(
-                    NavigateTo.web(),
+                    NavigateToURL.withCustomerData(url),
                     Ensure.that(LOGIN).isEnabled(),
                     EnterInformation.withCustomerData(username, password),
-                    LoginButton.withTheFollowingField(),
-                    PageHome.withTheFollowingField()
+                    LoginButton.withTheFollowingField()
             );
             loggedIn = true;
         }

@@ -144,4 +144,27 @@ public class LoginPage {
             .located(By.xpath("//*[@id=\"dashboard\"]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/a/i"));
     public static final Target LABEL_INFORMATION_VALIDATE= Target.the("Validate Information")
             .located(By.xpath("//div[normalize-space()='Borrower']"));
+    public static final Target LABEL_ACTIVATE_LOAN= Target.the("Home Loan")
+            .located(By.xpath("//ul[@id='filterLoanStatus']//a[text()[normalize-space() = 'Active']]\n"));
+    public static final Target BTN_NEW= Target.the("New Loan")
+            .located(By.xpath("//button[@class='btn btn-success dropdown-toggle btn-sm']"));
+    public static final Target BTN_NEW_LOAN= Target.the("New Loan Button")
+            .located(By.xpath("//ul[@class='dropdown-menu']//a[text()[normalize-space() = 'New Loan']]\n"));
+    public static final Target LABEL_NEW_LOAN_PAGE= Target.the("Page New Loan")
+            .located(By.xpath("//li[@id='tabLoanInfo']//a[text()[normalize-space() = 'Loan Information']]\n"));
+    public static final Target INPUT_LOAN_NUMBER= Target.the("Loan Number")
+            .located(By.id("loanfilenum"));
+    public static final Target BTN_LOAN_TYPE= Target.the("Loan Type")
+            .located(By.xpath("//button[@data-id='loanType']"));
+    public static final Target BTN_LOAN_PROGRAM= Target.the("Loan Program")
+            .located(By.xpath("//button[@data-id='loanprogram']"));
+    public static final Target BTN_TRANSACTION_TABLE= Target.the("Transaction Table")
+            .located(By.xpath("//button[@data-id='ddlbtransaction']"));
+    public static final Target BTN_LOAN_FUNDED_DATE= Target.the("Loan Funded Date")
+            .located(By.xpath("//input[@name='loanfundeddate']"));
+    public static final Target BTN_DATE= Target.the("Date")
+            .located(By.xpath("//div[@class='datepicker-days']//table//th[@class='datepicker-switch']"));
+    public static final Target INPUT_TERM_DAY= Target.the("Page New Loan")
+            .located(By.xpath("//li[@id='tabLoanInfo']//a[text()[normalize-space() = 'Term Day']]\n"));
+
 }

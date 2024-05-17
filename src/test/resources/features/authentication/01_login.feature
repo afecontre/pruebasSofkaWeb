@@ -8,7 +8,7 @@ Feature: Login
     Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user is on the application home page
+      Given the user is on the application home page "Login"
 
     @LGN-001
     Scenario: Successful login
