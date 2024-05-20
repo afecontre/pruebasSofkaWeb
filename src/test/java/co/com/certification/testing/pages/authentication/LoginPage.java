@@ -166,5 +166,8 @@ public class LoginPage {
             .located(By.xpath("//div[@class='datepicker-days']//table//th[@class='datepicker-switch']"));
     public static final Target INPUT_TERM_DAY= Target.the("Page New Loan")
             .located(By.xpath("//li[@id='tabLoanInfo']//a[text()[normalize-space() = 'Term Day']]\n"));
-
+    public static final Target BTN_SESSION= Target.the("Session")
+            .located(By.xpath("//a[@class='user-header']"));
+    public static final Target BTN_LOGOUT= Target.the("Logout")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
 }

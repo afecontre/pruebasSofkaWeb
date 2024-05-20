@@ -8,11 +8,13 @@ Feature: Dashboard
     Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Chiclayo0877**"
+
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Leganes002**" in "Dashboard"
 
      @DLA-001
       Scenario Outline: Check Statistics of a selected range with visualization by date
-        When seleccionar el view "<view>"
+        When valid dashboard home
+        And seleccionar el view "<view>"
         Then validar los graficos
         Examples:
           | view   |
@@ -72,3 +74,6 @@ Feature: Dashboard
           | type           |
           | Justin Alvarez |
 
+      @DLA-OUT
+      Scenario: Logout
+        Then the user clicks on logout

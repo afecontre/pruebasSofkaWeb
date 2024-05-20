@@ -7,11 +7,11 @@ Feature: Loan
 
   Rule: The username and password must be valid and associated with an existing account on the system
 
-    Background: Enter the Home Page
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Chiclayo0877**" in "Loan"
+    Background: Enter the Home Page Loan
+      Given the user has logged in with username "rmechan@landgorilla.com" and password "Leganes002**" in "Loan"
 
     @LOA-001
-    Scenario: Quick Search Pipeline Loans with Existing Values
+    Scenario: Make a new loan
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page

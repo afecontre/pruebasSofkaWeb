@@ -1,6 +1,7 @@
 package co.com.certification.testing.steps.authentication;
 
 import co.com.certification.testing.tasks.authentication.*;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.ensure.Ensure;
 
@@ -8,6 +9,7 @@ import static co.com.certification.testing.pages.authentication.LoginPage.LOGIN;
 import static co.com.certification.testing.steps.conf.Hooks.USER;
 
 public class CommonSteps {
+
     private static boolean loggedIn = false;
 
     @Given("the user is on the application home page {string}")
@@ -33,5 +35,12 @@ public class CommonSteps {
             );
             loggedIn = true;
         }
+    }
+
+    @And("the user clicks on logout")
+    public void theUserClicksOnLogout() {
+        USER.attemptsTo(
+                Logout.withTheFollowingField());
+        loggedIn = false;
     }
 }

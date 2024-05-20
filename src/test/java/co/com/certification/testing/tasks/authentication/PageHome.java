@@ -25,8 +25,11 @@ public class PageHome implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
+        actor.attemptsTo(
+                WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds());
         if (actor.asksFor(Visibility.of(HOME))) {
-            Pause.withDuration(3);
+            actor.attemptsTo(
+                    WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds());
         } else {
             actor.attemptsTo(Click.on(BTN_LOGIN));
         }

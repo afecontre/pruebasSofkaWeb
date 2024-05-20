@@ -1,4 +1,4 @@
-package co.com.certification.testing.tasks.dashboard;
+package co.com.certification.testing.tasks.authentication;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -8,23 +8,24 @@ import net.thucydides.core.annotations.Step;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isNotEnabled;
 
-public class FilterOrders implements Task {
+public class Logout implements Task {
 
-    public FilterOrders() {
-       //Nothing
-    }
-    public static FilterOrders withTheFollowingField() {
-        return instrumented(FilterOrders.class);
+
+    public Logout() {
+        //Nothing
     }
 
+    public static Logout withTheFollowingField() {
+        return instrumented(Logout.class);
+    }
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(BTN_FILTERS, isEnabled()).forNoMoreThan(5).seconds(),
-                Click.on(BTN_FILTERS)
+                Click.on(BTN_SESSION),
+                Click.on(BTN_LOGOUT)
         );
     }
 }

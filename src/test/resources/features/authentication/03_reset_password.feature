@@ -1,5 +1,5 @@
 #language: en
-@lg
+@lg_
 Feature: Reset Password
 As user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
@@ -8,7 +8,7 @@ To access the different products
   Rule: I forgot my account password and I'm trying to recover my password
 
     Background: Enter the Home Page
-      Given the user is on the application home page
+      Given the user is on the application home page "Login"
 
     @RPA-001
     Scenario Outline: Reset Password
@@ -23,8 +23,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                  |  new_password   |
-        | rmechan@landgorilla.com|  Chiclayo0877** |
+        | email                  |  new_password |
+        | rmechan@landgorilla.com|  Leganes002** |
 
 
     @RPA-002
@@ -99,8 +99,8 @@ To access the different products
       And the user enters the password again "<new_password>"
       Then valid that the button is disabled
       Examples:
-        | email                  |  new_password       |
-        | rmechan@landgorilla.com|  BuenosAires1919**  |
+        | email                  |  new_password |
+        | rmechan@landgorilla.com| Bilbao9091**  |
 
     @RPA-007
     Scenario Outline: Enter digits contain your user ID

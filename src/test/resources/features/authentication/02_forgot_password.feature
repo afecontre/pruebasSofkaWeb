@@ -1,5 +1,5 @@
 #language: en
-@lg
+@lg_
 Feature: Forgotten Password
 As a user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
@@ -8,7 +8,7 @@ To access the different products
   Rule: I forgot my account password and I'm trying to recover my password
 
     Background: Enter the Home Page
-      Given the user is on the application home page
+      Given the user is on the application home page "Login"
 
     @FPA-001
     Scenario Outline: Forgotten Password
