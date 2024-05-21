@@ -1,5 +1,5 @@
 #language: en
-@lg_loan
+@lg
 Feature: Loan
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -8,7 +8,8 @@ Feature: Loan
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page Loan
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Leganes002**" in "Loan"
+
+      Given the user has logged in with username "sub" in "loan-manager/index"
 
     @LOA-001
     Scenario: Make a new loan

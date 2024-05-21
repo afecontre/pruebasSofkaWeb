@@ -1,5 +1,6 @@
 package co.com.certification.testing.tasks.authentication;
 
+import co.com.certification.testing.util.ElementEnabled;
 import co.com.certification.testing.util.Pause;
 import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.screenplay.Actor;
@@ -25,11 +26,9 @@ public class PageHome implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds());
-        if (actor.asksFor(Visibility.of(HOME))) {
-            actor.attemptsTo(
-                    WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds());
+        Boolean elementVisible = actor.asksFor(ElementEnabled.forTarget(HOME));
+        if (elementVisible) {
+            actor.attemptsTo(WaitUntil.the(HOME, isEnabled()).forNoMoreThan(10).seconds());
         } else {
             actor.attemptsTo(Click.on(BTN_LOGIN));
         }

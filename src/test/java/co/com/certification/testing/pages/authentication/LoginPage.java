@@ -18,7 +18,7 @@ public class LoginPage {
             .located(By.xpath("//*[@id=\"btnLogin\"]"));
 
     public static final Target HOME= Target.the("Start")
-            .located(By.xpath("//div[@class='logo-element']"));
+            .located(By.xpath("//div[@class='col-lg-3']//div[@class='ibox ibox-primary']//div[@class='ibox-title']/h5[text()='Orders']\n"));
 
     public static final Target USER_PASS_INVALIDO= Target.the("Username and Password invalid")
             .located(By.xpath("//*[@id=\"loginAlert\"]/div/span"));
@@ -164,10 +164,48 @@ public class LoginPage {
             .located(By.xpath("//input[@name='loanfundeddate']"));
     public static final Target BTN_DATE= Target.the("Date")
             .located(By.xpath("//div[@class='datepicker-days']//table//th[@class='datepicker-switch']"));
-    public static final Target INPUT_TERM_DAY= Target.the("Page New Loan")
-            .located(By.xpath("//li[@id='tabLoanInfo']//a[text()[normalize-space() = 'Term Day']]\n"));
+    public static final Target INPUT_TERM_DAY= Target.the("Term Day")
+            .located(By.xpath("//input[@name='loanterm']"));
     public static final Target BTN_SESSION= Target.the("Session")
             .located(By.xpath("//a[@class='user-header']"));
     public static final Target BTN_LOGOUT= Target.the("Logout")
             .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_LOAN_PURPOSE= Target.the("Logout")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_BRANCH= Target.the("Select Branch")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_INVESTOR= Target.the("Select Investor")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_APPRAISED_VALUE= Target.the("Input Appraised Value")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_FUNDING_ACCOUNT= Target.the("Input Fundin Account")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_TITLE_COMPANY= Target.the("Input Company")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_TITLE_PERSON_NAME= Target.the("Input Person Name")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_TITLE_EMAIL= Target.the("Input Email")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_PHONE_NUMBER= Target.the("Input PhoneNumer")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_RETAINAGE_IMPROVED= Target.the("Input Retainage Improved")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_RETAINAGE_DEPOSIT= Target.the("Input Retainage Deposit")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_POINTS_PAID= Target.the("Input Point Paid")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_DISBURSEMENT_METHOD= Target.the("Input Disbursement Method")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_NOTE_DATE= Target.the("Note Date")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target BTN_LOAN_DUE_DATE= Target.the("Loan Due Date")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_CHANNEL_SOURCE= Target.the("Input Channel Source")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_CHANNEL_CONTACT_NAME= Target.the("Input Channel Contact Name")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target INPUT_CUSTOMER_NAME= Target.the("Input Customer Name")
+            .located(By.xpath("//li/a[text()='Log Out']\n"));
+    public static final Target LABEL_ALREADY_LOAN= Target.the("Number Loan Already")
+            .located(By.xpath("//div[@class='invalid-feedback']"));
 }

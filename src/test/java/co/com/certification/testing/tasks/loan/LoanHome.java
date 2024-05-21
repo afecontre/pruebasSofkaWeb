@@ -23,7 +23,7 @@ public class LoanHome implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(LABEL_ACTIVATE_LOAN, isEnabled()).forNoMoreThan(10).seconds()
+                WaitUntil.the(BTN_NEW_LOAN, isEnabled()).forNoMoreThan(10).seconds()
         );
     }
 }

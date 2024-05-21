@@ -9,7 +9,7 @@ import org.junit.runner.RunWith;
 plugin={"pretty"},
 features = "src/test/resources/features",
 glue="co.com.certification.testing",
-tags="@lg_loan",
+tags="@DSH-001",
 snippets = CucumberOptions.SnippetType.CAMELCASE)
 public class TestRunner {
 }

@@ -9,7 +9,7 @@ Feature: Dashboard
 
     Background: Enter the Home Page
 
-      Given the user has logged in with username "rmechan@landgorilla.com" and password "Leganes002**" in "Dashboard"
+      Given the user has logged in with username "sub" in "dashboard/home"
 
      @DLA-001
       Scenario Outline: Check Statistics of a selected range with visualization by date

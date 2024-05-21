@@ -27,18 +27,7 @@ public class NavigateToURL implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-        String url_new=null;
-
-        switch(url) {
-            case "Loan":
-                url_new="https://lg01.uat-landgorilla.com/clientV2/loan-manager/index";
-                break;
-            case "Dashboard":
-                url_new="https://lg01.uat-landgorilla.com/clientV2/dashboard/home";
-                break;
-            default:
-                System.out.println("Opción no reconocida");
-        }
+        String url_new="https://lg01.uat-landgorilla.com/clientV2/" + url;
         actor.attemptsTo(
                 Open.url(url_new));
     }

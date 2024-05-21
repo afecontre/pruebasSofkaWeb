@@ -31,10 +31,35 @@ public class LoadUsersCSV implements Task {
         try (BufferedReader reader = new BufferedReader(new FileReader(rutaArchivo));
              CSVParser csvParser = CSVFormat.DEFAULT.withFirstRecordAsHeader().parse(reader)) {
             for (CSVRecord record : csvParser) {
+                String type = record.get("type");
                 String username = record.get("username");
                 String password = record.get("password");
-                actor.remember("username", username);
-                actor.remember("password", password);
+
+                switch (type.toLowerCase()) {
+                    case "admin":
+                        actor.remember("admin_username", username);
+                        actor.remember("admin_password", password);
+                        System.out.println("type: admin, username: " + username + ", password: " + password);
+                        break;
+                    case "sub":
+                        actor.remember("sub_username", username);
+                        actor.remember("sub_password", password);
+                        System.out.println("type: sub, username: " + username + ", password: " + password);
+                        break;
+                    case "reset":
+                        actor.remember("reset_username", username);
+                        actor.remember("reset_password", password);
+                        System.out.println("type: reset, username: " + username + ", password: " + password);
+                        break;
+                    case "blocked":
+                        actor.remember("blocked_username", username);
+                        actor.remember("blocked_password", password);
+                        System.out.println("type: blocked, username: " + username + ", password: " + password);
+                        break;
+                    default:
+                        System.out.println("Unrecognized type: " + type);
+                        break;
+                }
             }
         } catch (IOException e) {
             e.printStackTrace();

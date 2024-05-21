@@ -14,12 +14,16 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnab
 
 public class EnterInformationCsv implements Task {
 
-    private static final String RUTA_ARCHIVO_CSV = "C:\\Users\\Owner\\Documents\\auto_landgorilla\\qa-automation-suite\\src\\test\\resources\\data\\testdata.csv";
-    public EnterInformationCsv() {
+    private static final String RUTA_ARCHIVO_CSV = "C:\\Users\\Owner\\Documents\\auto_landgorilla\\qa-automation-suite\\src\\test\\resources\\data\\users.csv";
+
+    private final String user;
+
+    public EnterInformationCsv(String user) {
+        this.user = user;
     }
 
-    public static EnterInformationCsv withCustomerData() {
-        return instrumented(EnterInformationCsv.class);
+    public static EnterInformationCsv withCustomerData(String user) {
+        return instrumented(EnterInformationCsv.class,user);
     }
 
     @Override
@@ -29,8 +33,34 @@ public class EnterInformationCsv implements Task {
                 LoadUsersCSV.withTheFollowingField(RUTA_ARCHIVO_CSV)
         );
 
-        String username = actor.recall("username");
-        String password =  actor.recall("password");
+//        String username = actor.recall("username");
+//        String password =  actor.recall("password");
+
+        String username = null;
+        String password = null;
+
+        switch (user.toLowerCase()) {
+            case "admin":
+                username = actor.recall("admin_username");
+                password = actor.recall("admin_password");
+                break;
+            case "sub":
+                username = actor.recall("sub_username");
+                password = actor.recall("sub_password");
+                break;
+            case "reset":
+                username = actor.recall("reset_username");
+                password = actor.recall("reset_password");
+                break;
+            case "blocked":
+                username = actor.recall("blocked_username");
+                password = actor.recall("blocked_password");
+                break;
+            default:
+                throw new IllegalArgumentException("Unrecognized user type: " + user);
+        }
+
+        if (username != null && password != null) {
 
         actor.attemptsTo(
                 LoadUsersCSV.withTheFollowingField(RUTA_ARCHIVO_CSV),
@@ -41,6 +71,7 @@ public class EnterInformationCsv implements Task {
                 WaitUntil.the(INPUT_PASSWORD, isEnabled()).forNoMoreThan(5).seconds(),
                 Click.on(INPUT_PASSWORD),
                 SendKeys.of(password).into(INPUT_PASSWORD)
-        );
+            );
+        }
     }
 }

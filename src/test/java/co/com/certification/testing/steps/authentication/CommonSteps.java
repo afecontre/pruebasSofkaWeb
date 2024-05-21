@@ -24,13 +24,26 @@ public class CommonSteps {
                 NavigateToResetPassword.web());
     }
 
-    @Given("the user has logged in with username {string} and password {string} in {string}")
-    public void theUserHasLoggedInWithUsernameAndPasswordIn(String username, String password, String url) {
+//    @Given("the user has logged in with username {string} and password {string} in {string}")
+//    public void theUserHasLoggedInWithUsernameAndPasswordIn(String username, String password, String url) {
+//        if (!loggedIn) {
+//            USER.attemptsTo(
+//                    NavigateToURL.withCustomerData(url),
+//                    Ensure.that(LOGIN).isEnabled(),
+//                    EnterInformation.withCustomerData(username, password),
+//                    LoginButton.withTheFollowingField()
+//            );
+//            loggedIn = true;
+//        }
+//    }
+
+    @Given("the user has logged in with username {string} in {string}")
+    public void theUserHasLoggedInWithUsernameIn(String user, String url) {
         if (!loggedIn) {
             USER.attemptsTo(
                     NavigateToURL.withCustomerData(url),
                     Ensure.that(LOGIN).isEnabled(),
-                    EnterInformation.withCustomerData(username, password),
+                    EnterInformationCsv.withCustomerData(user),
                     LoginButton.withTheFollowingField()
             );
             loggedIn = true;
@@ -43,4 +56,12 @@ public class CommonSteps {
                 Logout.withTheFollowingField());
         loggedIn = false;
     }
+
+    @And("ingresa al dashboard {string}")
+    public void ingresaAlDashboard(String url) {
+        USER.attemptsTo(
+                NavigateToURL.withCustomerData(url));
+    }
+
+
 }
