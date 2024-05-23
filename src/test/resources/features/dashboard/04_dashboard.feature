@@ -298,3 +298,7 @@ Feature: Dashboard
       Examples:
         | type                   |
         | AutoTran 1573146458085 |
+
+    @DLA-OUT
+    Scenario: Logout
+      Then the user clicks on logout

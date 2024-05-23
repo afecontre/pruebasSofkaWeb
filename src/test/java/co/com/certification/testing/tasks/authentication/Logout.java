@@ -5,6 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
+import net.thucydides.core.webdriver.CloseBrowser;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
