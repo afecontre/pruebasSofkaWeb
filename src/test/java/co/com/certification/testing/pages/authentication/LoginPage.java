@@ -207,5 +207,41 @@ public class LoginPage {
     public static final Target INPUT_CUSTOMER_NAME= Target.the("Input Customer Name")
             .located(By.xpath("//li/a[text()='Log Out']\n"));
     public static final Target LABEL_ALREADY_LOAN= Target.the("Number Loan Already")
-            .located(By.xpath("//div[@class='invalid-feedback']"));
+            .located(By.xpath("//div[contains(text(), 'This Loan File Number already exists.')]\n"));
+    public static final Target BTN_PROPERTY_INFORMATION= Target.the("Section Property Information")
+            .located(By.xpath("//a[@href='#tabloansetup-property']"));
+    public static final Target INPUT_SUBJECT= Target.the("Input Subject")
+            .located(By.id("property_address"));
+    public static final Target INPUT_ZIP= Target.the("Input ZIP ")
+            .located(By.id("zipcode"));
+    public static final Target INPUT_CITY= Target.the("Input City ")
+            .located(By.id("city"));
+    public static final Target BTN_BORROWER_INFORMATION= Target.the("Section Borrower Information")
+            .located(By.xpath("//a[@href='#tabloansetup-borrower']"));
+    public static final Target INPUT_BORROWER_FIRST_NAME= Target.the("Borrower First Name")
+            .located(By.id("borrower_name"));
+    public static final Target INPUT_BORROWER_LAST_NAME= Target.the("Borrower Last Name")
+            .located(By.id("borrower_lastname"));
+    public static final Target BTN_MAP_BUDGET= Target.the("Section Map Budget")
+            .located(By.xpath("//a[@class='linkmapbudget']"));
+    public static final Target INPUT_AMOUNT_LOAN= Target.the("Amount Loan")
+            .located(By.xpath("//*[@id=\"MapBudgetSummary\"]/tbody/tr[1]/td[2]/div/div/input"));
+    public static final Target INPUT_ADVANCED= Target.the("Input Advanced Loan")
+            .located(By.xpath("//*[@id=\"MapBudgetSummary\"]/tbody/tr[1]/td[3]/div/div/input"));
+    public static final Target INPUT_BORROWER_CONTRIBUTION= Target.the("Borrower Contribution")
+            .located(By.xpath("//*[@id=\"MapBudgetSummary\"]/tbody/tr[2]/td[2]/div/div/input"));
+    public static final Target INPUT_BORROWER_EQUITY= Target.the("Borrower Equity")
+            .located(By.xpath("//*[@id=\"MapBudgetSummary\"]/tbody/tr[3]/td[2]/div/div/input"));
+    public static final Target INPUT_CONTINGENCY= Target.the("Borrower Equity")
+            .located(By.id("input-90"));
+    public static final Target INPUT_INTEREST_RESERVE= Target.the("Borrower Equity")
+            .located(By.id("input-91"));
+    public static final Target BTN_LOAN_STATUS= Target.the("Loan Status")
+            .located(By.xpath("//button[@data-statusloan='Setup']"));
+    public static final Target BTN_ACTIVE_STATUS= Target.the("Activate Status")
+            .located(By.xpath("//a[@data-status='Active']"));
+    public static final Target BTN_CHANGE_ACTIVATE= Target.the("Change Activate")
+            .located(By.xpath("//button[@class='btn btn-warning ladda-button']"));
+    public static final Target BTN_CLOSE_ACTIVATE= Target.the("Close Activate")
+            .located(By.xpath("//button[@class='btn btn-default']"));
 }

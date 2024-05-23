@@ -8,7 +8,6 @@ Feature: Loan
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page Loan
-
       Given the user has logged in with username "sub" in "loan-manager/index"
 
     @LOA-001

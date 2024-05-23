@@ -3,6 +3,8 @@ package co.com.certification.testing.util;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.targets.Target;
+import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.WebElement;
 
 public class ElementEnabled implements Question<Boolean> {
 
@@ -18,6 +20,11 @@ public class ElementEnabled implements Question<Boolean> {
 
     @Override
     public Boolean answeredBy(Actor actor) {
-        return target.resolveFor(actor).isEnabled();
+        try {
+            WebElement element = target.resolveFor(actor);
+            return element.isDisplayed();
+        } catch (NoSuchElementException e) {
+            return false;
+        }
     }
 }

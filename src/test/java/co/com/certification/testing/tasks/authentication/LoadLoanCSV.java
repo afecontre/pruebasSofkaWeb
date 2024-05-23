@@ -33,12 +33,16 @@ public class LoadLoanCSV implements Task {
                 String transaction_table = record.get("transaction_table");
                 String loan_funded_date = record.get("loan_funded_date");
                 String term_day = record.get("term_day");
+                String subject = record.get("subject");
+                String zip = record.get("zip");
                 actor.remember("loan_file_number", loan_file_number);
                 actor.remember("loan_type", loan_type);
                 actor.remember("loanProgram", loanProgram);
                 actor.remember("transaction_table", transaction_table);
                 actor.remember("loan_funded_date", loan_funded_date);
                 actor.remember("term_day", term_day);
+                actor.remember("subject", subject);
+                actor.remember("zip", zip);
             }
         } catch (IOException e) {
             e.printStackTrace();
