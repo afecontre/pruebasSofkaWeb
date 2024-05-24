@@ -244,10 +244,14 @@ public class LoginPage {
             .located(By.xpath("//button[@class='btn btn-warning ladda-button']"));
     public static final Target BTN_CLOSE_ACTIVATE= Target.the("Close Activate")
             .located(By.xpath("//button[@class='btn btn-default']"));
+    public static final Target BTN_SECTION= Target.the("Section")
+            .located(By.xpath("//i[@class='fa fa-bars']"));
     public static final Target BTN_SECTION_LOAN= Target.the("Section Loan")
-            .located(By.xpath("//nav[@class='navbar menu-horizontal-top-zindex navbar-horizontal']//a[@href='/clientV2/loan-manager/index']"));
+            .located(By.xpath("//a[contains(text(),'Loans')]"));
     public static final Target LBL_LOAN_NUMBER= Target.the("Loan Number")
             .located(By.xpath("//tr[@data-index='0']//td[@class='column-loan-file']"));
+    public static final Target LABEL_FOUNDING_SOURCE= Target.the("Loan Number")
+            .located(By.xpath("//th[@class='funding-source']"));
 
 
 }

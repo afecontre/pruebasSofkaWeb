@@ -1,4 +1,4 @@
-package co.com.certification.testing.tasks.authentication;
+package co.com.certification.testing.tasks.loan;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
@@ -12,14 +12,14 @@ import java.io.IOException;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
-public class LoadLoanCSV implements Task {
+public class LoadLoanCSV_2 implements Task {
     private final String rutaArchivo;
-    public LoadLoanCSV(String rutaArchivo) {
+    public LoadLoanCSV_2(String rutaArchivo) {
         this.rutaArchivo = rutaArchivo;
     }
 
-    public static LoadLoanCSV withTheFollowingField(String rutaArchivo) {
-        return instrumented(LoadLoanCSV.class,rutaArchivo);
+    public static LoadLoanCSV_2 withTheFollowingField(String rutaArchivo) {
+        return instrumented(LoadLoanCSV_2.class,rutaArchivo);
     }
 
     @Override

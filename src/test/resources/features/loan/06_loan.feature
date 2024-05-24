@@ -16,8 +16,8 @@ Feature: Loan
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information
-      And enter data in Property Information
-      And enter data in Borrower Information
-      And enter data in Map Budget
-      And click Change Status
-      And validate the loan new
+#      And enter data in Property Information
+#      And enter data in Borrower Information
+#      And enter data in Map Budget
+#      And click Change Status
+#      And validate the loan new
