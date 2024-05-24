@@ -4,6 +4,7 @@ import co.com.certification.testing.tasks.dashboard.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import net.thucydides.core.annotations.Screenshots;
 import org.testng.annotations.Test;
 
 import static co.com.certification.testing.steps.conf.Hooks.USER;
@@ -19,16 +20,18 @@ public class DashboardSteps {
         USER.attemptsTo(ItemActivate.withTheFollowingFields());
     }
 
+    @Screenshots
     @And("click en el filtro por {string}")
     public void clickEnElFiltroPor(String period) {
         USER.attemptsTo(FilterForDay.withTheFollowingField(period));
     }
+    @Screenshots
     @Then("validar los graficos")
     public void validarLosGraficos() {
         USER.attemptsTo(GraphicValidate.withTheFollowingField());
     }
 
-
+    @Screenshots
     @And("click filtro Orders")
     public void clickFiltroOrders() {
         USER.attemptsTo(FilterOrders.withTheFollowingField());
@@ -79,8 +82,4 @@ public class DashboardSteps {
         USER.attemptsTo(SelectLastActivity.withTheFollowingField(time));
     }
 
-    @When("valid dashboard home")
-    public void validDashboardHome() {
-        USER.attemptsTo(DashboardHome.withTheFollowingFields());
-    }
 }

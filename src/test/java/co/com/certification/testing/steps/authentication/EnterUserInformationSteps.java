@@ -5,6 +5,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
+import net.thucydides.core.annotations.Screenshots;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
@@ -25,6 +26,7 @@ public class EnterUserInformationSteps {
     public void clickOnTheLoginButton() {
         USER.attemptsTo(LoginButton.withTheFollowingField());
     }
+    @Screenshots
     @Then("valid home page")
     public void validHomePage() {
         USER.attemptsTo(PageHome.withTheFollowingField());
@@ -45,6 +47,7 @@ public class EnterUserInformationSteps {
 
     @When("the user enter a name your user {string}")
     public void theUserEnterANameYourUser(String user) {
-        USER.attemptsTo(EnterInformationCsv.withCustomerData(user));
+        //USER.attemptsTo(EnterInformationCsv.withCustomerData(user));
+        USER.attemptsTo(UserLoginTest.withCustomerData(user));
     }
 }

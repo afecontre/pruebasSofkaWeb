@@ -8,7 +8,7 @@ Feature: Dashboard
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page
-      Given the user has logged in with username "sub" in "dashboard/home"
+      Given the user has logged in with username "subuser" in "dashboard/home"
 
     @DSH-001
     Scenario Outline: Display statistics of the "Loan Type" Filter

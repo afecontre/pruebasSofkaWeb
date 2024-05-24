@@ -8,11 +8,16 @@ Feature: Loan
   Rule: The username and password must be valid and associated with an existing account on the system
 
     Background: Enter the Home Page Loan
-      Given the user has logged in with username "sub" in "loan-manager/index"
+      Given the user has logged in with username "subuser" in "loan-manager/index"
 
     @LOA-001
     Scenario: Make a new loan
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
-      And enter information the new Loan
+      And enter data the new Loan Information
+      And enter data in Property Information
+      And enter data in Borrower Information
+      And enter data in Map Budget
+      And click Change Status
+      And validate the loan new

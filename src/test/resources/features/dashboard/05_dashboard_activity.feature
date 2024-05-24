@@ -9,11 +9,11 @@ Feature: Dashboard
 
     Background: Enter the Home Page
 
-      Given the user has logged in with username "sub" in "dashboard/home"
+      Given the user has logged in with username "subuser" in "dashboard/home"
 
      @DLA-001
       Scenario Outline: Check Statistics of a selected range with visualization by date
-        When valid dashboard home
+        When valid home page
         And seleccionar el view "<view>"
         Then validar los graficos
         Examples:

@@ -1,0 +1,20 @@
+{
+  "users": {
+    "admin": {
+      "username": "rmechan@landgorilla.com",
+      "password": "Leganes002**"
+    },
+    "subuser": {
+      "username": "rmechan+auto@landgorilla.com",
+      "password": "Kosovo2020**"
+    },
+    "admin2": {
+      "username": "rmechan@landgorilla.com",
+      "password": "Kosovo2020**"
+    },
+    "subuser3": {
+      "username": "rmechan@landgorilla.com",
+      "password": "Kosovo2020**"
+    }
+  }
+}

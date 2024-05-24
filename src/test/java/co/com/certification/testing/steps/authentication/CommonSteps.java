@@ -4,6 +4,7 @@ import co.com.certification.testing.tasks.authentication.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.ensure.Ensure;
+import net.thucydides.core.annotations.Screenshots;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.LOGIN;
 import static co.com.certification.testing.steps.conf.Hooks.USER;
@@ -36,20 +37,22 @@ public class CommonSteps {
 //            loggedIn = true;
 //        }
 //    }
-
+    @Screenshots
     @Given("the user has logged in with username {string} in {string}")
     public void theUserHasLoggedInWithUsernameIn(String user, String url) {
         if (!loggedIn) {
             USER.attemptsTo(
                     NavigateToURL.withCustomerData(url),
                     Ensure.that(LOGIN).isEnabled(),
-                    EnterInformationCsv.withCustomerData(user),
+                    //EnterInformationCsv.withCustomerData(user),
+                    UserLoginTest.withCustomerData(user),
                     LoginButton.withTheFollowingField()
             );
             loggedIn = true;
         }
     }
 
+    @Screenshots
     @And("the user clicks on logout")
     public void theUserClicksOnLogout() {
         USER.attemptsTo(
