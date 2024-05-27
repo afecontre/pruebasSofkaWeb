@@ -6,7 +6,7 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.*;
+import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
@@ -29,7 +29,5 @@ public class ChangeStatus implements Task {
                 Click.on(BTN_ACTIVE_STATUS),
                 Click.on(BTN_CHANGE_ACTIVATE)
         );
-
-
     }
 }

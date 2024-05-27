@@ -15,5 +15,4 @@ public class SharedComponents {
     public void setDriver(WebDriver driver){
         this.driver=driver;
     }
-
 }

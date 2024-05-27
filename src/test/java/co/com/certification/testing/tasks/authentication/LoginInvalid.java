@@ -1,15 +1,11 @@
 package co.com.certification.testing.tasks.authentication;
 
-import io.cucumber.java.en.And;
-import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.USER_PASS_INVALIDO;
-import static co.com.certification.testing.steps.conf.Hooks.USER;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 

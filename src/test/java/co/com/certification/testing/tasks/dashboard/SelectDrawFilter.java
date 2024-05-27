@@ -3,11 +3,9 @@ package co.com.certification.testing.tasks.dashboard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.findby.By;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.*;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectDrawFilter implements Task {

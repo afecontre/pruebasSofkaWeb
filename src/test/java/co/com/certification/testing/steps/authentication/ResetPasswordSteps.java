@@ -3,8 +3,6 @@ package co.com.certification.testing.steps.authentication;
 import co.com.certification.testing.tasks.authentication.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
-import io.cucumber.java.en.When;
-import net.serenitybdd.screenplay.ensure.Ensure;
 
 import static co.com.certification.testing.steps.conf.Hooks.USER;
 

@@ -1,5 +1,6 @@
 package co.com.certification.testing.tasks.authentication;
 
+import co.com.certification.testing.util.LoadUsersCSV;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;

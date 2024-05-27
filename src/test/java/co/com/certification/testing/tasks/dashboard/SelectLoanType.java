@@ -7,14 +7,13 @@ import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.findby.By;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_SAVE_FILTER;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectLoanType implements Task {
 
     private final String type_loan;
     public SelectLoanType(String type_loan) {
-       //Nothing
         this.type_loan = type_loan;
     }
     public static SelectLoanType withTheFollowingField(String type_loan) {

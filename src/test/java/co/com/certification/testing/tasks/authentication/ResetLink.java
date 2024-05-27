@@ -3,16 +3,10 @@ package co.com.certification.testing.tasks.authentication;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.actions.SendKeys;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import org.junit.Assert;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.INPUT_PASSWORD;
-import static co.com.certification.testing.pages.authentication.LoginPage.INPUT_USERNAME;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class ResetLink implements Task {
     public ResetLink() {

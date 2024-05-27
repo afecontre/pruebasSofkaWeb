@@ -13,6 +13,7 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class EnterInformation implements Task {
+
     private final String username;
     private final String password;
     public EnterInformation(String username,String password) {

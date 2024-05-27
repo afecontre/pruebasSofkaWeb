@@ -5,8 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.LABEL_ACTIVATE_LOAN;
-import static co.com.certification.testing.pages.authentication.LoginPage.LABEL_NEW_LOAN_PAGE;
+import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class NewLoanPage implements Task {

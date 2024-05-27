@@ -24,19 +24,6 @@ public class CommonSteps {
         USER.attemptsTo(
                 NavigateToResetPassword.web());
     }
-
-//    @Given("the user has logged in with username {string} and password {string} in {string}")
-//    public void theUserHasLoggedInWithUsernameAndPasswordIn(String username, String password, String url) {
-//        if (!loggedIn) {
-//            USER.attemptsTo(
-//                    NavigateToURL.withCustomerData(url),
-//                    Ensure.that(LOGIN).isEnabled(),
-//                    EnterInformation.withCustomerData(username, password),
-//                    LoginButton.withTheFollowingField()
-//            );
-//            loggedIn = true;
-//        }
-//    }
     @Screenshots
     @Given("the user has logged in with username {string} in {string}")
     public void theUserHasLoggedInWithUsernameIn(String user, String url) {

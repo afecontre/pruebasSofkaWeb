@@ -5,8 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.LABEL_GRAPHIC_VALIDATE;
-import static co.com.certification.testing.pages.authentication.LoginPage.LABEL_INFORMATION_VALIDATE;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 

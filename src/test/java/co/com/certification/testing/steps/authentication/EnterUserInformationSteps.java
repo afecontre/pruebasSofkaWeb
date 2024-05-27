@@ -6,18 +6,10 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 import net.thucydides.core.annotations.Screenshots;
-import org.testng.annotations.Test;
-
-import java.io.IOException;
 
 import static co.com.certification.testing.steps.conf.Hooks.USER;
 
 public class EnterUserInformationSteps {
-//    @When("the user enter a name your user and a password")
-//    public void theUserEnterANameYourUserAndAPassword() throws IOException {
-//        USER.attemptsTo(EnterInformationCsv.withCustomerData());
-//    }
-
     @When("the user enter a name your user {string} and a password {string}")
     public void theUserEnterANameYourUserAndAPassword(String username, String password) {
         USER.attemptsTo(EnterInformation.withCustomerData(username,password));
@@ -30,7 +22,6 @@ public class EnterUserInformationSteps {
     @Then("valid home page")
     public void validHomePage() {
         USER.attemptsTo(PageHome.withTheFollowingField());
-
     }
     @Then("valid that the login is invalid")
     public void validThatTheLoginIsInvalid() {
@@ -44,10 +35,8 @@ public class EnterUserInformationSteps {
     public void validThatTheLoginIsInvalidDueToEmptyPassword() {
         USER.attemptsTo(PasswordEmpty.withTheFollowingField());
     }
-
     @When("the user enter a name your user {string}")
     public void theUserEnterANameYourUser(String user) {
-        //USER.attemptsTo(EnterInformationCsv.withCustomerData(user));
         USER.attemptsTo(UserLoginTest.withCustomerData(user));
     }
 }

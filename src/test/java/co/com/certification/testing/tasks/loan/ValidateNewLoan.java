@@ -7,7 +7,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.*;
+import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static org.hamcrest.Matchers.containsString;

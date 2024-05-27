@@ -5,11 +5,6 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-import net.serenitybdd.screenplay.waits.WaitUntil;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
-import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
-import org.junit.Assert;
-
 import static co.com.certification.testing.steps.conf.Hooks.USER;
 
 public class ForgotPasswordSteps {
@@ -37,7 +32,6 @@ public class ForgotPasswordSteps {
     @Then("valid email address")
     public void validEmailAddress() {
         USER.attemptsTo(EmailInvalid.withTheFollowingField());
-        //USER.attemptsTo(EmailAndPasswordInvalid.withTheFollowingField());
     }
 
     @Then("the user should receive a password reset link")

@@ -5,7 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.*;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class FilterBy implements Task {

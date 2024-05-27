@@ -5,8 +5,7 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_CHANGE_ORDERS_FILTER;
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_LOAN_FILTER;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectChangeOrdersFilter implements Task {

@@ -1,18 +1,16 @@
 package co.com.certification.testing.tasks.authentication;
 
+import co.com.certification.testing.models.InformationUrl;
 import net.serenitybdd.screenplay.Actor;
-import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Open;
-import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.LOGIN;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 
 public class NavigateToURL implements Task {
+
 
     private final String url;
 
@@ -27,8 +25,7 @@ public class NavigateToURL implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-        String url_new="https://lg01.uat-landgorilla.com/clientV2/" + url;
         actor.attemptsTo(
-                Open.url(url_new));
+                Open.url(InformationUrl.getUatUrlDemoUrl() + url));
     }
 }

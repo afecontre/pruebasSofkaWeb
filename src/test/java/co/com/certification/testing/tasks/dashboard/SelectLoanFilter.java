@@ -3,12 +3,9 @@ package co.com.certification.testing.tasks.dashboard;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.findby.By;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_LOAN_FILTER;
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_SAVE_FILTER;
+import static co.com.certification.testing.pages.dashboard.DashboardPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class SelectLoanFilter implements Task {
