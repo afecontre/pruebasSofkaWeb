@@ -11,7 +11,6 @@ import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class NavigateToURL implements Task {
 
-
     private final String url;
 
     public NavigateToURL(String url) {

@@ -47,29 +47,4 @@ public class LoanSteps{
             USER.attemptsTo(EnterInformationLoan.withRecords(records, 0));
         }
     }
-//    @Screenshots
-//    @And("enter data in Property Information")
-//    public void enterDataInPropertyInformation() {
-//        USER.attemptsTo(EnterInformationProperty.withRecords(records));
-//    }
-//    @Screenshots
-//    @And("enter data in Borrower Information")
-//    public void enterDataInBorrowerInformation() {
-//        USER.attemptsTo(EnterInformationBorrower.withCustomerData());
-//    }
-//    @Screenshots
-//    @And("enter data in Map Budget")
-//    public void enterDataInMapBudget() {
-//        USER.attemptsTo(EnterInformationMapBudget.withCustomerData());
-//    }
-//    @Screenshots
-//    @And("click Change Status")
-//    public void clickChangeStatus() {
-//        USER.attemptsTo(ChangeStatus.withCustomerData());
-//    }
-//    @Screenshots
-//    @And("validate the loan new")
-//    public void validateTheLoanNew() {
-//        USER.attemptsTo(ValidateNewLoan.withCustomerData());
-//    }
 }

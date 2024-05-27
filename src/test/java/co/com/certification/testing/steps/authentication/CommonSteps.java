@@ -31,7 +31,6 @@ public class CommonSteps {
             USER.attemptsTo(
                     NavigateToURL.withCustomerData(url),
                     Ensure.that(LOGIN).isEnabled(),
-                    //EnterInformationCsv.withCustomerData(user),
                     UserLoginTest.withCustomerData(user),
                     LoginButton.withTheFollowingField()
             );

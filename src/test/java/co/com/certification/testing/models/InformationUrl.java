@@ -19,4 +19,7 @@ public class InformationUrl {
     public static String getUatUrlDemoUrl() {
         return EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("pages.url_uat");
     }
+    public static String getUatUrlLoanDemoUrl() {
+        return EnvironmentSpecificConfiguration.from(environmentVariables).getProperty("pages.url_loan");
+    }
 }
