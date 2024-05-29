@@ -3,6 +3,11 @@
 git stash push -m "Saving local changes"
 # Checkout to the gh-pages branch
 git checkout gh-pages
+<<<<<<< Updated upstream
+=======
+# Clear existing files
+git clean -fdx
+>>>>>>> Stashed changes
 # Copy new report files from the build directory cp -R target/site/serenity/* .
 # Add all files to git
 git add .
