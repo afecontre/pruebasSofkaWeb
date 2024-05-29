@@ -3,11 +3,9 @@ package co.com.certification.testing.tasks.authentication;
 
 import java.io.IOException;
 import java.security.GeneralSecurityException;
-
 import co.com.certification.testing.util.GmailApiUtil;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 

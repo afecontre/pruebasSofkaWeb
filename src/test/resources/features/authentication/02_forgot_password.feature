@@ -1,5 +1,5 @@
 #language: en
-@lg_
+@lg
 Feature: Forgotten Password
 As a user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
