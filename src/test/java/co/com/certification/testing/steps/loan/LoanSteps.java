@@ -15,11 +15,12 @@ import static co.com.certification.testing.steps.conf.Hooks.USER;
 
 public class LoanSteps{
 
-    private static final String RUTA_ARCHIVO_CSV = "C:\\Users\\Owner\\Documents\\auto_landgorilla\\qa-automation-suite\\src\\test\\resources\\data\\loan.csv";
+    private static final String RELATIVE_CSV_PATH = "src/test/resources/data/loan.csv";
+
     private List<CSVRecord> records;
 
     public LoanSteps() {
-        records = CSVLoader.getRecords(RUTA_ARCHIVO_CSV);
+        records = CSVLoader.getRecords(RELATIVE_CSV_PATH);
     }
 
     @When("the user navigates to {string}")

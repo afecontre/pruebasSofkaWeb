@@ -8,7 +8,9 @@ import net.serenitybdd.screenplay.actions.SendKeys;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import java.io.File;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.io.IOException;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.INPUT_PASSWORD;
@@ -33,9 +35,15 @@ public class UserLoginTest implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         try {
-            // Read the users.json file
+            // Construct the relative path to the users.json file
+            Path path = Paths.get("src", "test", "resources", "json", "users.json");
+
+            // Read the file content as a byte array
+            byte[] jsonData = Files.readAllBytes(path);
+
+            // Deserialize the JSON content into the Users class
             ObjectMapper objectMapper = new ObjectMapper();
-            Users users = objectMapper.readValue(new File("C:\\Users\\Owner\\Documents\\auto_landgorilla\\qa-automation-suite\\src\\test\\resources\\json\\users.json"), Users.class);
+            Users users = objectMapper.readValue(jsonData, Users.class);
 
             // Get user credentials
             Users.User userData = users.users.get(user);
