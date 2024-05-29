@@ -24,7 +24,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                  |  new_password  |
-        | rmechan@landgorilla.com|  Alicante002** |
+        | rmechan@landgorilla.com|  Ceara002**    |
 
     @RPA-002
     Scenario Outline: Enter the same digit without Combination of letters and numbers
@@ -98,8 +98,8 @@ To access the different products
       And the user enters the password again "<new_password>"
       Then valid that the button is disabled
       Examples:
-        | email                  |  new_password |
-        | rmechan@landgorilla.com| Bilbao9091**  |
+        | email                  |  new_password    |
+        | rmechan@landgorilla.com|  Flamengo002**   |
 
     @RPA-007
     Scenario Outline: Enter digits contain your user ID

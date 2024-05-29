@@ -12,7 +12,7 @@ Feature: Login
 
     @LGN-001
     Scenario: Successful login
-      When the user enter a name your user "admin"
+      When the user enter a name your user "subuser"
       And click on the Login button
       Then valid home page
       And the user clicks on logout
