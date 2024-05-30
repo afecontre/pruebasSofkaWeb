@@ -106,6 +106,20 @@ public class LoanPage {
             .located(By.xpath("//tr[@data-index='0']//td[@class='column-loan-file']"));
     public static final Target LABEL_FOUNDING_SOURCE= Target.the("Loan Number")
             .located(By.xpath("//th[@class='funding-source']"));
+    public static final Target CHK_LOAN= Target.the("CheckBox Loan")
+            .located(By.xpath("//a[text()='LFN-000092']/ancestor::tr/td[1]//input[@type='checkbox']\n"));
+    public static final Target BTN_ACTION= Target.the("Action Button")
+            .located(By.xpath("//button[@class='btn btn-default dropdown-toggle btn-sm notarchived-action btn-outline-primary']"));
+    public static final Target BTN_DELETE_LOAN= Target.the("Delete Loan Button")
+            .located(By.xpath("//li[@class='action-active']/a[@data-role='deleteloan' and text()='Delete Loan']"));
+    public static final Target BTN_DELETE_CONFIRM= Target.the("Delete Loan Confirm Button")
+            .located(By.xpath("//div[@class='jconfirm-buttons']/button[@class='btn btn-warning' and text()='delete']\n"));
+    public static final Target LABEL_DELETE_LOAN= Target.the("Delete Loan Message")
+            .located(By.xpath("//div[@class='jconfirm-content-pane']//div[@class='jconfirm-content' and contains(text(),'The selected loans have been deleted')]\n"));
+    public static final Target BTN_SUCCESS_DELETE= Target.the("Success Loan")
+            .located(By.xpath("//div[@class='jconfirm-buttons']//button[text()='ok']\n"));
+    public static final Target BTN_BORROWER_TYPE= Target.the("Success Loan")
+            .located(By.xpath("//button[@class='btn dropdown-toggle bs-placeholder btn-default']//span[@class='filter-option pull-left'][normalize-space()='Select an option']"));
 
 
 }

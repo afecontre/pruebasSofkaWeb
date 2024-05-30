@@ -146,3 +146,70 @@ To access the different products
         | email                  |  new_password_1  | new_password_2  |
         | rmechan@landgorilla.com|  Karate*###21    | Karati*###21    |
 
+    @RPA-010
+    Scenario Outline: Reset Password - YY
+      When the user clicks on the Forget Password option
+      And enters their email "<email>"
+      And clicks the Identify button
+      Then sees a valid recovery message
+      Then the user should receive a password reset link
+      And the user is on the application reset password
+      And the user enter a new password "<new_password>"
+      And the user enters the password again "<new_password>"
+      And click the Set The Password button
+      Then valid reset message
+      Examples:
+        | email                               |  new_password  |
+        | rmechan+autorepassYY@landgorilla.com|  Peru002**     |
+
+    @RPA-011
+    Scenario Outline: Reset Password - YN
+      When the user clicks on the Forget Password option
+      And enters their email "<email>"
+      And clicks the Identify button
+      Then sees a valid recovery message
+      Then the user should receive a password reset link
+      And the user is on the application reset password
+      And the user enter a new password "<new_password>"
+      And the user enters the password again "<new_password>"
+      And click the Set The Password button
+      Then valid reset message
+      Examples:
+        | email                               |  new_password  |
+        | rmechan+autorepassYN@landgorilla.com|  Ceara002**    |
+
+    @RPA-012
+    Scenario Outline: Reset Password - NY
+      When the user clicks on the Forget Password option
+      And enters their email "<email>"
+      And clicks the Identify button
+      Then sees a valid recovery message
+      Then the user should receive a password reset link
+      And the user is on the application reset password
+      And the user enter a new password "<new_password>"
+      And the user enters the password again "<new_password>"
+      And click the Set The Password button
+      Then valid reset message
+      Examples:
+        | email                               |  new_password  |
+        | rmechan+autorepassNY@landgorilla.com|  Ceara002**    |
+
+    @RPA-013
+    Scenario Outline: Reset Password - NN
+      When the user clicks on the Forget Password option
+      And enters their email "<email>"
+      And clicks the Identify button
+      Then sees a valid recovery message
+      Then the user should receive a password reset link
+      And the user is on the application reset password
+      And the user enter a new password "<new_password>"
+      And the user enters the password again "<new_password>"
+      And click the Set The Password button
+      Then valid reset message
+      Examples:
+        | email                               |  new_password  |
+        | rmechan+autorepassNN@landgorilla.com|  Ceara002**    |
+
+
+
+

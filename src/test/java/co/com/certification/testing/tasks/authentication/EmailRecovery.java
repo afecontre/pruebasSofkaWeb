@@ -30,6 +30,8 @@ public class EmailRecovery implements Task {
                 WaitUntil.the(EMAIL_RECOVERY, isEnabled()).forNoMoreThan(5).seconds(),
                 Click.on(EMAIL_RECOVERY),
                 SendKeys.of(email).into(EMAIL_RECOVERY));
-        actor.remember("email",email);
+
+        String email_remember = "rmechan@landgorilla.com";
+        actor.remember("email", email_remember);
     }
 }
