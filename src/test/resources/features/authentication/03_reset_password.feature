@@ -23,8 +23,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                  |  new_password  |
-        | rmechan@landgorilla.com|  Ceara002**    |
+        | email                  |  new_password |
+        | rmechan@landgorilla.com|  Guyana002**  |
 
     @RPA-002
     Scenario Outline: Enter the same digit without Combination of letters and numbers
@@ -99,7 +99,7 @@ To access the different products
       Then valid that the button is disabled
       Examples:
         | email                  |  new_password    |
-        | rmechan@landgorilla.com|  Flamengo002**   |
+        | rmechan@landgorilla.com|  Coritiba002**   |
 
     @RPA-007
     Scenario Outline: Enter digits contain your user ID
@@ -147,7 +147,7 @@ To access the different products
         | rmechan@landgorilla.com|  Karate*###21    | Karati*###21    |
 
     @RPA-010
-    Scenario Outline: Reset Password - YY
+    Scenario Outline: Reset Password - Best Practices Company and Users Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
       And clicks the Identify button
@@ -159,11 +159,11 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password  |
-        | rmechan+autorepassYY@landgorilla.com|  Peru002**     |
+        | email                               |  new_password   |
+        | rmechan+autorepassYY@landgorilla.com|  Guyana002**  |
 
     @RPA-011
-    Scenario Outline: Reset Password - YN
+    Scenario Outline: Reset Password - Best Practices Company Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
       And clicks the Identify button
@@ -175,11 +175,11 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password  |
-        | rmechan+autorepassYN@landgorilla.com|  Ceara002**    |
+        | email                               |  new_password   |
+        | rmechan+autorepassYN@landgorilla.com|  Guyana002**  |
 
     @RPA-012
-    Scenario Outline: Reset Password - NY
+    Scenario Outline: Reset Password - Best Practices Users Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
       And clicks the Identify button
@@ -191,11 +191,11 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password  |
-        | rmechan+autorepassNY@landgorilla.com|  Ceara002**    |
+        | email                               |  new_password   |
+        | rmechan+autorepassNY@landgorilla.com|  Guyana002**  |
 
     @RPA-013
-    Scenario Outline: Reset Password - NN
+    Scenario Outline: Reset Password - Best Practices Company and Users Not Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
       And clicks the Identify button
@@ -207,8 +207,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password  |
-        | rmechan+autorepassNN@landgorilla.com|  Ceara002**    |
+        | email                               |  new_password |
+        | rmechan+autorepassNN@landgorilla.com|  Guyana002**  |
 
 
 
