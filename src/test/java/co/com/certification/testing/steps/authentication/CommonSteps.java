@@ -24,7 +24,7 @@ public class CommonSteps {
         USER.attemptsTo(
                 NavigateToResetPassword.web());
     }
-    @Screenshots
+
     @Given("the user has logged in with username {string} in {string}")
     public void theUserHasLoggedInWithUsernameIn(String user, String url) {
         if (!loggedIn) {

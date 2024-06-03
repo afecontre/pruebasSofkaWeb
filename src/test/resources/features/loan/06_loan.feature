@@ -11,8 +11,15 @@ Feature: Loan
       Given the user has logged in with username "subuser" in "loan-manager/index"
 
     @LOA-001
-    Scenario: Make a new loan
+    Scenario: Create a new Conventional type loan
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
-      And enter data the new Loan Information
+      And enter data the new Loan Information "Conventional"
+
+    @LOA-002
+    Scenario:Create a new Commercial type loan
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Commercial"

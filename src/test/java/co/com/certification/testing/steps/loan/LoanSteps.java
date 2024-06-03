@@ -36,16 +36,23 @@ public class LoanSteps{
         USER.attemptsTo(NewLoanButton.withTheFollowingField());
     }
 
-    @Screenshots
     @And("valid New Loan page")
     public void validNewLoanPage() {
         USER.attemptsTo(NewLoanPage.withTheFollowingField());
     }
-    @Screenshots
+    /*@Screenshots
     @And("enter data the new Loan Information")
     public void enterDataTheNewLoanInformation() {
         if (records != null && !records.isEmpty()) {
             USER.attemptsTo(EnterInformationLoan.withRecords(records, 0));
+        }
+    }*/
+
+    @Screenshots
+    @And("enter data the new Loan Information {string}")
+    public void enterDataTheNewLoanInformation(String loan_type) {
+        if (records != null && !records.isEmpty()) {
+            USER.attemptsTo(EnterInformationLoan.withRecords(records, 0,loan_type));
         }
     }
 }

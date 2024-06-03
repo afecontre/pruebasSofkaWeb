@@ -18,7 +18,6 @@ public class DashboardSteps {
         USER.attemptsTo(ItemActivate.withTheFollowingFields());
     }
 
-    @Screenshots
     @And("click en el filtro por {string}")
     public void clickEnElFiltroPor(String period) {
         USER.attemptsTo(FilterForDay.withTheFollowingField(period));
@@ -29,7 +28,6 @@ public class DashboardSteps {
         USER.attemptsTo(GraphicValidate.withTheFollowingField());
     }
 
-    @Screenshots
     @And("click filtro Orders")
     public void clickFiltroOrders() {
         USER.attemptsTo(FilterOrders.withTheFollowingField());
