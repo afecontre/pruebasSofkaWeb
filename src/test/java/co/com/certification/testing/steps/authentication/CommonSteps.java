@@ -38,7 +38,6 @@ public class CommonSteps {
         }
     }
 
-    @Screenshots
     @And("the user clicks on logout")
     public void theUserClicksOnLogout() {
         USER.attemptsTo(

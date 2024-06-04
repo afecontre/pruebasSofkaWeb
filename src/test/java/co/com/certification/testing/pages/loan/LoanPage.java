@@ -120,6 +120,25 @@ public class LoanPage {
             .located(By.xpath("//div[@class='jconfirm-buttons']//button[text()='ok']\n"));
     public static final Target BTN_BORROWER_TYPE= Target.the("Success Loan")
             .located(By.xpath("//button[@class='btn dropdown-toggle bs-placeholder btn-default']//span[@class='filter-option pull-left'][normalize-space()='Select an option']"));
-
+    public static final Target BTN_ACTION_DRAW= Target.the("Action Draw Button")
+            .located(By.xpath("//button[@class='btn btn-success dropdown-toggle btn-sm']"));
+    public static final Target BTN_DRAW= Target.the("Draw Button")
+            .located(By.xpath("//a[normalize-space()='Draw']"));
+    public static final Target BTN_FIRST_DRAW= Target.the("First Draw Button")
+            .located(By.xpath("//a[@class='createdraw option4']"));
+    public static final Target BTN_FIRST_DRAW_PROCEED= Target.the("First Draw Proceed Button")
+            .located(By.xpath("//button[@id='btn-select-apm-auto']"));
+    public static final Target BTN_FIRST_DRAW_CANCEL= Target.the("First Draw Cancel Button")
+            .located(By.xpath("//button[@class='btn btn-default reset-apm-detected']"));
+    public static final Target BTN_SCHEDULING_APPOINTMENT_NOT_REQUIRED= Target.the("Scheduling Appointment Not Required Button")
+            .located(By.id("information1"));
+    public static final Target BTN_SCHEDULING_APPOINTMENT_REQUIRED= Target.the("Scheduling Appointment Required Button")
+            .located(By.id("information2"));
+    public static final Target BTN_SCHEDULING_NOT_INSPECTION= Target.the("Scheduling Not Inspection Button")
+            .located(By.id("information3"));
+    public static final Target BTN_SAVE_INSPECTION_INFORMATION= Target.the("Save Inspection Information Button")
+            .located(By.xpath("//button[text()='Save']\n"));
+    public static final Target BTN_CANCEL_INSPECTION_INFORMATION= Target.the("Cancel Inspection Information Button")
+            .located(By.xpath("//button[text()='Save']\n"));
 
 }

@@ -10,18 +10,17 @@ Feature: Loan
     Background: Enter the Home Page Loan
       Given the user has logged in with username "subuser" in "loan-manager/index"
 
-    @LOA-001
-    Scenario: Create a new Conventional type loan
+    @DRA-001
+    Scenario: Create draw with Conventional type loan
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information "Conventional"
-      And delete the loan created
+      And create new Draw
 
-    @LOA-002
+    @DRA-002
     Scenario:Create a new Commercial type loan
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information "Commercial"
-      And delete the loan created
