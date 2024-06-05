@@ -65,6 +65,8 @@ public class CreateDraws implements Task {
                         DoubleClick.on(BTN_SAVE_INSPECTION_INFORMATION)
                  );
                 }
+            actor.attemptsTo(
+                    Open.url(InformationUrl.getUatUrlLoanDemoUrl()));
             }
         }
 }

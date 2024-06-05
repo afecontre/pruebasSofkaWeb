@@ -25,3 +25,4 @@ Feature: Loan
       And valid New Loan page
       And enter data the new Loan Information "Commercial"
       And delete the loan created
+      And the user clicks on logout

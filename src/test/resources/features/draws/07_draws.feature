@@ -17,10 +17,5 @@ Feature: Loan
       And valid New Loan page
       And enter data the new Loan Information "Conventional"
       And create new Draw
-
-    @DRA-002
-    Scenario:Create a new Commercial type loan
-      When valid home loan
-      And the user clicks New Loan option
-      And valid New Loan page
-      And enter data the new Loan Information "Commercial"
+      And delete the loan created
+      And the user clicks on logout
