@@ -42,6 +42,5 @@ public class DeleteLoan implements Task {
         }
         // Limpia la lista después de eliminar todos los préstamos
         EnterInformationLoan.getGeneratedLoanNumbers().clear();
-
     }
 }

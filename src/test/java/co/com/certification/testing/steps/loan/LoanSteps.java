@@ -18,11 +18,9 @@ public class LoanSteps{
 
     private static final String RELATIVE_CSV_PATH = "src/test/resources/data/loan.csv";
     private final List<CSVRecord> records;
-    private final int currentIndex;
 
     public LoanSteps() {
         records = CSVLoader.getRecords(RELATIVE_CSV_PATH);
-        currentIndex = 0;
     }
 
     @When("the user navigates to {string}")
@@ -42,14 +40,6 @@ public class LoanSteps{
     public void validNewLoanPage() {
         USER.attemptsTo(NewLoanPage.withTheFollowingField());
     }
-
-    /*@Screenshots
-    @And("enter data the new Loan Information")
-    public void enterDataTheNewLoanInformation() {
-        if (records != null && !records.isEmpty()) {
-            USER.attemptsTo(EnterInformationLoan.withRecords(records, 0));
-        }
-    }*/
 
     @Screenshots
     @And("enter data the new Loan Information {string}")
