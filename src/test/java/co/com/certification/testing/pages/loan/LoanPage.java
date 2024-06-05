@@ -127,7 +127,7 @@ public class LoanPage {
     public static final Target BTN_FIRST_DRAW= Target.the("First Draw Button")
             .located(By.xpath("//a[@class='createdraw option4']"));
     public static final Target BTN_FIRST_DRAW_PROCEED= Target.the("First Draw Proceed Button")
-            .located(By.xpath("//button[@id='btn-select-apm-auto']"));
+            .located(By.id("btn-select-apm-auto"));
     public static final Target BTN_FIRST_DRAW_CANCEL= Target.the("First Draw Cancel Button")
             .located(By.xpath("//button[@class='btn btn-default reset-apm-detected']"));
     public static final Target BTN_SCHEDULING_APPOINTMENT_NOT_REQUIRED= Target.the("Scheduling Appointment Not Required Button")
@@ -140,5 +140,9 @@ public class LoanPage {
             .located(By.xpath("//button[text()='Save']\n"));
     public static final Target BTN_CANCEL_INSPECTION_INFORMATION= Target.the("Cancel Inspection Information Button")
             .located(By.xpath("//button[text()='Save']\n"));
+    public static final Target BTN_TAB_CHANGE_ORDERS= Target.the("Change Orders Tab")
+            .located(By.id("tabChangeOrders"));
+    public static final Target BTN_TAB_DRAWS= Target.the("Draws Tab")
+            .located(By.id("tabDraws"));
 
 }
