@@ -8,6 +8,7 @@ import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.*;
+import static co.com.certification.testing.pages.loan.LoanPage.BTN_NEW_LOAN;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class PageHome implements Task {
@@ -22,31 +23,21 @@ public class PageHome implements Task {
     public <T extends Actor> void performAs(T actor) {
         boolean homeVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
 
-        if (homeVisible) {
-            actor.attemptsTo(
-                    WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds()
-            );
-        } else {
+        if (!homeVisible) {
             actor.attemptsTo(
                     Click.on(BTN_LOGIN)
             );
             boolean logoutVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
             if (logoutVisible) {
                 actor.attemptsTo(
-                        WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds()
-                );
-            } else {
-                actor.attemptsTo(
                         Click.on(BTN_LOGIN)
                 );
                 boolean loginVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
                 if (loginVisible)
-                    {
                     actor.attemptsTo(
-                            WaitUntil.the(HOME, isEnabled()).forNoMoreThan(5).seconds()
+                            Click.on(BTN_LOGIN)
                     );
-                    }
-                }
             }
         }
+    }
 }

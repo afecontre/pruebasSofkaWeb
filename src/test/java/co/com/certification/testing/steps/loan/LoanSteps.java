@@ -1,5 +1,6 @@
 package co.com.certification.testing.steps.loan;
 
+import co.com.certification.testing.tasks.draws.AddItem;
 import co.com.certification.testing.tasks.draws.CreateDraws;
 import co.com.certification.testing.tasks.loan.*;
 import co.com.certification.testing.util.CSVLoader;
@@ -57,8 +58,14 @@ public class LoanSteps{
         USER.attemptsTo(DeleteLoan.withTheFollowingField());
     }
 
-    @And("create new Draw")
-    public void createNewDraw() {
-        USER.attemptsTo(CreateDraws.withTheFollowingField());
+    @And("create {string} new Draw")
+    public void createNewDraw(String number) {
+        USER.attemptsTo(CreateDraws.withTheFollowingField(number));
     }
+
+    @And("add line item")
+    public void addLineItem() {
+        USER.attemptsTo(AddItem.withTheFollowingField());
+    }
+
 }

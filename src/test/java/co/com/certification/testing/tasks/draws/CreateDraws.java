@@ -20,12 +20,14 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnab
 
 public class CreateDraws implements Task {
 
-    public CreateDraws() {
-        //Nothing
+    private final String number;
+
+    public CreateDraws(String number) {
+        this.number = number;
     }
 
-    public static CreateDraws withTheFollowingField() {
-        return instrumented(CreateDraws.class);
+    public static CreateDraws withTheFollowingField(String number) {
+        return instrumented(CreateDraws.class,number);
     }
 
     @Override
@@ -33,6 +35,8 @@ public class CreateDraws implements Task {
     public <T extends Actor> void performAs(T actor) {
         //create draws
         List<String> loanNumbers = EnterInformationLoan.getGeneratedLoanNumbers();
+
+        int number_int=Integer.parseInt(number);
 
         for (String loanNumber : loanNumbers) {
             actor.attemptsTo(
@@ -51,8 +55,11 @@ public class CreateDraws implements Task {
 
                 );
 
-            for (int i = 0; i < 2; i++) {
-                actor.attemptsTo(
+            if (number_int > 1)
+            {
+                number_int--;
+                for (int i = 0; i < number_int; i++) {
+                    actor.attemptsTo(
                         Open.url(InformationUrl.getUatUrlLoanDemoUrl()),
                         Click.on(By.xpath("//a[normalize-space()='"+ loanNumber + "']")),
                         Click.on(BTN_ACTION_DRAW),
@@ -63,8 +70,9 @@ public class CreateDraws implements Task {
                         Click.on(By.xpath("//div[@class='inspection-scheduling']/span[text()='Monday']")),
                         Click.on(By.xpath("//div[@class='inspection-scheduling-inspection']//label[contains(text(),'Morning')]")),
                         DoubleClick.on(BTN_SAVE_INSPECTION_INFORMATION)
-                 );
+                     );
                 }
+            }
             actor.attemptsTo(
                     Open.url(InformationUrl.getUatUrlLoanDemoUrl()));
             }

@@ -20,36 +20,27 @@ public class LoanHome implements Task {
     public static LoanHome withTheFollowingField() {
         return new LoanHome();
     }
+
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
 
-        boolean homeVisible = WebElementQuestion.the(BTN_NEW_LOAN).answeredBy(actor).isVisible();
+        boolean homeVisible = WebElementQuestion.the(BTN_NEW_LOAN).answeredBy(actor).isEnabled();
 
-        if (homeVisible) {
-            actor.attemptsTo(
-                    WaitUntil.the(BTN_NEW_LOAN, isEnabled()).forNoMoreThan(5).seconds()
-            );
-        } else {
+        if (!homeVisible) {
             actor.attemptsTo(
                     Click.on(BTN_LOGIN)
             );
             boolean logoutVisible = WebElementQuestion.the(BTN_NEW_LOAN).answeredBy(actor).isVisible();
             if (logoutVisible) {
                 actor.attemptsTo(
-                        WaitUntil.the(BTN_NEW_LOAN, isEnabled()).forNoMoreThan(5).seconds()
-                );
-            } else {
-                actor.attemptsTo(
                         Click.on(BTN_LOGIN)
                 );
                 boolean loginVisible = WebElementQuestion.the(BTN_NEW_LOAN).answeredBy(actor).isVisible();
                 if (loginVisible)
-                {
                     actor.attemptsTo(
-                            WaitUntil.the(BTN_NEW_LOAN, isEnabled()).forNoMoreThan(5).seconds()
+                            Click.on(BTN_LOGIN)
                     );
-                }
             }
         }
     }

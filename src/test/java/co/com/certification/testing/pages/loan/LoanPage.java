@@ -144,5 +144,31 @@ public class LoanPage {
             .located(By.id("tabChangeOrders"));
     public static final Target BTN_TAB_DRAWS= Target.the("Draws Tab")
             .located(By.id("tabDraws"));
+    public static final Target BTN_SELECT_DRAW= Target.the("Select Draw")
+            .located(By.xpath("//div[@class='custom-col custom-button-open']"));
+    public static final Target BTN_PAYEE_1= Target.the("Payye 1")
+            .located(By.xpath("//span[@aria-labelledby='select2-jsp1-container']"));
+    public static final Target INPUT_PAYEE_1= Target.the("Input Payye 1")
+            .located(By.xpath("//input[@class='select2-search__field']"));
+    public static final Target INPUT_REQUESTING_CONTINGENCY= Target.the("Input Requesting Contingency")
+            .located(By.xpath("//input[@name='drawLines[2][multi_amount]']"));
+    public static final Target INPUT_REQUESTING_INTEREST_RESERVE= Target.the("Input Requesting Interest Reserve")
+            .located(By.xpath("//input[@name='drawLines[1][multi_amount]']"));
+    public static final Target INPUT_RETAINAGE_CONTINGENCY= Target.the("Input Retainage Contingency")
+            .located(By.xpath("//input[@name='drawLines[2][multi_retainage]']"));
+    public static final Target INPUT_RETAINAGE_INTEREST_RESERVE= Target.the("Input Retainage Interest Reserve")
+            .located(By.xpath("//input[@name='drawLines[1][multi_retainage]']"));
+    public static final Target BTN_DEPOSIT_ITEM_CONTINGENCY= Target.the("Activate Deposit Item Contingency")
+            .located(By.xpath("//*[@id=\"table-budget-modal\"]/tbody/tr[2]/td[16]/div/div/label"));
+    public static final Target BTN_DEPOSIT_ITEM_INTEREST_RESERVE= Target.the("Activate Deposit Item Interest Reserve")
+            .located(By.xpath("//*[@id=\"table-budget-modal\"]/tbody/tr[3]/td[16]/div/div/label"));
+    public static final Target BTN_APPROVE_ITEM_CONTINGENCY= Target.the("Input Retainage Interest Reserve")
+            .located(By.xpath("//*[@id=\"table-budget-modal\"]/tbody/tr[2]/td[17]/div/div/label"));
+    public static final Target BTN_APPROVE_ITEM_INTEREST_RESERVE= Target.the("Input Retainage Interest Reserve")
+            .located(By.xpath("//*[@id=\"table-budget-modal\"]/tbody/tr[3]/td[17]/div/div/label"));
 
+    public static final Target BTN_SAVE_CLOSE= Target.the("Save Close Button")
+            .located(By.xpath("//div[@class='buttonSaveCloseContainer']//button[@id='buttonSaveLine']"));
+    public static final Target WRAPPER_BTN= Target.the("Save Close Button")
+            .located(By.xpath("//div[@id='wrapper']"));
 }
