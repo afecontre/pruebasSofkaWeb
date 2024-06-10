@@ -169,6 +169,14 @@ public class LoanPage {
 
     public static final Target BTN_SAVE_CLOSE= Target.the("Save Close Button")
             .located(By.xpath("//div[@class='buttonSaveCloseContainer']//button[@id='buttonSaveLine']"));
-    public static final Target WRAPPER_BTN= Target.the("Save Close Button")
-            .located(By.xpath("//div[@id='wrapper']"));
+    public static final Target LBL_TOTAL_REQUESTING = Target.the("Quantity Total Requesting")
+            .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-requested'][2]\n"));
+    public static final Target LBL_TOTAL_RETAINAGE_BALANCE = Target.the("Quantity Total Retainage Balance")
+            .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-requested'][1]\n"));
+    public static final Target LBL_TOTAL_APPROVED = Target.the("Quantity Total Approved")
+            .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-adjusted'][1]/span\n"));
+    public static final Target LBL_TOTAL_RETAINAGE = Target.the("Quantity Total Retainage")
+            .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-adjusted'][2]/span\n"));
+    public static final Target LBL_TOTAL_APPROVED_LESS_RETAINAGE = Target.the("Quantity Total Approved Less Retainage")
+            .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-less-retainage']/span\n"));
 }

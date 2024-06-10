@@ -28,4 +28,14 @@ Feature: Draws
       And create "1" new Draw
       And add line item
       And delete the loan created
+
+    @DRA-003
+    Scenario: Create draw, validate the quantities entered in the items
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Commercial"
+      And create "1" new Draw
+      And add line item
+      And delete the loan created
       And the user clicks on logout

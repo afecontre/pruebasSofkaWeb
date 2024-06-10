@@ -12,4 +12,11 @@ public class Constants {
     public static final String LOAN_NUMBER = "loan_number";
     public static final String SUBJECT = "subject";
     public static final String ZIP = "zip";
+
+    public static final String PAYEE_1 = "Roberto Carlos Mechan";
+    public static final String REQUESTING_CONTINGENCY = "1000";
+    public static final String REQUESTING_INTEREST_RESERVE = "1000";
+    public static final String RETAINAGE_CONTINGENCY = "200";
+    public static final String RETAINAGE_INTEREST_RESERVE = "200";
+
 }
