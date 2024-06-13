@@ -2,7 +2,7 @@ package co.com.certification.testing.models;
 
 public enum  InformationSystem {
 
-    USUARIO("Roberto Carlos","Mechan","1500","100","100","1000","700");
+    USUARIO("Roberto Carlos","Mechan","150","10","10","100","70");
 
     private final String firstName;
     private final String lastName;

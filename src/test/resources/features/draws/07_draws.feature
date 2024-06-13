@@ -16,7 +16,7 @@ Feature: Draws
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information "Conventional"
-      And create "3" new Draw
+      And create "1" new Draw
       And delete the loan created
 
     @DRA-002
@@ -26,16 +26,25 @@ Feature: Draws
       And valid New Loan page
       And enter data the new Loan Information "Commercial"
       And create "1" new Draw
-      And add line item
       And delete the loan created
 
     @DRA-003
-    Scenario: Create draw, validate the quantities entered in the items
+    Scenario: Create draw, add item, Approved Items Partial
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
-      And enter data the new Loan Information "Commercial"
+      And enter data the new Loan Information "Conventional"
       And create "1" new Draw
-      And add line item
+      And add line item "0"
+      And delete the loan created
+
+    @DRA-004
+    Scenario: Create draw, add item, Approved Items Total
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Conventional"
+      And create "1" new Draw
+      And add line item "1"
       And delete the loan created
       And the user clicks on logout

@@ -13,11 +13,11 @@ public class LoanPage {
     public static final Target INPUT_LOAN_NUMBER= Target.the("Loan Number")
             .located(By.id("loanfilenum"));
     public static final Target BTN_LOAN_TYPE= Target.the("Loan Type")
-            .located(By.xpath("//button[@data-id='loanType']"));
+            .located(By.xpath("//*[@id=\"tabloansetup-loan\"]/div/div/div[1]/div[3]/div/div/div/button/span[1]"));
     public static final Target BTN_LOAN_PROGRAM= Target.the("Loan Program")
-            .located(By.xpath("//button[@data-id='loanprogram']"));
+            .located(By.xpath("//*[@id=\"tabloansetup-loan\"]/div/div/div[1]/div[6]/div/div/div/button/span[1]"));
     public static final Target BTN_TRANSACTION_TABLE= Target.the("Transaction Table")
-            .located(By.xpath("//button[@data-id='ddlbtransaction']"));
+            .located(By.xpath("//*[@id=\"tabloansetup-loan\"]/div/div/div[1]/div[11]/div/div/div/button/span[1]"));
     public static final Target BTN_LOAN_FUNDED_DATE= Target.the("Loan Funded Date")
             .located(By.xpath("//input[@name='loanfundeddate']"));
     public static final Target BTN_DATE= Target.the("Date")
@@ -179,4 +179,16 @@ public class LoanPage {
             .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-adjusted'][2]/span\n"));
     public static final Target LBL_TOTAL_APPROVED_LESS_RETAINAGE = Target.the("Quantity Total Approved Less Retainage")
             .located(By.xpath("//tr[@class='totals']/td[@class='text-right td-less-retainage']/span\n"));
+    public static final Target BTN_APPROVED_ITEM_CONTINGENCY_ON_1 = Target.the("Approved Item Contingency ON")
+            .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Contingency')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status  label-approved-lineitem']"));
+    public static final Target BTN_APPROVED_ITEM_CONTINGENCY_ON_2 = Target.the("Approved Item Contingency ON")
+            .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Contingency')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status label-approved-lineitem']"));
+    public static final Target BTN_APPROVED_ITEM_CONTINGENCY_OFF = Target.the("Approved Item Contingency OFF")
+            .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Contingency')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status ']"));
+    public static final Target BTN_APPROVED_ITEM_INTEREST_RESERVE_ON = Target.the("Approved Item Interest ON")
+            .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Interest Reserve')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status label-approved-lineitem']"));
+    public static final Target BTN_APPROVED_ITEM_INTEREST_RESERVE_OFF = Target.the("Approved Item Interest OFF")
+            .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Interest Reserve')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status ']"));
+    public static final Target BTN_DEPOSIT_ITEM_ON = Target.the("Deposit Item ON")
+            .located(By.xpath("//div[@class='custom-col pull-right margin-top-4']"));
 }

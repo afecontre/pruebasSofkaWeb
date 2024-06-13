@@ -30,6 +30,5 @@ public class ValidateNewLoan implements Task {
         );
 
         actor.should(seeThat(ObtainText.element(LBL_LOAN_NUMBER),containsString(actor.recall("loan_number"))).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT));
-
     }
 }

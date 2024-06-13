@@ -1,6 +1,6 @@
 #language: en
 @lg
-Feature: Forgotten Password
+Feature: Authentication > Forgotten Password
 As a user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
 To access the different products

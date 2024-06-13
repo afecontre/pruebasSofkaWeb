@@ -63,9 +63,9 @@ public class LoanSteps{
         USER.attemptsTo(CreateDraws.withTheFollowingField(number));
     }
 
-    @And("add line item")
-    public void addLineItem() {
-        USER.attemptsTo(AddItem.withTheFollowingField());
+    @And("add line item {string}")
+    public void addLineItem(String number) {
+        USER.attemptsTo(AddItem.withTheFollowingField(number));
     }
 
 }

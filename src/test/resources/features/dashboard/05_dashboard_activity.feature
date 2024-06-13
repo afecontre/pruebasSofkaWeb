@@ -1,6 +1,6 @@
 #language: en
 @lg
-Feature: Dashboard
+Feature: Dashboard > Dashboard Activity
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
   To access the different products
