@@ -191,4 +191,11 @@ public class LoanPage {
             .located(By.xpath("//tr[contains(@class, 'js-tr-linedrawitem')]//td[contains(@class, 'draw-td-description')]//div[@class='item-description']//text()[contains(., 'Interest Reserve')]/ancestor::td/ancestor::tr//td[@class='small text-center vertical-align-middle']//div[@class='onoffswitch onoffswitch-approved-lineitem js-change-approval-status ']"));
     public static final Target BTN_DEPOSIT_ITEM_ON = Target.the("Deposit Item ON")
             .located(By.xpath("//div[@class='custom-col pull-right margin-top-4']"));
+    public static final Target BTN_APPROVE_ALL_ITEM = Target.the("Approve All Item Button")
+            .located(By.xpath("//*[@for=\"line_approve_option_master\"]"));
+    public static final Target BTN_EXCLUDE_ALL_RETAINAGE = Target.the("Exclude All Retainage Button")
+            .located(By.xpath("//*[@for=\"line_retainage_master\"]"));
+    public static final Target BTN_MARK_ALL_DEPOSIT = Target.the("Mark All Deposit Button")
+            .located(By.xpath("//*[@for=\"line_storedmaterials_master\"]"));
+
 }

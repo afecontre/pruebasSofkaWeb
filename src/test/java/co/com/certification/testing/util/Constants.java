@@ -23,5 +23,12 @@ public class Constants {
     public static final String REQUESTING_INTEREST_RESERVE = "500";
     public static final String RETAINAGE_CONTINGENCY = "8";
     public static final String RETAINAGE_INTEREST_RESERVE = "8";
+    public static final String TOTAL_ZERO = "$0.00";
+
+    public static final String FIRST_NAME = "Automation01";
+    public static final String LAST_NAME = "Tester";
+    public static final String TITLE = "Customer";
+    public static final String ROLE = "Account admin";
+    public static final String PHONE_NUMBER = "(519) 942-3377 x 77";
 
 }

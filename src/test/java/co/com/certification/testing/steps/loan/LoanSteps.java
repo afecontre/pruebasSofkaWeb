@@ -1,7 +1,6 @@
 package co.com.certification.testing.steps.loan;
 
-import co.com.certification.testing.tasks.draws.AddItem;
-import co.com.certification.testing.tasks.draws.CreateDraws;
+import co.com.certification.testing.tasks.draws.*;
 import co.com.certification.testing.tasks.loan.*;
 import co.com.certification.testing.util.CSVLoader;
 import io.cucumber.java.en.And;
@@ -24,9 +23,6 @@ public class LoanSteps{
         records = CSVLoader.getRecords(RELATIVE_CSV_PATH);
     }
 
-    @When("the user navigates to {string}")
-    public void theUserNavigatesTo(String url) {
-    }
     @When("valid home loan")
     public void validHomeLoan() {
         USER.attemptsTo(LoanHome.withTheFollowingField());
@@ -68,4 +64,28 @@ public class LoanSteps{
         USER.attemptsTo(AddItem.withTheFollowingField(number));
     }
 
+    @And("add line item and full approval")
+    public void addLineItemAndFullApproval() {
+        USER.attemptsTo(AddItemFullApproval.withTheFollowingField());
+    }
+
+    @And("add line item and deposits confirmed")
+    public void addLineItemAndDepositsConfirmed() {
+        USER.attemptsTo(AddItemDepositsConfirmed.withTheFollowingField());
+    }
+
+    @And("add line item and approve confirmed")
+    public void addLineItemAndApproveConfirmed() {
+        USER.attemptsTo(AddItemApproveConfirmed.withTheFollowingField());
+    }
+
+    @And("add line item and Contigency approve confirmed")
+    public void addLineItemAndContigencyApproveConfirmed() {
+        USER.attemptsTo(AddItemContingencyApprove.withTheFollowingField());
+    }
+
+    @And("add line item and Interest approve confirmed")
+    public void addLineItemAndInterestApproveConfirmed() {
+        USER.attemptsTo(AddItemInterestApprove.withTheFollowingField());
+    }
 }

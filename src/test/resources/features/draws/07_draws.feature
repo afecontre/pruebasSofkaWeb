@@ -1,5 +1,5 @@
 #language: en
-@lg
+@lg_draw
 Feature: Draws
   As user of the Land Gorilla UAT page,
   I want to be able to log in with my username and password
@@ -29,22 +29,52 @@ Feature: Draws
       And delete the loan created
 
     @DRA-003
-    Scenario: Create draw, add item, Approved Items Partial
+    Scenario: Create draw, add item, Approved Items Partial - Deposits Confirmed
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information "Conventional"
       And create "1" new Draw
-      And add line item "0"
+      And add line item and deposits confirmed
       And delete the loan created
 
     @DRA-004
+    Scenario: Create draw, add item, Approved Items Partial - Approve Confirmed
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Conventional"
+      And create "1" new Draw
+      And add line item and approve confirmed
+      And delete the loan created
+
+    @DRA-005
+    Scenario: Create draw, add item, Approved Items Partial - Contingency Approve Confirmed
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Conventional"
+      And create "1" new Draw
+      And add line item and Contigency approve confirmed
+      And delete the loan created
+
+    @DRA-006
+    Scenario: Create draw, add item, Approved Items Partial - Interest Approve Confirmed
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Conventional"
+      And create "1" new Draw
+      And add line item and Interest approve confirmed
+      And delete the loan created
+
+    @DRA-007
     Scenario: Create draw, add item, Approved Items Total
       When valid home loan
       And the user clicks New Loan option
       And valid New Loan page
       And enter data the new Loan Information "Conventional"
       And create "1" new Draw
-      And add line item "1"
+      And add line item and full approval
       And delete the loan created
       And the user clicks on logout

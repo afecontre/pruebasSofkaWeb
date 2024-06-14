@@ -42,9 +42,6 @@ public class AddItem implements Task {
         String contingency = RETAINAGE_CONTINGENCY + 0;
         String interest = RETAINAGE_INTEREST_RESERVE + 0;
 
-        System.out.println("AA: " + contingency );
-        System.out.println("BB: " + interest );
-
         String total_requesting = OperationsMath.sumarNumeros(REQUESTING_CONTINGENCY, REQUESTING_INTEREST_RESERVE);
         String total_retainage = OperationsMath.sumarNumeros(contingency, interest);
         String total_requesting_approved="$0.00";
@@ -73,7 +70,7 @@ public class AddItem implements Task {
             int approve_contingency_int = Integer.parseInt(actor.recall(APPROVE_CONTINGENCY));
             int approve_interest_int = Integer.parseInt(actor.recall(APPROVE_INTEREST));
 
-            /*if (deposit_contingency_int == 1)
+            if (deposit_contingency_int == 1)
                 actor.attemptsTo(
                         Click.on(BTN_DEPOSIT_ITEM_CONTINGENCY));
 
@@ -87,22 +84,7 @@ public class AddItem implements Task {
 
             if (approve_interest_int == 1)
                 actor.attemptsTo(
-                        Click.on(BTN_APPROVE_ITEM_INTEREST_RESERVE));*/
-
-            if (Integer.parseInt(number)==0){
-                actor.attemptsTo(
-                        Click.on(BTN_DEPOSIT_ITEM_CONTINGENCY));
-            }
-
-
-            if (Integer.parseInt(number)==1){
-                actor.attemptsTo(
-                        Click.on(BTN_DEPOSIT_ITEM_CONTINGENCY),
-                        Click.on(BTN_DEPOSIT_ITEM_INTEREST_RESERVE),
-                        Click.on(BTN_APPROVE_ITEM_CONTINGENCY),
                         Click.on(BTN_APPROVE_ITEM_INTEREST_RESERVE));
-            }
-
 
             actor.attemptsTo(
                     Click.on(INPUT_RETAINAGE_CONTINGENCY),
@@ -115,16 +97,6 @@ public class AddItem implements Task {
 
             if (deposit_contingency_int == 1 || deposit_interest_int == 1)
                 actor.attemptsTo(WaitUntil.the(BTN_DEPOSIT_ITEM_ON, isVisible()).forNoMoreThan(2).seconds());
-              /*  actor.attemptsTo(
-                        WaitUntil.the(BTN_APPROVED_ITEM_CONTINGENCY_ON, isEnabled()).forNoMoreThan(2).seconds());
-            else
-                actor.attemptsTo(WaitUntil.the(BTN_APPROVED_ITEM_CONTINGENCY_OFF, isEnabled()).forNoMoreThan(2).seconds());
-
-            if (deposit_interest_int == 1)
-                actor.attemptsTo(WaitUntil.the(BTN_APPROVED_ITEM_INTEREST_RESERVE_ON, isEnabled()).forNoMoreThan(2).seconds());
-            else
-                actor.attemptsTo(WaitUntil.the(BTN_APPROVED_ITEM_INTEREST_RESERVE_OFF, isEnabled()).forNoMoreThan(2).seconds());*/
-
 
             if (approve_contingency_int == 1 && approve_interest_int == 0 ) {
                 actor.attemptsTo(WaitUntil.the(BTN_APPROVED_ITEM_CONTINGENCY_ON_1, isEnabled()).forNoMoreThan(2).seconds());
@@ -163,9 +135,6 @@ public class AddItem implements Task {
                 actor.should(seeThat(ObtainText.element(LBL_TOTAL_RETAINAGE),containsString(total_retainage_approved)).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT));
                 actor.should(seeThat(ObtainText.element(LBL_TOTAL_APPROVED_LESS_RETAINAGE),containsString(total_requesting_approved)).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT));
             }
-
-
-
 
 
            /* for (int i = 0; i < 2; i++) {
