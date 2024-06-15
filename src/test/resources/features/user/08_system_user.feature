@@ -22,4 +22,4 @@ Feature: User > System User
 #      Then the user clicks on logout
       Examples:
         | email                          |
-        | rmechan+06uat@landgorilla.com  |
+        | rmechan+08uat@landgorilla.com  |
