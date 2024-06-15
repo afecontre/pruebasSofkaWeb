@@ -16,8 +16,10 @@ Feature: User > System User
       And the user clicks New User option
       And enters the User information "<email>"
       And validated the information entered
-      And delete user created
-      Then the user clicks on logout
+      And the user should receive a Account
+      And the user enter new account "<email>"
+#      And delete user created
+#      Then the user clicks on logout
       Examples:
         | email                          |
         | rmechan+06uat@landgorilla.com  |

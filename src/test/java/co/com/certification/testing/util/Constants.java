@@ -31,4 +31,7 @@ public class Constants {
     public static final String ROLE = "Account admin";
     public static final String PHONE_NUMBER = "(519) 942-3377 x 77";
 
+    public static final String RESET_PASSWORD = "is:unread subject:UAT Reset Password Request from:support@uat-landgorilla.com";
+    public static final String ACCOUNT_NEW = "(519) 942-3377 x 77";
+
 }

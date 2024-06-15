@@ -1,5 +1,6 @@
-package co.com.certification.testing.tasks.authentication;
+package co.com.certification.testing.tasks.user;
 
+import co.com.certification.testing.tasks.authentication.RetrievePasswordResetLink;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.abilities.BrowseTheWeb;
@@ -12,7 +13,7 @@ import org.openqa.selenium.By;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class ResetLink implements Task {
+public class ResetLinkAccount implements Task {
 
 //    private final String type;
 //
@@ -20,8 +21,8 @@ public class ResetLink implements Task {
 //        this.type = type;
 //    }
 
-    public static ResetLink withTheFollowingField() {
-        return instrumented(ResetLink.class);
+    public static ResetLinkAccount withTheFollowingField() {
+        return instrumented(ResetLinkAccount.class);
     }
 
     @Override
@@ -34,9 +35,11 @@ public class ResetLink implements Task {
             // Wait a bit for the email to arrive (you can replace this with more sophisticated email polling)
             Thread.sleep(5000);
 
-            actor.attemptsTo(RetrievePasswordResetLink.forEmail(email));
+            actor.attemptsTo(RetrieveAccountResetLink.forEmail(email));
             String resetLink = actor.recall("resetLink");
-            //String password_new = actor.recall("password");
+            String password_new = actor.recall("password_new");
+
+            actor.remember("password_new", password_new);
 
             Assert.assertNotNull("No reset link was retrieved", resetLink);
             //Assert.assertNotNull("No password was retrieved", password_new);

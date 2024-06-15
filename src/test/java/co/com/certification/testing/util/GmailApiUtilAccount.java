@@ -1,6 +1,8 @@
 package co.com.certification.testing.util;
 
 import com.google.api.client.auth.oauth2.Credential;
+import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
+import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
 import com.google.api.client.googleapis.auth.oauth2.GoogleAuthorizationCodeFlow;
 import com.google.api.client.googleapis.auth.oauth2.GoogleClientSecrets;
 import com.google.api.client.googleapis.javanet.GoogleNetHttpTransport;
@@ -12,8 +14,6 @@ import com.google.api.services.gmail.GmailScopes;
 import com.google.api.services.gmail.model.ListMessagesResponse;
 import com.google.api.services.gmail.model.Message;
 import com.google.api.services.gmail.model.MessagePart;
-import com.google.api.client.extensions.jetty.auth.oauth2.LocalServerReceiver;
-import com.google.api.client.extensions.java6.auth.oauth2.AuthorizationCodeInstalledApp;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -25,7 +25,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class GmailApiUtil {
+public class GmailApiUtilAccount {
 
     private static final String APPLICATION_NAME = "automatizacion";
     private static final JsonFactory JSON_FACTORY = JacksonFactory.getDefaultInstance();
@@ -33,7 +33,7 @@ public class GmailApiUtil {
     private static final String TOKENS_DIRECTORY_PATH = "tokens";
 
     public static Credential authorize() throws IOException, GeneralSecurityException {
-        InputStream in = GmailApiUtil.class.getResourceAsStream("/credentials.json");
+        InputStream in = GmailApiUtilAccount.class.getResourceAsStream("/credentials.json");
         GoogleClientSecrets clientSecrets = GoogleClientSecrets.load(JSON_FACTORY, new InputStreamReader(in));
 
         GoogleAuthorizationCodeFlow flow = new GoogleAuthorizationCodeFlow.Builder(
@@ -53,11 +53,11 @@ public class GmailApiUtil {
                 .build();
     }
 
-    public static String getLatestResetPasswordLink(String userId) throws IOException, GeneralSecurityException {
+    public static String[] getLatestResetPasswordLink(String userId) throws IOException, GeneralSecurityException {
         Gmail service = getGmailService();
 
         ListMessagesResponse response = service.users().messages().list(userId)
-                .setQ("is:unread subject:UAT Reset Password Request from:Support@uat-landgorilla.com")
+                .setQ("is:unread subject:\"Account from Land Gorilla\" from:contact@uat-landgorilla.com")
                 .setMaxResults(1L)
                 .execute();
 
@@ -76,14 +76,31 @@ public class GmailApiUtil {
             return null;
         }
 
-        Pattern pattern = Pattern
-                .compile("https://system\\.uat-landgorilla\\.com//reset-password2\\.html\\?\\S+?(?=</a><br)");
-        Matcher matcher = pattern.matcher(emailData);
+        // Patrón para encontrar el enlace de inicio de sesión
+        Pattern linkPattern = Pattern.compile("https://system.uat-landgorilla.com/clientv2-login.html");
+        Matcher linkMatcher = linkPattern.matcher(emailData);
 
-        if (matcher.find()) {
-            return matcher.group();
+        String loginLink = null;
+        if (linkMatcher.find()) {
+            loginLink = linkMatcher.group();
         } else {
-            System.out.println("No se encontró el enlace de restablecimiento de contraseña en el correo.");
+            System.out.println("No se encontró el enlace de inicio de sesión en el correo.");
+        }
+
+        // Patrón para encontrar la línea que contiene "Password:" y extraer el valor que sigue
+        Pattern passwordPattern = Pattern.compile("Password:\\s*(\\S+)");
+        Matcher passwordMatcher = passwordPattern.matcher(emailData);
+
+        String password = null;
+        if (passwordMatcher.find()) {
+            password = passwordMatcher.group(1);
+        } else {
+            System.out.println("No se encontró el campo de contraseña en el correo.");
+        }
+
+        if (loginLink != null || password != null) {
+            return new String[]{loginLink, password};
+        } else {
             return null;
         }
     }

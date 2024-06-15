@@ -49,5 +49,7 @@ public class EnterInformationUser  implements Task {
                 Click.on(BTN_SAVE_USER),
                 Click.on(BTN_CONFIRMED_ACTION)
         );
+        String email_remember = "rmechan@landgorilla.com";
+        actor.remember("email", email_remember);
     }
 }
