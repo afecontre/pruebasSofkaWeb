@@ -34,7 +34,9 @@ public class EnterNewAccount implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
 
-        String password_new =actor.recall("password_new");
+        String password_new = actor.recall("password_new");
+        password_new = password_new.split("<br")[0];
+
         actor.attemptsTo(
                 WaitUntil.the(INPUT_USERNAME, isEnabled()).forNoMoreThan(8).seconds(),
                 SendKeys.of(email).into(INPUT_USERNAME),

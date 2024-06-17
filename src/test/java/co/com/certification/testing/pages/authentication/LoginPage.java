@@ -50,4 +50,7 @@ public class LoginPage {
             .located(By.xpath("//a[@class='user-header']"));
     public static final Target BTN_LOGOUT= Target.the("Logout")
             .located(By.xpath("//li/a[text()='Log Out']\n"));
+
+
+
 }

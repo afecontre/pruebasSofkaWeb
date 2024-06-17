@@ -42,7 +42,12 @@ public class UserSteps {
     @And("the user enter new account {string}")
     public void theUserEnterNewAccount(String email) {
         USER.attemptsTo(
-                EnterNewAccount.withCustomerData(email));
-                //LoginButton.withTheFollowingField());
+                EnterNewAccount.withCustomerData(email),
+                LoginButton.withTheFollowingField());
+    }
+    @And("the user enter passwords {string} and completes information")
+    public void theUserEnterPasswordsAndCompletesInformation(String password) {
+        USER.attemptsTo(
+                EnterNewPassword.withCustomerData(password));
     }
 }

@@ -46,5 +46,22 @@ public class UserPage {
             .located(By.xpath("//a[@class='form-link btnFormRowTable']"));
     public static final Target LABEL_ROLE_USER= Target.the("Role User Label")
             .located(By.xpath("//*[@id=\"tbl-tab2-systemuser\"]/tbody/tr/td[4]"));
+    public static final Target INPUT_PASSWORD_USER= Target.the("New Password")
+            .located(By.id("password"));
+    public static final Target INPUT_PASSWORD_USER_CONFIRM= Target.the("New Password Confirm")
+            .located(By.id("password2"));
+    public static final Target BTN_SAVE_CHANGES= Target.the("Save Changes")
+            .located(By.xpath("//button[@class='submit-button ladda-button btn btn-primary btn-lg block full-width m-b']"));
+    public static final Target BTN_TIME_ZONE= Target.the("TimeZone Button")
+            .located(By.id("timezoneID"));
+    public static final Target BTN_TIME_ZONE_PACIF= Target.the("TimeZone Pacific Station Button")
+            .located(By.xpath("//*[@id=\"timezoneID\"]/option[2]"));
+    public static final Target BTN_SAVE_CHANGES_INFORMATION= Target.the("Save Changes Information")
+            .located(By.xpath("//button[@class='ladda-button btn btn-primary btn-lg block full-width m-b']"));
+
+    public static final Target BTN_USER_TAB= Target.the("User Tab")
+            .located(By.xpath("//div[@class='navbar-header']//a[@class='dropbtn'][normalize-space()='Users']"));
+    public static final Target BTN_SYSTEM_USER= Target.the("System User Tab")
+            .located(By.xpath("//div[@class='navbar-header']//a[contains(text(),'System Users')]"));
 
 }

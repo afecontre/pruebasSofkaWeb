@@ -18,8 +18,10 @@ Feature: User > System User
       And validated the information entered
       And the user should receive a Account
       And the user enter new account "<email>"
-#      And delete user created
-#      Then the user clicks on logout
+      And the user enter passwords "<password>" and completes information
+      And validated the information entered
+      And delete user created
+      Then the user clicks on logout
       Examples:
-        | email                          |
-        | rmechan+08uat@landgorilla.com  |
+        | email                          | password     |
+        | rmechan+19uat@landgorilla.com  | Panama002**  |

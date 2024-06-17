@@ -24,7 +24,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                  |  new_password  |
-        | rmechan@landgorilla.com|  Asia002**     |
+        | rmechan@landgorilla.com|  Aruba002**     |
 
     @RPA-002
     Scenario Outline: Enter the same digit without Combination of letters and numbers
@@ -99,7 +99,7 @@ To access the different products
       Then valid that the button is disabled
       Examples:
         | email                  |  new_password   |
-        | rmechan@landgorilla.com|  Oceania002**   |
+        | rmechan@landgorilla.com|  Panama002**      |
 
     @RPA-007
     Scenario Outline: Enter digits contain your user ID
@@ -160,7 +160,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassYY@landgorilla.com|  Asia002**   |
+        | rmechan+autorepassYY@landgorilla.com|  Aruba002**   |
 
     @RPA-011
     Scenario Outline: Reset Password - Best Practices Company Activate
@@ -176,7 +176,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassYN@landgorilla.com|  Asia002**   |
+        | rmechan+autorepassYN@landgorilla.com|  Aruba002**   |
 
     @RPA-012
     Scenario Outline: Reset Password - Best Practices Users Activate
@@ -192,7 +192,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassNY@landgorilla.com|  Asia002**   |
+        | rmechan+autorepassNY@landgorilla.com|  Aruba002**   |
 
     @RPA-013
     Scenario Outline: Reset Password - Best Practices Company and Users Not Activate
@@ -208,7 +208,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password |
-        | rmechan+autorepassNN@landgorilla.com|  Asia002**    |
+        | rmechan+autorepassNN@landgorilla.com|  Aruba002**  |
 
 
 
