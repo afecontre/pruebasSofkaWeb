@@ -1,6 +1,6 @@
 #language: en
 @CLM
-Feature: Dashboard / Orders
+Feature: Dashboard / Dashboard
   As user of the Land Gorilla UAT page,
   I want to be able to review the dashboard
 
