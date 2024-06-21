@@ -1,6 +1,6 @@
 #language: en
-@lg
-Feature: Authentication > Forgotten Password
+@CLM
+Feature: Login / Forgot Password
 As a user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
 To access the different products
@@ -10,7 +10,7 @@ To access the different products
     Background: Enter the Home Page
       Given the user is on the application home page "Login"
 
-    @FPA-001
+    @FORGOT-PASS-001
     Scenario Outline: Forgotten Password
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -21,7 +21,7 @@ To access the different products
         | email                    |
         | rmechan@landgorilla.com  |
 
-    @FPA-002
+    @FORGOT-PASS-002
     Scenario Outline: Email Field required
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -31,7 +31,7 @@ To access the different products
         | email       |
         |             |
 
-    @FPA-003
+    @FORGOT-PASS-003
     Scenario Outline: Email Field valid
       When the user clicks on the Forget Password option
       And enters their email "<email>"

@@ -1,16 +1,16 @@
 #language: en
-@lg
-Feature: Authentication > Reset Password
+@CLM
+Feature: Login / Reset Password
 As user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
 To access the different products
 
-  Rule: I forgot my account password and I'm trying to recover my password
+  Rule: I'm trying to reset my password
 
     Background: Enter the Home Page
       Given the user is on the application home page "Login"
 
-    @RPA-001
+    @RESET-PASS-001
     Scenario Outline: Reset Password
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -24,9 +24,9 @@ To access the different products
       Then valid reset message
       Examples:
         | email                  |  new_password  |
-        | rmechan@landgorilla.com|  Aruba002**     |
+        | rmechan@landgorilla.com|  Dynamo002**     |
 
-    @RPA-002
+    @RESET-PASS-002
     Scenario Outline: Enter the same digit without Combination of letters and numbers
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -41,7 +41,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  ****####      |
 
-    @RPA-003
+    @RESET-PASS-003
     Scenario Outline: Enter digits without One capital letter
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -56,7 +56,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  karate200#**  |
 
-    @RPA-004
+    @RESET-PASS-004
     Scenario Outline: Enter digits without One lowercase letter
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -71,7 +71,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  KARATE200#**  |
 
-    @RPA-005
+    @RESET-PASS-005
     Scenario Outline: Enter digits without One special character !@#$%&*()
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -86,7 +86,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  KARATe200010  |
 
-    @RPA-006
+    @RESET-PASS-006
     Scenario Outline: Enters the same previous password in the New and Confirm fields
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -99,9 +99,9 @@ To access the different products
       Then valid that the button is disabled
       Examples:
         | email                  |  new_password   |
-        | rmechan@landgorilla.com|  Panama002**      |
+        | rmechan@landgorilla.com|  Aruba002**     |
 
-    @RPA-007
+    @RESET-PASS-007
     Scenario Outline: Enter digits contain your user ID
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -116,7 +116,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  Rmechan###21  |
 
-    @RPA-008
+    @RESET-PASS-008
     Scenario Outline: Enter digits more than 2 consecutive characters of your full name
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -131,7 +131,7 @@ To access the different products
         | email                  |  new_password  |
         | rmechan@landgorilla.com|  Roberto###21  |
 
-    @RPA-009
+    @RESET-PASS-009
     Scenario Outline: Enters different passwords in the New and Confirm fields
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -146,7 +146,7 @@ To access the different products
         | email                  |  new_password_1  | new_password_2  |
         | rmechan@landgorilla.com|  Karate*###21    | Karati*###21    |
 
-    @RPA-010
+    @RESET-PASS-010
     Scenario Outline: Reset Password - Best Practices Company and Users Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -160,9 +160,9 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassYY@landgorilla.com|  Aruba002**   |
+        | rmechan+autorepassYY@landgorilla.com|  Dynamo002**   |
 
-    @RPA-011
+    @RESET-PASS-011
     Scenario Outline: Reset Password - Best Practices Company Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -176,9 +176,9 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassYN@landgorilla.com|  Aruba002**   |
+        | rmechan+autorepassYN@landgorilla.com|  Dynamo002**   |
 
-    @RPA-012
+    @RESET-PASS-012
     Scenario Outline: Reset Password - Best Practices Users Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -192,9 +192,9 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password  |
-        | rmechan+autorepassNY@landgorilla.com|  Aruba002**   |
+        | rmechan+autorepassNY@landgorilla.com|  Dynamo002**   |
 
-    @RPA-013
+    @RESET-PASS-013
     Scenario Outline: Reset Password - Best Practices Company and Users Not Activate
       When the user clicks on the Forget Password option
       And enters their email "<email>"
@@ -208,7 +208,7 @@ To access the different products
       Then valid reset message
       Examples:
         | email                               |  new_password |
-        | rmechan+autorepassNN@landgorilla.com|  Aruba002**  |
+        | rmechan+autorepassNN@landgorilla.com|  Dynamo002**  |
 
 
 

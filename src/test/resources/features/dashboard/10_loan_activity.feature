@@ -1,9 +1,8 @@
 #language: en
-@lg
-Feature: Dashboard > Dashboard Activity
+@CLM
+Feature: Dashboard / Activity
   As user of the Land Gorilla UAT page,
-  I want to be able to log in with my username and password
-  To access the different products
+  I want to be able to review the Dashboard Activity
 
     Rule: The username and password must be valid and associated with an existing account on the system
 
@@ -11,20 +10,7 @@ Feature: Dashboard > Dashboard Activity
 
       Given the user has logged in with username "subuser" in "dashboard/home"
 
-     @DLA-001
-      Scenario Outline: Check Statistics of a selected range with visualization by date
-        When valid home page
-        And seleccionar el view "<view>"
-        Then validar los graficos
-        Examples:
-          | view   |
-          | Day    |
-          | Week   |
-          | Month  |
-          | Quarter|
-          | Year   |
-
-      @DLA-002
+      @DSH-LOAN-ACTIVITY-001
       Scenario Outline: Display statistics of the Filter "Loan Program" - Loan Activity
         When click filtro Loan Activity
         And filtrar por "Loan Program"
@@ -34,7 +20,7 @@ Feature: Dashboard > Dashboard Activity
           | type    |
           | JS LP 1 |
 
-      @DLA-003
+      @DSH-LOAN-ACTIVITY-002
       Scenario Outline: Display statistics of the Filter "Loan Type" - Loan Activity
         When click filtro Loan Activity
         And filtrar por "Loan Type"
@@ -44,7 +30,7 @@ Feature: Dashboard > Dashboard Activity
           | type          |
           | Conventional  |
 
-      @DLA-004
+      @DSH-LOAN-ACTIVITY-003
       Scenario Outline: Display statistics of the Filter "Investor Name" - Loan Activity
         When click filtro Loan Activity
         And filtrar por "Investor"
@@ -54,7 +40,7 @@ Feature: Dashboard > Dashboard Activity
           | type                  |
           | 1651201244184_Cameron |
 
-      @DLA-005
+      @DSH-LOAN-ACTIVITY-004
       Scenario Outline: Display statistics of the Filter "Transaction Table" - Loan Activity
         When click filtro Loan Activity
         And filtrar por "Transaction Table"
@@ -64,16 +50,13 @@ Feature: Dashboard > Dashboard Activity
           | type                   |
           | AutoTran 1573146458085 |
 
-      @DLA-006
+      @DSH-LOAN-ACTIVITY-005
       Scenario Outline: Display statistics of the Filter "System User" - Loan Activity
         When click filtro Loan Activity
         And filtrar por "System User"
         And seleccionar el tipo "<type>"
         Then valida la informacion organizada
+        And the user clicks on logout
         Examples:
           | type           |
           | Justin Alvarez |
-
-      @DLA-OUT
-      Scenario: Logout
-        Then the user clicks on logout
