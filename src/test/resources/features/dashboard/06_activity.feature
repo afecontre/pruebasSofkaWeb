@@ -10,6 +10,51 @@ Feature: Dashboard / Activity
 
       Given the user has logged in with username "subuser" in "dashboard/home"
 
+     @DSH-ACTIVITY-001
+      Scenario Outline: Check Statistics of a selected range with visualization by date
+        When valid home page
+        And seleccionar el view "<view>"
+        Then validar los graficos
+        Examples:
+          | view   |
+          | Day    |
+
+      @DSH-ACTIVITY-002
+      Scenario Outline: Check Statistics of a selected range with visualization by date
+        When valid home page
+        And seleccionar el view "<view>"
+        Then validar los graficos
+        Examples:
+          | view   |
+          | Week    |
+
+      @DSH-ACTIVITY-003
+      Scenario Outline: Check Statistics of a selected range with visualization by date
+        When valid home page
+        And seleccionar el view "<view>"
+        Then validar los graficos
+        Examples:
+          | view   |
+          | Month  |
+
+      @DSH-ACTIVITY-004
+      Scenario Outline: Check Statistics of a selected range with visualization by date
+        When valid home page
+        And seleccionar el view "<view>"
+        Then validar los graficos
+        Examples:
+          | view   |
+          | Quarter|
+
+      @DSH-ACTIVITY-005
+      Scenario Outline: Check Statistics of a selected range with visualization by date
+        When valid home page
+        And seleccionar el view "<view>"
+        Then validar los graficos
+        Examples:
+          | view   |
+          | Year   |
+
       @DSH-LOAN-ACTIVITY-001
       Scenario Outline: Display statistics of the Filter "Loan Program" - Loan Activity
         When click filtro Loan Activity
@@ -60,3 +105,5 @@ Feature: Dashboard / Activity
         Examples:
           | type           |
           | Justin Alvarez |
+
+
