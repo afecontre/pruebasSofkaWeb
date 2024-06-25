@@ -197,5 +197,20 @@ public class LoanPage {
             .located(By.xpath("//*[@for=\"line_retainage_master\"]"));
     public static final Target BTN_MARK_ALL_DEPOSIT = Target.the("Mark All Deposit Button")
             .located(By.xpath("//*[@for=\"line_storedmaterials_master\"]"));
+    public static final Target BTN_SEARCH_QUICK = Target.the("Search Quick")
+            .located(By.id("lSearch"));
+    public static final Target BTN_CLEAR_SEARCH_QUICK = Target.the("Clear Search Quick Button")
+            .located(By.xpath("//button[@id='btn-resetQS']"));
+    public static final Target BTN_POST_TRANSACTIONS = Target.the("Post Transactions Button")
+            .located(By.xpath("//a[normalize-space()='Post Transactions']"));
+    public static final Target BTN_DOWNLOAD_TEMPLATE = Target.the("Download Template Button")
+            .located(By.xpath("//font[contains(text(),'Avanzado')]"));
+    public static final Target BTN_CHANGE_STATUS = Target.the("Change Status Button")
+            .located(By.xpath("//a[@title='Change Status']"));
+    public static final Target BTN_STATUS = Target.the("New Status Button")
+            .located(By.xpath("//button[@class='btn dropdown-toggle btn-default']"));
+    public static final Target BTN_CONFIRMED_CHANGE = Target.the("Confirmed Change Button")
+            .located(By.id("buttonSaveChangeStatus"));
+
 
 }

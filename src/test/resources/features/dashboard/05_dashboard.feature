@@ -294,6 +294,7 @@ Feature: Dashboard / Dashboard
       Then validar los graficos
       And click en el filtro por "Month"
       Then validar los graficos
+      And the user clicks on logout
       Examples:
         | type                   |
         | AutoTran 1573146458085 |

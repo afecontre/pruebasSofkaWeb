@@ -43,7 +43,7 @@ public class UserPage {
     public static final Target BTN_CANCEL_DELETE_USER= Target.the("Cancel Delete User Button")
             .located(By.xpath("//div[contains(@class,'jconfirm-buttons')]//button[contains(@type,'button')][normalize-space()='Close']"));
     public static final Target LABEL_USER_NAME= Target.the("User Name Label")
-            .located(By.xpath("//a[@class='form-link btnFormRowTable']"));
+            .located(By.xpath("//a[contains(@class, 'form-link') and contains(@class, 'btnFormRowTable') and @data-table='tbl-tab2-systemuser']\n"));
     public static final Target LABEL_ROLE_USER= Target.the("Role User Label")
             .located(By.xpath("//*[@id=\"tbl-tab2-systemuser\"]/tbody/tr/td[4]"));
     public static final Target INPUT_PASSWORD_USER= Target.the("New Password")

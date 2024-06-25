@@ -24,4 +24,21 @@ Feature: Loans / Create New Loan Setup
       And valid New Loan page
       And enter data the new Loan Information "Commercial"
       And delete the loan created
+
+    @LOAN-003
+    Scenario: Quick Search Pipeline Loans with Existing Values
+      When valid home loan
+      And the user clicks Quick Search and enter Search information "LOAN_026"
+      Then validate the loan
+
+#    @LOAN-004
+#    Scenario: Action button, Download Template Post Transactions
+#      When valid home loan
+#      And the user download Template
+
+    @LOAN-004
+    Scenario: In the Action button, select Change Status
+      When valid home loan
+      And the user clicks Quick Search and enter Search information "LOAN_026"
+      And change status "Setup"
       And the user clicks on logout

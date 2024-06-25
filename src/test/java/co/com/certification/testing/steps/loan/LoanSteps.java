@@ -4,6 +4,7 @@ import co.com.certification.testing.tasks.draws.*;
 import co.com.certification.testing.tasks.loan.*;
 import co.com.certification.testing.util.CSVLoader;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Screenshots;
 import org.apache.commons.csv.CSVRecord;
@@ -87,5 +88,25 @@ public class LoanSteps{
     @And("add line item and Interest approve confirmed")
     public void addLineItemAndInterestApproveConfirmed() {
         USER.attemptsTo(AddItemInterestApprove.withTheFollowingField());
+    }
+
+    @And("the user clicks Quick Search and enter Search information {string}")
+    public void theUserClicksQuickSearchAndEnterSearchInformation(String number_loan) {
+        USER.attemptsTo(QuickSearch.withTheFollowingField(number_loan));
+    }
+
+    @Then("validate the loan")
+    public void validateTheLoan() {
+        USER.attemptsTo(ValidateLoan.withCustomerData());
+    }
+
+    @And("the user download Template")
+    public void theUserDownloadTemplate() {
+        USER.attemptsTo(DownloadTemplate.withCustomerData());
+    }
+
+    @And("change status {string}")
+    public void changeStatus(String status) {
+        USER.attemptsTo(ChangeStatusLoan.withCustomerData(status));
     }
 }
