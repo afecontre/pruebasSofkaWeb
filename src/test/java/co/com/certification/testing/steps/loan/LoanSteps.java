@@ -109,4 +109,19 @@ public class LoanSteps{
     public void changeStatus(String status) {
         USER.attemptsTo(ChangeStatusLoan.withCustomerData(status));
     }
+
+    @And("archive Loan")
+    public void archiveLoan() {
+        USER.attemptsTo(ArchiveLoan.withCustomerData());
+    }
+
+    @And("delete Loan")
+    public void deleteLoan() {
+        USER.attemptsTo(DeleteLoanActivate.withCustomerData());
+    }
+
+    @When("unarchive Loan")
+    public void unarchiveLoan() {
+        USER.attemptsTo(UnarchiveLoan.withCustomerData());
+    }
 }

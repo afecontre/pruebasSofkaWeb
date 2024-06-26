@@ -211,6 +211,14 @@ public class LoanPage {
             .located(By.xpath("//button[@class='btn dropdown-toggle btn-default']"));
     public static final Target BTN_CONFIRMED_CHANGE = Target.the("Confirmed Change Button")
             .located(By.id("buttonSaveChangeStatus"));
+    public static final Target BTN_ARCHIVE_LOAN = Target.the("Archive Loan Button")
+            .located(By.xpath("//a[@data-role='archiveloan']"));
+    public static final Target BTN_CONFIRMED_LOAN = Target.the("Confirmed Archive Loan Button")
+            .located(By.xpath("//button[@class='btn btn-warning']"));
+    public static final Target BTN_VIEW_ARCHIVED = Target.the("View Arhived Button")
+            .located(By.xpath("//a[@info='archived']"));
+
+
 
 
 }
