@@ -200,7 +200,7 @@ public class LoanPage {
     public static final Target BTN_SEARCH_QUICK = Target.the("Search Quick")
             .located(By.id("lSearch"));
     public static final Target BTN_CLEAR_SEARCH_QUICK = Target.the("Clear Search Quick Button")
-            .located(By.xpath("//button[@id='btn-resetQS']"));
+            .located(By.xpath("//button[@id='btn-resetQS']//i[@class='fa fa-times']"));
     public static final Target BTN_POST_TRANSACTIONS = Target.the("Post Transactions Button")
             .located(By.xpath("//a[normalize-space()='Post Transactions']"));
     public static final Target BTN_DOWNLOAD_TEMPLATE = Target.the("Download Template Button")

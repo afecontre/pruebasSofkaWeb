@@ -23,4 +23,4 @@ Feature: Login / System User
       Then the user clicks on logout
       Examples:
         | email                          | password     |
-        | rmechan+36uat@landgorilla.com  | Panama002**  |
+        | rmechan+38uat@landgorilla.com  | Panama002**  |

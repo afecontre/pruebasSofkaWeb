@@ -43,7 +43,12 @@ Feature: Loans / Create New Loan Setup
       And archive Loan
 
     @LOAN-006
+    Scenario: Quick Search Pipeline Loans with Existing Values
+      And the user clicks Quick Search and enter Search information "LOAN-LG-8099"
+      Then validate the loan
+
+    @LOAN-007
     Scenario: Action button, select one or more loans, select Delete Loan
-      And the user clicks Quick Search and enter Search information "LFN-000232"
+      And the user clicks Quick Search and enter Search information "LOAN-LG-8099"
       And delete Loan
       And the user clicks on logout
