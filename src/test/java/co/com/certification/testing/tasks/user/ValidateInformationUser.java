@@ -2,6 +2,7 @@ package co.com.certification.testing.tasks.user;
 
 import co.com.certification.testing.exceptions.NotFoundText;
 import co.com.certification.testing.questions.ObtainText;
+import co.com.certification.testing.util.Pause;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
@@ -41,6 +42,8 @@ public class ValidateInformationUser implements Task {
                 SendKeys.of(FIRST_NAME).into(INPUT_SEARCH_USER),
                 Hit.the(Keys.ENTER).into(INPUT_SEARCH_USER)
         );
+
+        Pause.withDuration(2);
 
         actor.should(
                 seeThat(ObtainText.element(LABEL_USER_NAME),containsString(FIRST_NAME)).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT),

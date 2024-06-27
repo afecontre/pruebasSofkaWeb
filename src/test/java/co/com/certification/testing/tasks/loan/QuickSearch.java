@@ -11,6 +11,8 @@ import org.openqa.selenium.Keys;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.INPUT_USERNAME;
 import static co.com.certification.testing.pages.loan.LoanPage.*;
+import static co.com.certification.testing.pages.user.UserPage.BTN_SYSTEM_USER;
+import static co.com.certification.testing.pages.user.UserPage.BTN_USER_TAB;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 

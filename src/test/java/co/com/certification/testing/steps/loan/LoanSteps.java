@@ -122,6 +122,11 @@ public class LoanSteps{
 
     @When("unarchive Loan")
     public void unarchiveLoan() {
-        USER.attemptsTo(UnarchiveLoan.withCustomerData());
+        USER.attemptsTo(ClearSearch.withCustomerData());
+    }
+
+    @When("clear search")
+    public void clearSearch() {
+        USER.attemptsTo(ClearSearch.withCustomerData());
     }
 }

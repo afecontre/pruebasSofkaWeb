@@ -1,5 +1,5 @@
 #language: en
-@CLM_LOAN
+@CLM
 Feature: Loans / Create New Loan Setup
   As user of the Land Gorilla UAT page,
   I want to create New Loans
@@ -28,28 +28,22 @@ Feature: Loans / Create New Loan Setup
     @LOAN-003
     Scenario: Quick Search Pipeline Loans with Existing Values
       When valid home loan
-      And the user clicks Quick Search and enter Search information "LOAN-LG-9773"
+      And the user clicks Quick Search and enter Search information "LOAN_104"
       Then validate the loan
-
-#    @LOAN-004
-#    Scenario: Action button, Download Template Post Transactions
-#      When valid home loan
-#      And the user download Template
 
     @LOAN-004
     Scenario: In the Action button, select Change Status
       When valid home loan
-      And the user clicks Quick Search and enter Search information "LOAN-LG-9773"
+      And the user clicks Quick Search and enter Search information "LOAN_104"
       And change status "Setup"
 
     @LOAN-005
     Scenario: Action button, select one or more loans, select Archive Loan
-      When valid home loan
-      And the user clicks Quick Search and enter Search information "LOAN-LG-8098"
+      And the user clicks Quick Search and enter Search information "LFN-000235"
       And archive Loan
 
     @LOAN-006
     Scenario: Action button, select one or more loans, select Delete Loan
-      And the user clicks Quick Search and enter Search information "LOAN-LG-4202"
+      And the user clicks Quick Search and enter Search information "LFN-000232"
       And delete Loan
       And the user clicks on logout

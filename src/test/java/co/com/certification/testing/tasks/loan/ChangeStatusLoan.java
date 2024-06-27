@@ -13,6 +13,8 @@ import net.thucydides.core.annotations.findby.By;
 import org.openqa.selenium.Keys;
 
 import static co.com.certification.testing.pages.loan.LoanPage.*;
+import static co.com.certification.testing.pages.user.UserPage.BTN_SYSTEM_USER;
+import static co.com.certification.testing.pages.user.UserPage.BTN_USER_TAB;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class ChangeStatusLoan implements Task {
@@ -34,7 +36,8 @@ public class ChangeStatusLoan implements Task {
         String number_loan = actor.recall("number_loan");
 
         actor.attemptsTo(
-                Click.on(By.xpath("//a[text()='"+ number_loan + "']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary text-center checkbox-loans']")),
+                Click.on(By.xpath("//a[text()='"+ number_loan + "']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary text-center checkbox-loans']//label")),
+                //Click.on(By.xpath("//a[text()='"+ number_loan + "']/ancestor::tr/td[1]")),
                 Click.on(BTN_ACTION),
                 Click.on(BTN_CHANGE_STATUS),
                 Click.on(BTN_STATUS)
@@ -47,7 +50,7 @@ public class ChangeStatusLoan implements Task {
                 Click.on(BTN_CHANGE),
                 Click.on(BTN_CONFIRMED_CHANGE),
                 Click.on(BTN_SUCCESS_DELETE),
-                Open.url(InformationUrl.getUatUrlLoanDemoUrl())
+                Click.on(BTN_CLEAR_SEARCH)
         );
 
     }

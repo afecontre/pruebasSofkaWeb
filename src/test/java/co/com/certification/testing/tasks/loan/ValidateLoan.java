@@ -10,6 +10,8 @@ import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.findby.By;
 
 import static co.com.certification.testing.pages.loan.LoanPage.*;
+import static co.com.certification.testing.pages.user.UserPage.BTN_SYSTEM_USER;
+import static co.com.certification.testing.pages.user.UserPage.BTN_USER_TAB;
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;

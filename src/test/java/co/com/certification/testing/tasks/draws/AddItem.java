@@ -96,7 +96,8 @@ public class AddItem implements Task {
             actor.should(seeThat(ObtainText.element(LBL_TOTAL_REQUESTING),containsString(total_requesting)).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT));
 
             if (deposit_contingency_int == 1 || deposit_interest_int == 1)
-                actor.attemptsTo(WaitUntil.the(BTN_DEPOSIT_ITEM_ON, isVisible()).forNoMoreThan(2).seconds());
+                actor.attemptsTo(
+                        WaitUntil.the(BTN_DEPOSIT_ITEM_ON, isVisible()).forNoMoreThan(2).seconds());
 
             if (approve_contingency_int == 1 && approve_interest_int == 0 ) {
                 actor.attemptsTo(WaitUntil.the(BTN_APPROVED_ITEM_CONTINGENCY_ON_1, isEnabled()).forNoMoreThan(2).seconds());
