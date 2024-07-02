@@ -216,17 +216,14 @@ public class LoanPage {
     public static final Target BTN_CONFIRMED_LOAN = Target.the("Confirmed Archive Loan Button")
             .located(By.xpath("//button[@class='btn btn-warning']"));
     public static final Target BTN_VIEW_ARCHIVED = Target.the("View Arhived Button")
-            .located(By.xpath("//a[@info='archived']"));
+            .located(By.xpath("//a[normalize-space()='View Archived']"));
     public static final Target BTN_CLEAR_SEARCH = Target.the("Clear Search Button")
             .located(By.id("btnclearAdvancedSearch"));
     public static final Target BTN_LOAN_TAB = Target.the("Tab Loan")
             .located(By.xpath("//div[@class='navbar-header']//a[contains(text(),'Loans')]"));
-
     public static final Target BTN_CHECK_LOAN = Target.the("Tab Loan")
             .located(By.xpath("//div[@class='checkbox checkbox-primary checkall d-inline-block-lg']"));
-
-
-
-
+    public static final Target LABEL_ARCHIVED = Target.the("Archived Label")
+            .located(By.id("showFolder"));
 
 }

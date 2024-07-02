@@ -129,4 +129,13 @@ public class LoanSteps{
     public void clearSearch() {
         USER.attemptsTo(ClearSearch.withCustomerData());
     }
+    @And("view Archived")
+    public void viewArchived() {
+        USER.attemptsTo(ViewArchived.withCustomerData());
+    }
+
+    @And("the user enter Search information {string}")
+    public void theUserEnterSearchInformation(String number_loan) {
+        USER.attemptsTo(QuickSearch_New.withTheFollowingField(number_loan));
+    }
 }

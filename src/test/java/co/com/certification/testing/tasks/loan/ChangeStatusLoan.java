@@ -37,7 +37,6 @@ public class ChangeStatusLoan implements Task {
 
         actor.attemptsTo(
                 Click.on(By.xpath("//a[text()='"+ number_loan + "']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary text-center checkbox-loans']//label")),
-                //Click.on(By.xpath("//a[text()='"+ number_loan + "']/ancestor::tr/td[1]")),
                 Click.on(BTN_ACTION),
                 Click.on(BTN_CHANGE_STATUS),
                 Click.on(BTN_STATUS)
