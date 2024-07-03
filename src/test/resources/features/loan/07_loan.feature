@@ -38,7 +38,7 @@ Feature: Loans / Create New Loan Setup
       And change status "Setup"
 
     @LOAN-005
-    Scenario: Quick Search Pipeline Loans with Existing Values
+    Scenario: Action button, select one or more loans, select Archive Loan
       And the user enter Search information "LFN-000235"
       Then archive Loan
 

@@ -3,6 +3,7 @@ package co.com.certification.testing.steps.dashboard;
 import co.com.certification.testing.tasks.dashboard.*;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
+import io.cucumber.java.en.When;
 import net.thucydides.core.annotations.Screenshots;
 
 import static co.com.certification.testing.steps.conf.Hooks.USER;
@@ -78,4 +79,20 @@ public class DashboardSteps {
         USER.attemptsTo(SelectLastActivity.withTheFollowingField(time));
     }
 
+    @And("filtrar por tiempo {string}")
+    public void filtrarPorTiempo(String day) {
+        USER.attemptsTo(SelectLastActivityTime.withTheFollowingField(day));
+    }
+    @When("click filtro Loan Maturity")
+    public void clickFiltroLoanMaturity() {
+        USER.attemptsTo(FilterLoanMaturity.withTheFollowingField());
+    }
+    @When("click filtro Pending Draws")
+    public void clickFiltroPendingDraws() {
+        USER.attemptsTo(FilterLoanPendingDraws.withTheFollowingField());
+    }
+    @When("click filtro Pending Change Orders")
+    public void clickFiltroPendingChangeOrders() {
+        USER.attemptsTo(FilterLoanPendingChangeOrders.withTheFollowingField());
+    }
 }

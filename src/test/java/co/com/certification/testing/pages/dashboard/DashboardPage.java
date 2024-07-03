@@ -82,8 +82,18 @@ public class DashboardPage {
             .located(By.xpath("//a//span[contains(text(),'Year') and not(contains(text(), ' Year'))]"));
     public static final Target BTN_FILTERS_LOAN_ACTIVITY= Target.the("Filter Loan Activity")
             .located(By.xpath("//*[@id=\"dashboard\"]/div/div[3]/div[1]/div/div[1]/div/div[2]/div[2]/a/i"));
+    public static final Target BTN_FILTERS_LOAN_MATURITY= Target.the("Filter Loan Maturity")
+            .located(By.xpath("//div[@class='row dashboard__lists']//div[2]//div[1]//div[1]//div[1]//a[1]//i[1]"));
     public static final Target LABEL_INFORMATION_VALIDATE= Target.the("Validate Information")
             .located(By.xpath("//div[normalize-space()='Borrower']"));
     public static final Target LABEL_ACTIVATE_LOAN= Target.the("Home Loan")
             .located(By.xpath("//ul[@id='filterLoanStatus']//a[text()[normalize-space() = 'Active']]\n"));
+    public static final Target BTN_LAST_ACTIVITY= Target.the("Last Activity Time Button")
+            .located(By.xpath("//button[@title='[Select ]']"));
+    public static final Target BTN_FILTERS_LOAN_PENDING_DRAWS= Target.the("Filter Loan Pending Draws")
+            .located(By.xpath("//div[@class='row dashboard__lists']//div[3]//div[1]//div[1]//div[1]//a[1]//i[1]"));
+    public static final Target BTN_FILTERS_LOAN_PENDING_CHANGE_ORDERS= Target.the("Filter Loan Pending Change Orders")
+            .located(By.xpath("//div[@class='row dashboard__lists']//div[4]//div[1]//div[1]//div[1]//a[1]//i[1]"));
+
+
 }

@@ -10,7 +10,7 @@ To access the different products
     Background: Enter the Home Page
       Given the user is on the application home page "Login"
 
-    @EPA-001
+    @EXPIRED-001
     Scenario Outline: Expired Password
       When the user enter a name your user "<username>" and a password "<password>"
       And click on the Login button
@@ -19,7 +19,7 @@ To access the different products
         | username                     | password      |
         | rmechan+uat@landgorilla.com  | Enzo78***(&/  |
 
-    @EPA-002
+    @EXPIRED-002
     Scenario Outline: Expired Password
       When the user enter a name your user "<username>" and a password "<password>"
       And click on the Login button
