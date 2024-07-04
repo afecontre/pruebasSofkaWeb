@@ -27,6 +27,7 @@ public class QuickSearch_New implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
+        Pause.withDuration(3);
         actor.attemptsTo(
                 Click.on(BTN_SEARCH_QUICK),
                 SendKeys.of(number_loan).into(BTN_SEARCH_QUICK)

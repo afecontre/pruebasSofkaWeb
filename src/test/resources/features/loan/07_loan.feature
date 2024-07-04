@@ -44,7 +44,7 @@ Feature: Loans / Create New Loan Setup
 
     @LOAN-006
     Scenario: Action button, select one or more loans, select Delete Loan
-      And the user clicks Quick Search and enter Search information "LOAN_027"
+      And the user clicks Quick Search and enter Search information "LOAN_035"
       And delete Loan
 
     @LOAN-007
