@@ -23,8 +23,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                  |  new_password   |
-        | rmechan@landgorilla.com|  Chepen002**    |
+        | email                  |  new_password      |
+        | rmechan@landgorilla.com|  Talleres002**     |
 
     @RESET-PASS-002
     Scenario Outline: Enter the same digit without Combination of letters and numbers
@@ -98,8 +98,8 @@ To access the different products
       And the user enters the password again "<new_password>"
       Then valid that the button is disabled
       Examples:
-        | email                  |  new_password   |
-        | rmechan@landgorilla.com|  Paita002**     |
+        | email                  |  new_password    |
+        | rmechan@landgorilla.com|  Unidos002**     |
 
     @RESET-PASS-007
     Scenario Outline: Enter digits contain your user ID
@@ -159,8 +159,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password    |
-        | rmechan+autorepassYY@landgorilla.com|  Chepen002**     |
+        | email                               |  new_password      |
+        | rmechan+autorepassYY@landgorilla.com|  Talleres002****   |
 
     @RESET-PASS-011
     Scenario Outline: Reset Password - Best Practices Company Activate
@@ -175,8 +175,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password     |
-        | rmechan+autorepassYN@landgorilla.com|  Chepen002**      |
+        | email                               |  new_password         |
+        | rmechan+autorepassYN@landgorilla.com|  Talleres002****      |
 
     @RESET-PASS-012
     Scenario Outline: Reset Password - Best Practices Users Activate
@@ -191,8 +191,8 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password     |
-        | rmechan+autorepassNY@landgorilla.com|  Chepen002**      |
+        | email                               |  new_password        |
+        | rmechan+autorepassNY@landgorilla.com| Talleres002****      |
 
     @RESET-PASS-013
     Scenario Outline: Reset Password - Best Practices Company and Users Not Activate
@@ -207,5 +207,5 @@ To access the different products
       And click the Set The Password button
       Then valid reset message
       Examples:
-        | email                               |  new_password       |
-        | rmechan+autorepassNN@landgorilla.com|  Chepen002**        |
+        | email                               |  new_password           |
+        | rmechan+autorepassNN@landgorilla.com|  Talleres002****        |
