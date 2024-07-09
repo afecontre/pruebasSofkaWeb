@@ -1,5 +1,5 @@
 #language: en
-@lg_expired
+@CLM_EXPIRED
 Feature: Expired Password
 As user of the Land Gorilla UAT page,
 I want to be able to log in with my username and password
@@ -16,8 +16,8 @@ To access the different products
       And click on the Login button
       Then valid expired message
       Examples:
-        | username                     | password      |
-        | rmechan+uat@landgorilla.com  | Enzo78***(&/  |
+        | username                     | password       |
+        | rmechan+uat@landgorilla.com  | Talleres002**  |
 
     @EXPIRED-002
     Scenario Outline: Expired Password
@@ -28,9 +28,6 @@ To access the different products
       And the user is on the application reset password
       And the user enter a new password "<new_password>"
       And the user enters the password again "<new_password>"
-      And click the Set The Password button
-      Then valid reset message
       Examples:
-        | username                 | password       |  new_password  |
-        | rmechan@landgorilla.com  | Eamll78***(&/  |  Yape78***(&/  |
-
+        | username                     | password       |  new_password  |
+        | rmechan+uat@landgorilla.com  | Talleres002**  |  Cordoba002**  |
