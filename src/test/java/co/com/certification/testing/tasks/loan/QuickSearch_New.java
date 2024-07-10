@@ -9,7 +9,7 @@ import net.serenitybdd.screenplay.actions.SendKeys;
 import net.thucydides.core.annotations.Step;
 import org.openqa.selenium.Keys;
 
-import static co.com.certification.testing.pages.loan.LoanPage.BTN_SEARCH_QUICK;
+import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class QuickSearch_New implements Task {

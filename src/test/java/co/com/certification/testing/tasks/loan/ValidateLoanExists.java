@@ -5,31 +5,26 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.findby.By;
 
 import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisible;
 
-public class ViewArchived implements Task {
+public class ValidateLoanExists implements Task {
 
-    public ViewArchived() {
+    public ValidateLoanExists() {
         //Nothing
     }
 
-    public static ViewArchived withCustomerData() {
-        return instrumented(ViewArchived.class);
+    public static ValidateLoanExists withCustomerData() {
+        return instrumented(ValidateLoanExists.class);
     }
 
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-
-        actor.attemptsTo(
-                Click.on(BTN_ACTION),
-                Click.on(BTN_VIEW_ARCHIVED),
-                WaitUntil.the(LABEL_ARCHIVED, isEnabled()).forNoMoreThan(4).seconds(),
-                Click.on(BTN_LOAN_TAB)
-        );
+     actor.attemptsTo(
+             WaitUntil.the(LBL_LOAN_NON_EXISTENT, isVisible()).forNoMoreThan(8).seconds(),
+             Click.on(BTN_CLEAR_SEARCH_QUICK));
     }
 }

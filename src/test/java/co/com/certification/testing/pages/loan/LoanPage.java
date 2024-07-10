@@ -201,10 +201,12 @@ public class LoanPage {
             .located(By.id("lSearch"));
     public static final Target BTN_CLEAR_SEARCH_QUICK = Target.the("Clear Search Quick Button")
             .located(By.xpath("//button[@id='btn-resetQS']//i[@class='fa fa-times']"));
+    public static final Target LBL_LOAN_NON_EXISTENT = Target.the("Validate Loan Non-Existent")
+            .located(By.xpath("//td[@colspan='11' and text()='No matching records found.']\n"));
     public static final Target BTN_POST_TRANSACTIONS = Target.the("Post Transactions Button")
             .located(By.xpath("//a[normalize-space()='Post Transactions']"));
     public static final Target BTN_DOWNLOAD_TEMPLATE = Target.the("Download Template Button")
-            .located(By.xpath("//font[contains(text(),'Avanzado')]"));
+            .located(By.xpath("/html/body/div[2]/a"));
     public static final Target BTN_CHANGE_STATUS = Target.the("Change Status Button")
             .located(By.xpath("//a[@title='Change Status']"));
     public static final Target BTN_STATUS = Target.the("New Status Button")
@@ -225,5 +227,8 @@ public class LoanPage {
             .located(By.xpath("//div[@class='checkbox checkbox-primary checkall d-inline-block-lg']"));
     public static final Target LABEL_ARCHIVED = Target.the("Archived Label")
             .located(By.id("showFolder"));
+    public static final Target BTN_ADVANCED = Target.the("Advanced Button")
+            .located(By.xpath("//a[@type='button']"));
+
 
 }

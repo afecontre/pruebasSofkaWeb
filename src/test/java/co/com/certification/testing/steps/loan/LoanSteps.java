@@ -95,14 +95,25 @@ public class LoanSteps{
         USER.attemptsTo(QuickSearch.withTheFollowingField(number_loan));
     }
 
+    @Then("validate the loan exists")
+    public void validateTheLoanExists() {
+        USER.attemptsTo(ValidateLoanExists.withCustomerData());
+    }
+
     @Then("validate the loan")
     public void validateTheLoan() {
         USER.attemptsTo(ValidateLoan.withCustomerData());
     }
 
+    @Screenshots
     @And("the user download Template")
     public void theUserDownloadTemplate() {
         USER.attemptsTo(DownloadTemplate.withCustomerData());
+    }
+
+    @And("the user upload Template")
+    public void theUserUploadTemplate() {
+        USER.attemptsTo(UploadTemplate.withCustomerData());
     }
 
     @And("change status {string}")
@@ -133,7 +144,6 @@ public class LoanSteps{
     public void viewArchived() {
         USER.attemptsTo(ViewArchived.withCustomerData());
     }
-
     @And("the user enter Search information {string}")
     public void theUserEnterSearchInformation(String number_loan) {
         USER.attemptsTo(QuickSearch_New.withTheFollowingField(number_loan));
