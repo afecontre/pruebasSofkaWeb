@@ -5,20 +5,19 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
-import net.thucydides.core.annotations.findby.By;
 
 import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
-public class ViewArchived implements Task {
+public class ReturnToLoanTab implements Task {
 
-    public ViewArchived() {
+    public ReturnToLoanTab() {
         //Nothing
     }
 
-    public static ViewArchived withCustomerData() {
-        return instrumented(ViewArchived.class);
+    public static ReturnToLoanTab withCustomerData() {
+        return instrumented(ReturnToLoanTab.class);
     }
 
     @Override
@@ -26,9 +25,7 @@ public class ViewArchived implements Task {
     public <T extends Actor> void performAs(T actor) {
 
         actor.attemptsTo(
-                Click.on(BTN_ACTION),
-                Click.on(BTN_VIEW_ARCHIVED),
-                WaitUntil.the(LABEL_ARCHIVED, isEnabled()).forNoMoreThan(4).seconds()
+                Click.on(BTN_LOAN_TAB)
         );
     }
 }

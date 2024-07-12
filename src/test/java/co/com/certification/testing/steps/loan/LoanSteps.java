@@ -148,4 +148,44 @@ public class LoanSteps{
     public void theUserEnterSearchInformation(String number_loan) {
         USER.attemptsTo(QuickSearch_New.withTheFollowingField(number_loan));
     }
+
+    @And("switch to active loan")
+    public void switchToActiveLoan() {
+        USER.attemptsTo(SwitchToActiveLoan.withCustomerData());
+    }
+
+    @Then("return to loan tab")
+    public void returnToLoanTab() {
+        USER.attemptsTo(ReturnToLoanTab.withCustomerData());
+    }
+
+    @And("the user view Active Loan")
+    public void theUserViewActiveLoan() {
+        USER.attemptsTo(ViewActiveLoan.withCustomerData());
+    }
+
+    @Then("valid tab Active Loan")
+    public void validTabActiveLoan() {
+
+    }
+
+    @When("the user clicks Add System User")
+    public void theUserClicksAddSystemUser() {
+        USER.attemptsTo(ClicksAddSystemUser.withCustomerData());
+    }
+
+    @And("validate warning message")
+    public void validateWarningMessage() {
+        USER.attemptsTo(WarningMessage.withCustomerData());
+    }
+
+    @And("enter information System User")
+    public void enterInformationSystemUser() {
+        USER.attemptsTo(EnterAddSystemUser.withCustomerData());
+    }
+
+    @And("select the loan")
+    public void selectTheLoan() {
+        USER.attemptsTo(SelectTheLoan.withCustomerData());
+    }
 }

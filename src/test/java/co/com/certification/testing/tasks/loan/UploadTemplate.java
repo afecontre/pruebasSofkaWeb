@@ -25,7 +25,6 @@ public class UploadTemplate implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                Click.on(BTN_ADVANCED),
                 Click.on(BTN_ACTION),
                 Click.on(BTN_POST_TRANSACTIONS),
                 Open.url("https://lg01.uat-landgorilla.com/clientV2/loan-manager/transactions-import-xlsx?readexcel=")

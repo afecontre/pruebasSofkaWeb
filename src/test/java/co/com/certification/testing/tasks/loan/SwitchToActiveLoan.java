@@ -11,24 +11,28 @@ import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
-public class ViewArchived implements Task {
+public class SwitchToActiveLoan implements Task {
 
-    public ViewArchived() {
+    public SwitchToActiveLoan() {
         //Nothing
     }
 
-    public static ViewArchived withCustomerData() {
-        return instrumented(ViewArchived.class);
+    public static SwitchToActiveLoan withCustomerData() {
+        return instrumented(SwitchToActiveLoan.class);
     }
 
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
 
+        String number_loan = actor.recall("number_loan");
+
         actor.attemptsTo(
+                Click.on(By.xpath("//td[text()='"+ number_loan + "']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary text-center checkbox-loans']//label")),
                 Click.on(BTN_ACTION),
-                Click.on(BTN_VIEW_ARCHIVED),
-                WaitUntil.the(LABEL_ARCHIVED, isEnabled()).forNoMoreThan(4).seconds()
+                Click.on(BTN_ACTIVATE_LOAN),
+                Click.on(BTN_CONFIRMED_LOAN),
+                Click.on(BTN_SUCCESS_DELETE)
         );
     }
 }

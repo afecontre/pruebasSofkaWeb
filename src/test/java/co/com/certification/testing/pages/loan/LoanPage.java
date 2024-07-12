@@ -229,6 +229,19 @@ public class LoanPage {
             .located(By.id("showFolder"));
     public static final Target BTN_ADVANCED = Target.the("Advanced Button")
             .located(By.xpath("//a[@type='button']"));
-
+    public static final Target BTN_ACTIVATE_LOAN = Target.the("Active Loan Button")
+            .located(By.xpath("//a[normalize-space()='Active Selected Loan']"));
+    public static final Target BTN_VIEW_ACTIVATE = Target.the("View Active Loan Button")
+            .located(By.xpath("//a[normalize-space()='View Active Loans']"));
+    public static final Target BTN_ADD_SYSTEM_USER = Target.the("Add System User Button")
+            .located(By.id("linkAddSystemUser"));
+    public static final Target LABEL_VALIDATE_SYSTEM_ACTIVATE = Target.the("Valid System user Active Label")
+            .located(By.xpath("//div[contains(text(), 'You must select at least one loan!')]"));
+    public static final Target INPUT_ADD_CONTACT = Target.the("Add Contact Input")
+            .located(By.id("tbl-form-addContact-quickly"));
+    public static final Target BTN_USER_SELECTED = Target.the("User Selected Button")
+            .located(By.xpath("//td[normalize-space()='Principal A Client']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary changeable-event']//label"));
+    public static final Target BTN_SAVE_SYSTEM_USER = Target.the("Save Selected Usert Button")
+            .located(By.xpath("//button[@data-style='zoom-in'][normalize-space()='Save']"));
 
 }
