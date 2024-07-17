@@ -25,7 +25,7 @@ public class DeleteUser implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
-                WaitUntil.the(BTN_CHECK_USER, isVisible()).forNoMoreThan(2).seconds(),
+                WaitUntil.the(BTN_CHECK_USER, isVisible()).forNoMoreThan(5).seconds(),
                 Click.on(BTN_CHECK_USER),
                 Click.on(BTN_ACTION_USER),
                 Click.on(BTN_DELETE_USER),
