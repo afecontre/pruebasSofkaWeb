@@ -9,21 +9,6 @@ Feature: Loans / Create New Loan Setup
     Background: Enter the Home Page Loan
       Given the user has logged in with username "subuser" in "loan-manager/index"
 
-    @LOAN-008
-    Scenario: Select one or more loans, select Delete Loan
-      When the user clicks Quick Search and enter Search information "LOAN-LG-9773"
-      And delete Loan
-
-    @LOAN-009
-    Scenario: View Archived Loans
-      When view Archived
-      And return to loan tab
-
-    @LOAN-010
-    Scenario: Download Template Post Transactions
-      When valid home loan
-      And the user download Template
-
     @LOAN-011
     Scenario: Loan Selected Active by selecting one or more loans
       When view Archived
@@ -47,7 +32,17 @@ Feature: Loans / Create New Loan Setup
       And select the loan
       And the user clicks Add System User
       And enter information System User
+
+    @LOAN-015
+    Scenario: select Remove System User
+      When the user enter Search information "LOAN-LG-7941"
+      And select the loan
+      And the user clicks Remove System User
+
+    @LOAN-016
+    Scenario: select Send Messages, do not select any loan
+      When the user enter Search information "LOAN-LG-7941"
+      And select the loan
+      And the user clicks Send Messages
       Then the user clicks on logout
-
-
 

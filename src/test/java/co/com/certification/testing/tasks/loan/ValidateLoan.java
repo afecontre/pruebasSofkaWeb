@@ -5,6 +5,8 @@ import co.com.certification.testing.questions.ObtainText;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.actions.SendKeys;
+import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.findby.By;
@@ -32,7 +34,6 @@ public class ValidateLoan implements Task {
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
         //actor.should(seeThat(ObtainText.element(LBL_LOAN_NUMBER),containsString(actor.recall("number_loan"))).orComplainWith(NotFoundText.class,NotFoundText.THE_VALUE_IS_NOT_EXPECT));
-
      actor.attemptsTo(
              WaitUntil.the(By.xpath("//a[normalize-space()='" + actor.recall("number_loan") + "']"), isVisible()).forNoMoreThan(8).seconds(),
              Click.on(BTN_CLEAR_SEARCH_QUICK)

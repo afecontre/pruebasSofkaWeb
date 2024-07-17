@@ -96,8 +96,8 @@ public class LoanPage {
             .located(By.xpath("//a[@data-status='Active']"));
     public static final Target BTN_CHANGE_ACTIVATE= Target.the("Change Activate")
             .located(By.xpath("//button[@class='btn btn-warning ladda-button']"));
-    public static final Target BTN_CLOSE_ACTIVATE= Target.the("Close Activate")
-            .located(By.xpath("//button[@class='btn btn-default']"));
+    public static final Target BTN_CONFIRM_ACTIVATE= Target.the("Close Activate")
+            .located(By.xpath("//button[text()='ok']"));
     public static final Target BTN_SECTION= Target.the("Section")
             .located(By.xpath("//i[@class='fa fa-bars']"));
     public static final Target BTN_SECTION_LOAN= Target.the("Section Loan")
@@ -211,7 +211,7 @@ public class LoanPage {
             .located(By.xpath("//a[@title='Change Status']"));
     public static final Target BTN_STATUS = Target.the("New Status Button")
             .located(By.xpath("//button[@class='btn dropdown-toggle btn-default']"));
-    public static final Target BTN_CONFIRMED_CHANGE = Target.the("Confirmed Change Button")
+    public static final Target  BTN_CONFIRMED_CHANGE = Target.the("Confirmed Change Button")
             .located(By.id("buttonSaveChangeStatus"));
     public static final Target BTN_ARCHIVE_LOAN = Target.the("Archive Loan Button")
             .located(By.xpath("//a[@data-role='archiveloan']"));
@@ -238,10 +238,35 @@ public class LoanPage {
     public static final Target LABEL_VALIDATE_SYSTEM_ACTIVATE = Target.the("Valid System user Active Label")
             .located(By.xpath("//div[contains(text(), 'You must select at least one loan!')]"));
     public static final Target INPUT_ADD_CONTACT = Target.the("Add Contact Input")
-            .located(By.id("tbl-form-addContact-quickly"));
-    public static final Target BTN_USER_SELECTED = Target.the("User Selected Button")
-            .located(By.xpath("//td[normalize-space()='Principal A Client']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary changeable-event']//label"));
+            .located(By.xpath("//input[@id='tbl-form-addContact-quickly']"));
+    public static final Target BTN_USER_SELECTED_ADD = Target.the("User Selected Button")
+            .located(By.xpath("//td[normalize-space()='Principal']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary changeable-event']//label"));
+    public static final Target BTN_USER_SELECTED_REMOVE = Target.the("User Selected Button")
+            .located(By.xpath("//td[normalize-space()='Roberto Mechan']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary changeable-event']//label"));
     public static final Target BTN_SAVE_SYSTEM_USER = Target.the("Save Selected Usert Button")
             .located(By.xpath("//button[@data-style='zoom-in'][normalize-space()='Save']"));
+    public static final Target BTN_REMOVE_SYSTEM_USER = Target.the("Remove System User Button")
+            .located(By.id("linkRemoveSystemUser"));
+    public static final Target BTN_NEXT_PAGE = Target.the("Next Page Button")
+            .located(By.xpath("//div[@class='ibox-content ']//div[@class='bootstrap-table']//div[@class='fixed-table-container']//div[@class='fixed-table-pagination']//div[@class='row p-xs']//div[@class='col-lg-6 text-center']//ul[@class='pagination pagination-sm']//li[@class='page-next']//a[@href='#'][contains(text(),'›')]"));
+    public static final Target BTN_CANCEL = Target.the("Cancel Button")
+            .located(By.xpath("//form[@id='mdbFrmAddContacts']//button[@type='button'][normalize-space()='Cancel']"));
+    public static final Target BTN_SEND_MESSAGES = Target.the("Send Messages Button")
+            .located(By.xpath("//a[@id='sendbulkmessages']"));
+    public static final Target INPUT_TO_MESSAGE = Target.the("To Messages Input")
+            .located(By.xpath("//input[@class='tt-input form-control']"));
+    public static final Target BTN_ITEM_SELECTED = Target.the("Item Selected Button")
+            .located(By.xpath("//li[@class='list-group-item tt-suggestion tt-selectable']"));
+    public static final Target INPUT_SUBJECT_MESSAGES = Target.the("Subject Messages Input")
+            .located(By.xpath("//input[@placeholder='Subject']"));
+    public static final Target BTN_SEND_EMAIL = Target.the("Send Email Button")
+            .located(By.xpath("//button[normalize-space()='Send']"));
+    public static final Target BODY_MESSAGES_INPUT = Target.the("Send Email Button")
+            .located(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']"));
+
+
+
+
+
 
 }

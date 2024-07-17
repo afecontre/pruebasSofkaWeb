@@ -32,7 +32,6 @@ public class QuickSearch_New implements Task {
                 Click.on(BTN_SEARCH_QUICK),
                 SendKeys.of(number_loan).into(BTN_SEARCH_QUICK)
         );
-        Pause.withDuration(2);
         actor.remember("number_loan", number_loan);
     }
 }

@@ -188,4 +188,19 @@ public class LoanSteps{
     public void selectTheLoan() {
         USER.attemptsTo(SelectTheLoan.withCustomerData());
     }
+
+    @And("the user clicks Remove System User")
+    public void theUserClicksRemoveSystemUser() {
+        USER.attemptsTo(RemoveSystemUser.withCustomerData());
+    }
+
+    @And("the user clicks Send Messages")
+    public void theUserClicksSendMessages() {
+        USER.attemptsTo(SendMessages.withCustomerData());
+    }
+
+    @When("the user enter Search information delete {string}")
+    public void theUserEnterSearchInformationDelete(String number_loan) {
+        USER.attemptsTo(EnterInformationDelete.withTheFollowingField(number_loan));
+    }
 }

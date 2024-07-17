@@ -34,16 +34,16 @@ Feature: Loans / Create New Loan Setup
     @LOAN-004
     Scenario: Quick Search Pipeline Loans with Existing Values
       When valid home loan
-      And the user clicks Quick Search and enter Search information "LOAN_104"
+      And the user clicks Quick Search and enter Search information "LOAN_035"
       Then validate the loan
 
-    @LOAN-06
+    @LOAN-005
     Scenario: In the Action button, select Change Status
       When valid home loan
-      And the user clicks Quick Search and enter Search information "LOAN_104"
+      And the user clicks Quick Search and enter Search information "LOAN_035"
       And change status "Setup"
 
-    @LOAN-007
+    @LOAN-006
     Scenario: Select one or more loans, select Archive Loan
       When the user enter Search information "LFN-000235"
       And archive Loan
