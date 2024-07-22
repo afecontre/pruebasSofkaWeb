@@ -24,7 +24,8 @@ public class NavigateToURL implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo
-                (Open.url(InformationUrl.getUatUrlDemoUrl() + url));
+        actor.attemptsTo(
+                Open.url(InformationUrl.getUatUrlDemoUrl() + url)
+                );
     }
 }

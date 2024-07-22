@@ -28,12 +28,12 @@ public class PageHome implements Task {
                     Click.on(BTN_LOGIN)
             );
             boolean logoutVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
-            if (logoutVisible) {
+            if (!logoutVisible) {
                 actor.attemptsTo(
                         Click.on(BTN_LOGIN)
                 );
                 boolean loginVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
-                if (loginVisible)
+                if (!loginVisible)
                     actor.attemptsTo(
                             Click.on(BTN_LOGIN)
                     );

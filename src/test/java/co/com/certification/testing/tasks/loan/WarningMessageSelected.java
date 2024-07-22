@@ -1,32 +1,32 @@
-package co.com.certification.testing.tasks.authentication;
+package co.com.certification.testing.tasks.loan;
 
-import co.com.certification.testing.util.Pause;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 
-import static co.com.certification.testing.pages.authentication.LoginPage.BTN_LOGIN;
+import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
-public class LoginButton implements Task {
+public class WarningMessageSelected implements Task {
 
-
-    public LoginButton() {
+    public WarningMessageSelected() {
         //Nothing
     }
 
-    public static LoginButton withTheFollowingField() {
-        return instrumented(LoginButton.class);
+    public static WarningMessageSelected withCustomerData() {
+        return instrumented(WarningMessageSelected.class);
     }
+
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
+
         actor.attemptsTo(
-                WaitUntil.the(BTN_LOGIN, isEnabled()).forNoMoreThan(5).seconds(),
-                Click.on(BTN_LOGIN)
+                WaitUntil.the(LABEL_VALIDATE_OPEN_LOAN, isEnabled()).forNoMoreThan(4).seconds(),
+                Click.on(BTN_SUCCESS_DELETE)
         );
     }
 }

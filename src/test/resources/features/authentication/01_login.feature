@@ -10,12 +10,12 @@ Feature: Login / System Access
     Background: Enter the Home Page
       Given the user is on the application home page "Login"
 
-    @LOGIN-001
-    Scenario: Successful login
-      When the user enter a name your user "subuser"
-      And click on the Login button
-      Then valid home page
-      And the user clicks on logout
+      @LOGIN-001
+      Scenario: Successful login
+        When the user enter a name your user "subuser"
+        And click on the Login button
+        Then valid home page
+        And the user clicks on logout
 
     @LOGIN-002
     Scenario Outline: Login with invalid email

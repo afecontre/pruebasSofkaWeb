@@ -203,4 +203,34 @@ public class LoanSteps{
     public void theUserEnterSearchInformationDelete(String number_loan) {
         USER.attemptsTo(EnterInformationDelete.withTheFollowingField(number_loan));
     }
+
+    @And("the user download Template Update Risk Labels")
+    public void theUserDownloadTemplateUpdateRiskLabels() {
+        USER.attemptsTo(DownloadTemplateUpdateRiskLabels.withCustomerData());
+    }
+
+    @And("the user clicks Open Loan")
+    public void theUserClicksOpenLoan() {
+        USER.attemptsTo(ClicksOpenLoan.withCustomerData());
+    }
+
+    @Then("validate warning message selected")
+    public void validateWarningMessageSelected() {
+        USER.attemptsTo(WarningMessageSelected.withCustomerData());
+    }
+
+    @And("the user selects several loans and clicks on Open Loan")
+    public void theUserSelectsSeveralLoansAndClicksOnOpenLoan() {
+        USER.attemptsTo(SelectedLoans.withCustomerData());
+    }
+
+    @Then("validate warning message selected loans")
+    public void validateWarningMessageSelectedLoans() {
+        USER.attemptsTo(WarningMessageSelectedLoans.withCustomerData());
+    }
+
+    @And("the user selects loans")
+    public void theUserSelectsLoans() {
+        USER.attemptsTo(SelectedLoans.withCustomerData());
+    }
 }

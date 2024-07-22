@@ -1,6 +1,7 @@
 package co.com.certification.testing.steps.authentication;
 
 import co.com.certification.testing.tasks.authentication.*;
+import co.com.certification.testing.tasks.loan.LoanHome;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import net.serenitybdd.screenplay.ensure.Ensure;
@@ -29,6 +30,7 @@ public class CommonSteps {
                     Ensure.that(LOGIN).isEnabled(),
                     UserLoginTest.withCustomerData(user),
                     LoginButton.withTheFollowingField()
+                    //LoanHome.withTheFollowingField()
             );
             loggedIn = true;
         }

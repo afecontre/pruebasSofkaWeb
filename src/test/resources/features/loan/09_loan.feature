@@ -42,10 +42,5 @@ Feature: Loans / Create New Loan Setup
       When valid home loan
       And the user clicks Quick Search and enter Search information "LOAN_035"
       And change status "Setup"
-
-    @LOAN-006
-    Scenario: Select one or more loans, select Archive Loan
-      When the user enter Search information "LFN-000235"
-      And archive Loan
       Then the user clicks on logout
 

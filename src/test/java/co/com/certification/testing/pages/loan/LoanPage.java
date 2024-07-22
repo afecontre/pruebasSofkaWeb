@@ -263,8 +263,18 @@ public class LoanPage {
             .located(By.xpath("//button[normalize-space()='Send']"));
     public static final Target BODY_MESSAGES_INPUT = Target.the("Send Email Button")
             .located(By.xpath("//body[@class='cke_editable cke_editable_themed cke_contents_ltr cke_show_borders']"));
-
-
+    public static final Target BTN_UPDATE_RISK = Target.the("Update Risk Labels Button")
+            .located(By.id("btn_loan_manager_upload_label_risk"));
+    public static final Target BTN_OPEN_LOAN = Target.the("Open Loan Button")
+            .located(By.id("openLoan"));
+    public static final Target LABEL_VALIDATE_OPEN_LOAN= Target.the("Open Loan Validate Message")
+            .located(By.xpath("//div[@class='jconfirm-content-pane']//div[@class='jconfirm-content' and contains(text(),'No loan have been selected')]\n"));
+    public static final Target BTN_LOAN_1= Target.the("Selected Loan 1")
+            .located(By.xpath("//tbody/tr[1]/td[1]/div[1]/label[1]"));
+    public static final Target BTN_LOAN_2= Target.the("Selected Loan 2")
+            .located(By.xpath("//tbody/tr[2]/td[1]/div[1]/label[1]"));
+    public static final Target LABEL_VALIDATE_OPEN_LOANS= Target.the("Open Loans Validate Message")
+            .located(By.xpath("//div[@class='jconfirm-content-pane']//div[@class='jconfirm-content' and contains(text(),'Only one loan can be opened at a time')]\n"));
 
 
 

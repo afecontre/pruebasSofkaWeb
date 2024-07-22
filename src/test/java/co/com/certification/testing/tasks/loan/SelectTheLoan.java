@@ -5,11 +5,13 @@ import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.SetCheckbox;
 import net.serenitybdd.screenplay.targets.Target;
+import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
 import net.thucydides.core.annotations.findby.By;
 
 import static co.com.certification.testing.pages.loan.LoanPage.*;
 import static net.serenitybdd.screenplay.Tasks.instrumented;
+import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class SelectTheLoan implements Task {
 
@@ -31,6 +33,7 @@ public class SelectTheLoan implements Task {
                 .located(By.xpath("//a[text()='" + number_loan + "']/ancestor::tr/td[1]//div[@class='checkbox checkbox-primary text-center checkbox-loans']//label"));
 
         actor.attemptsTo(
+                WaitUntil.the(BTN_SELECTED, isEnabled()).forNoMoreThan(4).seconds(),
                 SetCheckbox.of(BTN_SELECTED).toTrue()
         );
     }
