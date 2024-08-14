@@ -22,22 +22,10 @@ public class PageHome implements Task {
     @Override
     public <T extends Actor> void performAs(T actor) {
         boolean homeVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
-
         if (!homeVisible) {
             actor.attemptsTo(
                     Click.on(BTN_LOGIN)
             );
-            boolean logoutVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
-            if (!logoutVisible) {
-                actor.attemptsTo(
-                        Click.on(BTN_LOGIN)
-                );
-                boolean loginVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
-                if (!loginVisible)
-                    actor.attemptsTo(
-                            Click.on(BTN_LOGIN)
-                    );
-            }
         }
     }
 }

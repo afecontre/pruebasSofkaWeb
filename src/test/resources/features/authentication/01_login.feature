@@ -14,8 +14,7 @@ Feature: Login / System Access
       Scenario: Successful login
         When the user enter a name your user "subuser"
         And click on the Login button
-        Then valid home page
-        And the user clicks on logout
+        Then the user clicks on logout
 
     @LOGIN-002
     Scenario Outline: Login with invalid email

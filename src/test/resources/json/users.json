@@ -1,13 +1,12 @@
 {
   "users": {
-    "subuser": {
+    "admin": {
       "username": "acontreras+uat@landgorilla.com",
       "password": "Afcm3008<"
     },
-    "admin": {
-
+    "subuser": {
       "username": "rmechan+auto@landgorilla.com",
-      "password": "Cadiz002**"
+      "password": "Canada002**"
     },
     "admin2": {
       "username": "rmechan@landgorilla.com",
