@@ -275,7 +275,30 @@ public class LoanPage {
             .located(By.xpath("//tbody/tr[2]/td[1]/div[1]/label[1]"));
     public static final Target LABEL_VALIDATE_OPEN_LOANS= Target.the("Open Loans Validate Message")
             .located(By.xpath("//div[@class='jconfirm-content-pane']//div[@class='jconfirm-content' and contains(text(),'Only one loan can be opened at a time')]\n"));
-
+    public static final Target LABEL_LOAN_FILE_NUMBER_REQUIRED= Target.the("Label Loan Number Required")
+            .located(By.xpath("//li[normalize-space()='Loan File Number is required']"));
+    public static final Target LABEL_LOAN_TYPE_REQUIRED= Target.the("Label Loan Type Required")
+            .located(By.xpath("//li[normalize-space()='Loan Type is required']"));
+    public static final Target LABEL_LOAN_PROGRAM_REQUIRED= Target.the("Label Loan Program Required")
+            .located(By.xpath("//li[normalize-space()='Loan Program is required']"));
+    public static final Target LABEL_TRANSACTION_TABLE_REQUIRED= Target.the("Label Transaction Table REquired")
+            .located(By.xpath("//li[normalize-space()='Transaction Table is required']"));
+    public static final Target LABEL_LOAN_FUNDED_DATE_REQUIRED= Target.the("Label Funded Date Required")
+            .located(By.xpath("//li[normalize-space()='Loan Funded Date is required']"));
+    public static final Target LABEL_ADDRESS_REQUIRED= Target.the("Label Address Required")
+            .located(By.xpath("//li[normalize-space()='Subject Address is required']"));
+    public static final Target LABEL_ZIP_REQUIRED= Target.the("Label Zip Required")
+            .located(By.xpath("//li[normalize-space()='Subject Zip is required']"));
+    public static final Target LABEL_CITY_REQUIRED= Target.the("Label City Required")
+            .located(By.xpath("//li[normalize-space()='Subject City is required']"));
+    public static final Target LABEL_STATE_REQUIRED= Target.the("Label State Required")
+            .located(By.xpath("//li[normalize-space()='Subject State is required']"));
+    public static final Target LABEL_DUE_DATE_NOT_EQUAL= Target.the("Label Due Date Not Equal")
+            .located(By.xpath("//div[@class='jconfirm jconfirm-modern jconfirm-open']//li[1]"));
+    public static final Target LABEL_TERM_THAN_ZERO= Target.the("Label Term Zero")
+            .located(By.xpath("//li[normalize-space()='Loan Term (Days) must be greater than zero']"));
+    public static final Target LABEL_FUNDED_DATE_NOT_GREATER= Target.the("Label Funded Date Not Greater")
+            .located(By.xpath("//li[contains(text(),'Loan Funded Date can’t be greater than the Loan Du')]"));
 
 
 

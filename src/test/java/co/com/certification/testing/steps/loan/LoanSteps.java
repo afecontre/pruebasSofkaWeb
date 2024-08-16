@@ -233,4 +233,29 @@ public class LoanSteps{
     public void theUserSelectsLoans() {
         USER.attemptsTo(SelectedLoans.withCustomerData());
     }
+
+    @And("click to change status")
+    public void clickToChangeStatus() {
+        USER.attemptsTo(ChangeStatusActivate.withCustomerData());
+    }
+
+    @Then("validate the required fields message")
+    public void validateTheRequiredFieldsMessage() {
+        USER.attemptsTo(ValidateTheRequiredFields.withCustomerData());
+    }
+
+    @And("enter information loan {string}")
+    public void enterInformationLoan(String day) {
+        USER.attemptsTo(EnterLoan.withTheFollowingField(day));
+    }
+
+    @Then("validate days message with zero value")
+    public void validateDaysMessageWithZeroValue() {
+        USER.attemptsTo(ValidateMessagesZeroValue.withCustomerData());
+    }
+
+    @Then("validate days message with negative value")
+    public void validateDaysMessageWithNegativeValue() {
+        USER.attemptsTo(ValidateMessagesNegativeValue.withCustomerData());
+    }
 }

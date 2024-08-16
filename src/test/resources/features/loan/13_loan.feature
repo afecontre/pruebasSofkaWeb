@@ -33,5 +33,31 @@ Feature: Loans / Create New Loan Setup
       And the user enter Search information "CVS-4409"
       And select the loan
       And the user clicks Open Loan
-      Then the user clicks on logout
+
+    @LOAN-021
+    Scenario: Change Status the loans with fields required empty in the Loan Information tab
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And click to change status
+      Then validate the required fields message
+
+    @LOAN-022
+    Scenario: Term in Days field with Zero Value
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter information loan "0"
+      And click to change status
+      Then validate days message with zero value
+
+    @LOAN-023
+    Scenario: Term in Days field with Negative Value
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter information loan "-2"
+      And click to change status
+      Then validate days message with negative value
+      And the user clicks on logout
 

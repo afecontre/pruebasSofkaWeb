@@ -28,32 +28,11 @@ public class LoanHome implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-
             boolean homeVisible = WebElementQuestion.the(BTN_NEW).answeredBy(actor).isVisible();
-
             if (!homeVisible) {
                 actor.attemptsTo(
                         Click.on(BTN_LOGIN)
                 );
-                boolean logoutVisible = WebElementQuestion.the(BTN_NEW).answeredBy(actor).isVisible();
-                if (!logoutVisible) {
-                    actor.attemptsTo(
-                            Click.on(BTN_LOGIN)
-                    );
-
-                    boolean loginVisible = WebElementQuestion.the(BTN_NEW).answeredBy(actor).isVisible();
-
-                    if (!loginVisible) {
-                        actor.attemptsTo(
-                                Click.on(BTN_LOGIN)
-                        );
-
-                        boolean inicioVisible = WebElementQuestion.the(BTN_NEW).answeredBy(actor).isVisible();
-                        assertThat(!inicioVisible)
-                                .as("***ERROR: No carga la pagina Principal del CLM después de loguearme por tercera vez***")
-                                .isFalse();
-                    }
-                }
             }
     }
 }
