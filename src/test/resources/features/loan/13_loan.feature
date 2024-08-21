@@ -59,5 +59,29 @@ Feature: Loans / Create New Loan Setup
       And enter information loan "-2"
       And click to change status
       Then validate days message with negative value
+
+    @LOAN-024
+    Scenario: Change Status the loans with fields required empty in the Property Information Tab
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter information loan empty property information "365"
+      And click to change status
+      Then validate message empty property information
+
+    @LOAN-025
+    Scenario: Fill fields with Borrower Information with error in email format
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      Then validates the email address in Borrower Information
+
+    @LOAN-026
+    Scenario: Fill fields with information from the Co-borrower1, Co-Borrower Type 1 = “Person”
+      When valid home loan
+      And the user clicks New Loan option
+      And valid New Loan page
+      And enter data the new Loan Information "Sub-Loan"
+      And delete the loan created
       And the user clicks on logout
 

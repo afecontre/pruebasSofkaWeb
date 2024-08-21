@@ -1,5 +1,6 @@
 package co.com.certification.testing.steps.loan;
 
+import co.com.certification.testing.tasks.authentication.EnterInformation;
 import co.com.certification.testing.tasks.draws.*;
 import co.com.certification.testing.tasks.loan.*;
 import co.com.certification.testing.util.CSVLoader;
@@ -257,5 +258,20 @@ public class LoanSteps{
     @Then("validate days message with negative value")
     public void validateDaysMessageWithNegativeValue() {
         USER.attemptsTo(ValidateMessagesNegativeValue.withCustomerData());
+    }
+
+    @And("enter information loan empty property information {string}")
+    public void enterInformationLoanEmptyPropertyInformation(String day) {
+        USER.attemptsTo(EnterLoanEmptyPropertyInformation.withTheFollowingField(day));
+    }
+
+    @Then("validate message empty property information")
+    public void validateMessageEmptyPropertyInformation() {
+        USER.attemptsTo(ValidateMessagesEmptyPropertyInformation.withCustomerData());
+    }
+
+    @Then("validates the email address in Borrower Information")
+    public void validatesTheEmailAddressInBorrowerInformation() {
+        USER.attemptsTo(ValidatesTheEmailAddress.withCustomerData());
     }
 }

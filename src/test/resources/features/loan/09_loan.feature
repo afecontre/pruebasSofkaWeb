@@ -1,5 +1,5 @@
 #language: en
-@CLM_LOAN
+@CLM
 Feature: Loans / Create New Loan Setup
   As user of the Land Gorilla UAT page,
   I want to create New Loans

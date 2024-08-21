@@ -299,7 +299,25 @@ public class LoanPage {
             .located(By.xpath("//li[normalize-space()='Loan Term (Days) must be greater than zero']"));
     public static final Target LABEL_FUNDED_DATE_NOT_GREATER= Target.the("Label Funded Date Not Greater")
             .located(By.xpath("//li[contains(text(),'Loan Funded Date can’t be greater than the Loan Du')]"));
-
-
+    public static final Target INPUT_BORROWER_EMAIL= Target.the("Input Email Borrower")
+            .located(By.xpath("//input[@id='borrower_email']"));
+    public static final Target LABEL_EMAIL_VALID= Target.the("Label Email Valid")
+            .located(By.xpath("//span[@id='borrower_email-error']"));
+    public static final Target BTN_COBORROWER_1_TYPE= Target.the("Co Borrower Type Person ")
+            .located(By.xpath("//span[@class='filter-option pull-left'][normalize-space()='Select an option']"));
+    public static final Target INPUT_COBORROWER_1_FIRST_NAME= Target.the("Co Borrower First Name")
+            .located(By.id("coborrower_name_1"));
+    public static final Target INPUT_COBORROWER_1_LAST_NAME= Target.the("Co Borrower Last Name")
+            .located(By.id("coborrower_lastname_1"));
+    public static final Target INPUT_COBORROWER_1_PHONE= Target.the("Co Borrower Phone")
+            .located(By.id("coborrower_homephone_1"));
+    public static final Target INPUT_COBORROWER_1_EMAIL= Target.the("Co Borrower Email")
+            .located(By.id("coborrower_email_1"));
+    public static final Target INPUT_COBORROWER_1_ADDRESS= Target.the("Co Borrower Address")
+            .located(By.id("coborroweraddress_1"));
+    public static final Target INPUT_COBORROWER_1_ZIP= Target.the("Co Borrower ZIP")
+            .located(By.id("coborrowerzip_1"));
+    public static final Target BTN_GUIDANCE= Target.the("Guidance LOC Button")
+            .located(By.xpath("//button[@data-id='parentID']//span[@class='filter-option pull-left'][normalize-space()='[ Select ]']"));
 
 }

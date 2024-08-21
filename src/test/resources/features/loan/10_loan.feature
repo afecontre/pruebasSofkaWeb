@@ -23,6 +23,6 @@ Feature: Loans / Create New Loan Setup
 
     @LOAN-008
     Scenario: Select one or more loans, select Delete Loan
-      When the user enter Search information delete "LOAN_122"
+      When the user enter Search information delete "LFN-000364"
       And delete Loan
       Then the user clicks on logout
