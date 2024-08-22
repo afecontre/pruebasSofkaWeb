@@ -11,7 +11,8 @@ Feature: Dashboard / Dashboard
 
     @DSH-DRAW-001
     Scenario Outline: Display statistics of the "Loan Type" Filter - Draws
-      When click filtro Draws
+      When valid home page
+      And click filtro Draws
       And filtrar por "Loan Type"
       And seleccionar el tipo "<type>"
       Then validar los graficos

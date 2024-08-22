@@ -11,8 +11,8 @@ Feature: Loans / Create New Loan Setup
 
     @LOAN-001
     Scenario: Create a new Conventional Type Loan
-      When the user clicks New Loan option
-      And valid New Loan page
+      When valid home page
+      And the user clicks New Loan option
       And enter data the new Loan Information "Conventional"
       And delete the loan created
 

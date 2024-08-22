@@ -4,6 +4,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
+import net.serenitybdd.screenplay.questions.CurrentVisibility;
 import net.serenitybdd.screenplay.questions.WebElementQuestion;
 import net.serenitybdd.screenplay.waits.WaitUntil;
 import net.thucydides.core.annotations.Step;
@@ -28,7 +29,7 @@ public class LoanHome implements Task {
     @Override
     @Step("{0} enters-select search information")
     public <T extends Actor> void performAs(T actor) {
-            boolean homeVisible = WebElementQuestion.the(BTN_NEW).answeredBy(actor).isVisible();
+        boolean homeVisible = actor.asksFor(CurrentVisibility.of(HOME));
             if (!homeVisible) {
                 actor.attemptsTo(
                         Click.on(BTN_LOGIN)

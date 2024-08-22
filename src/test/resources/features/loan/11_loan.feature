@@ -11,7 +11,8 @@ Feature: Loans / Create New Loan Setup
 
     @LOAN-009
     Scenario: View Archived Loans
-      When view Archived
+      When valid home page
+      And view Archived
       And return to loan tab
 
     @LOAN-010

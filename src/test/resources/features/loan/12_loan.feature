@@ -11,7 +11,8 @@ Feature: Loans / Create New Loan Setup
 
     @LOAN-011
     Scenario: Loan Selected Active by selecting one or more loans
-      When view Archived
+      When valid home page
+      And view Archived
       And the user enter Search information "LFN-000235"
       And switch to active loan
       Then return to loan tab

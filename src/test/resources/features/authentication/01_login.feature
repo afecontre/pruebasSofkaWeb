@@ -14,6 +14,7 @@ Feature: Login / System Access
       Scenario: Successful login
         When the user enter a name your user "subuser"
         And click on the Login button
+        And valid home page
         Then the user clicks on logout
 
     @LOGIN-002

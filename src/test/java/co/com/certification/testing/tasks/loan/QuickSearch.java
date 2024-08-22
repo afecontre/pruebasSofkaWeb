@@ -33,7 +33,7 @@ public class QuickSearch implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 Click.on(BTN_SEARCH_QUICK),
-                SendKeys.of(number_loan).into(BTN_SEARCH_QUICK)
+                SendKeys.of(number_loan).into(BTN_SEARCH_QUICK).thenHit(Keys.ENTER)
         );
         actor.remember("number_loan", number_loan);
     }

@@ -1,15 +1,11 @@
 package co.com.certification.testing.tasks.authentication;
 
-import co.com.certification.testing.util.ElementEnabled;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Task;
 import net.serenitybdd.screenplay.actions.Click;
-import net.serenitybdd.screenplay.questions.WebElementQuestion;
-import net.serenitybdd.screenplay.waits.WaitUntil;
+import net.serenitybdd.screenplay.questions.CurrentVisibility;
 
 import static co.com.certification.testing.pages.authentication.LoginPage.*;
-import static co.com.certification.testing.pages.loan.LoanPage.BTN_NEW_LOAN;
-import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnabled;
 
 public class PageHome implements Task {
 
@@ -21,7 +17,7 @@ public class PageHome implements Task {
     }
     @Override
     public <T extends Actor> void performAs(T actor) {
-        boolean homeVisible = WebElementQuestion.the(HOME).answeredBy(actor).isVisible();
+        boolean homeVisible = actor.asksFor(CurrentVisibility.of(HOME));
         if (!homeVisible) {
             actor.attemptsTo(
                     Click.on(BTN_LOGIN)

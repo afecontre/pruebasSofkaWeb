@@ -13,7 +13,7 @@ public class LoginPage {
     public static final Target BTN_LOGIN= Target.the("Button Login")
             .located(By.xpath("//*[@id=\"btnLogin\"]"));
     public static final Target HOME= Target.the("Start")
-            .located(By.xpath("//div[@class='col-lg-3']//div[@class='ibox ibox-primary']//div[@class='ibox-title']/h5[text()='Orders']\n"));
+            .located(By.xpath("//div[@class='col-lg-3']//div[@class='ibox ibox-primary']//div[@class='ibox-title']/h5[text()='Orders']"));
     public static final Target USER_PASS_INVALIDO= Target.the("Username and Password invalid")
             .located(By.xpath("//*[@id=\"loginAlert\"]/div/span"));
     public static final Target EMAIL_EMPTY= Target.the("Email Empty")
