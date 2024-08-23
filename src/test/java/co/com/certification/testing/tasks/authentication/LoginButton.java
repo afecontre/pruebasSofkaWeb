@@ -13,7 +13,6 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnab
 
 public class LoginButton implements Task {
 
-
     public LoginButton() {
         //Nothing
     }

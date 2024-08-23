@@ -20,7 +20,6 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isEnab
 
 public class UserLoginTest implements Task {
 
-
     private final String user;
 
     public UserLoginTest(String user) {

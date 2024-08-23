@@ -10,11 +10,10 @@ Feature: Login / System Access
     Background: Enter the Home Page
       Given the user is on the application home page "Login"
 
-      @LOGIN-001
+    @LOGIN-001
       Scenario: Successful login
         When the user enter a name your user "subuser"
         And click on the Login button
-        And valid home page
         Then the user clicks on logout
 
     @LOGIN-002

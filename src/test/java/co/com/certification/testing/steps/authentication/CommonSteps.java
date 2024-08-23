@@ -20,8 +20,6 @@ public class CommonSteps {
                 NavigateTo.web());
     }
 
-
-
     @Given("the user has logged in with username {string} in {string}")
     public void theUserHasLoggedInWithUsernameIn(String user, String url) {
         if (!loggedIn) {
