@@ -1,0 +1,26 @@
+# Conclusiones del Ejercicio de Automatización con Serenity y Cucumber
+
+## Hallazgos
+
+1. **Flujo de Compra en Demoblaze**:
+   - El flujo de compra en el sitio web Demoblaze se automatizó con éxito utilizando Serenity BDD y Screenplay.
+   - Las pruebas validaron que los productos pueden ser añadidos al carrito y la compra completada exitosamente.
+
+2. **Integración con Serenity BDD**:
+   - La integración con Serenity BDD permite la generación de reportes detallados que facilitan el análisis de los resultados de las pruebas.
+   - La configuración en `serenity.conf` proporciona flexibilidad para ejecutar pruebas en diferentes entornos y navegadores.
+
+3. **Manejo de Alertas y Elementos Web**:
+   - Se implementaron mecanismos efectivos para manejar alertas del navegador y validar la presencia de elementos en la página.
+
+## Conclusiones
+
+- El uso de Serenity BDD con Screenplay proporciona una estructura clara y mantenible para la automatización de pruebas.
+- La automatización del flujo de compra es robusta y puede servir como base para ampliar la cobertura de pruebas a otras funcionalidades del sitio.
+- La generación de reportes en Serenity facilita la revisión y el análisis de los resultados, lo que mejora el proceso de aseguramiento de la calidad.
+- Se recomienda continuar expandiendo la suite de pruebas automatizadas para cubrir otros escenarios críticos en el sitio web Demoblaze.
+
+## Recomendaciones
+
+- Implementar más validaciones en diferentes puntos del flujo de trabajo para asegurar la robustez de la aplicación.
+- Considerar la integración de pruebas automatizadas en el pipeline de CI/CD para asegurar la calidad continua.
